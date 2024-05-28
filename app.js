@@ -431,9 +431,18 @@
 // }
 
 
-function hello(){
-    return ()=>{
-        console.log("hello world");
-    }
+// function hello(){
+//     return ()=>{
+//         console.log("hello world");
+//     }
+// }
+// console.log(hello()())
+
+const obj = {
+    name: "Umair"
 }
-console.log(hello()())
+
+function hello(age,str){
+    console.log(this.name + " is "+ age + " old "+ str);
+}
+hello.bind(obj, 23, "hello")()
