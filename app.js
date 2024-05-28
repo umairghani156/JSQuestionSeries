@@ -407,25 +407,33 @@
 // console.log(3 > 2 > 1);
 // console.log(1 < 2 < 3);
 // console.log(false > -1);
-const p = document.getElementsByTagName("p");
-console.log(p);
-let h = [...p]
-const span = document.getElementById("colorSpan")
-function hello(){
-    if( document.body.style.backgroundColor == "black"){
-    document.body.style.backgroundColor = "white";
-    document.body.style.color = "black";
-    span.innerHTML = "white"
-    h.forEach(element => {
-        element.style.color = "red"
-    });
-    }else{
-        document.body.style.backgroundColor = "black";
-    document.body.style.color = "white";
-    span.innerText = "black"
-    h.forEach(element => {
-        element.style.color = "yellow"
-    });
+// const p = document.getElementsByTagName("p");
+// console.log(p);
+// let h = [...p]
+// const span = document.getElementById("colorSpan")
+// function hello(){
+//     if( document.body.style.backgroundColor == "black"){
+//     document.body.style.backgroundColor = "white";
+//     document.body.style.color = "black";
+//     span.innerHTML = "white"
+//     h.forEach(element => {
+//         element.style.color = "red"
+//     });
+//     }else{
+//         document.body.style.backgroundColor = "black";
+//     document.body.style.color = "white";
+//     span.innerText = "black"
+//     h.forEach(element => {
+//         element.style.color = "yellow"
+//     });
 
+//     }
+// }
+
+
+function hello(){
+    return ()=>{
+        console.log("hello world");
     }
 }
+console.log(hello()())
