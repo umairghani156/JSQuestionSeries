@@ -446,3 +446,19 @@ function hello(age,str){
     console.log(this.name + " is "+ age + " old "+ str);
 }
 hello.bind(obj, 23, "hello")()
+
+
+//Check longest word in String
+
+function hello2(str){
+    let longestWord ="";
+    let word = str.split(" ").forEach(element => {
+        if(element.length > longestWord.length){
+            longestWord = element
+        }
+    });
+    console.log(longestWord);
+
+}
+
+hello2("Hello this is Umair Ahmed from Pakistan. He is Mern Stack Developer. He is currently looking for an opportunity to join a company.")
