@@ -467,3 +467,12 @@ let arr = [1, 2, 3, 4 , 5];//[1, 2, 3, 4 , 51, 2, 3, 4 , 5]
 let arr2 = [1, 2, 3, 4 , 5];
 let check = arr + arr2
 console.log(typeof check); //
+
+
+for(var i =0; i < 4; i++){
+    console.log(i);
+    setTimeout(()=>{
+        debugger
+        console.log(i);
+    },1000)
+}
