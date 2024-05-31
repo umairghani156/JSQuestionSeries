@@ -461,4 +461,9 @@ function hello2(str){
 
 }
 
-hello2("Hello this is Umair Ahmed from Pakistan. He is Mern Stack Developer. He is currently looking for an opportunity to join a company.")
+hello2("Hello this is Umair Ahmed from Pakistan. He is Mern Stack Developer. He is currently looking for an opportunity to join a company.") 
+
+let arr = [1, 2, 3, 4 , 5];//[1, 2, 3, 4 , 51, 2, 3, 4 , 5]
+let arr2 = [1, 2, 3, 4 , 5];
+let check = arr + arr2
+console.log(typeof check); //
