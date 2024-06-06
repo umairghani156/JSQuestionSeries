@@ -438,30 +438,30 @@
 // }
 // console.log(hello()())
 
-const obj = {
-    name: "Umair"
-}
+// const obj = {
+//     name: "Umair"
+// }
 
-function hello(age,str){
-    console.log(this.name + " is "+ age + " old "+ str);
-}
-hello.bind(obj, 23, "hello")()
+// function hello(age,str){
+//     console.log(this.name + " is "+ age + " old "+ str);
+// }
+// hello.bind(obj, 23, "hello")()
 
 
-//Check longest word in String
+// //Check longest word in String
 
-function hello2(str){
-    let longestWord ="";
-    let word = str.split(" ").forEach(element => {
-        if(element.length > longestWord.length){
-            longestWord = element
-        }
-    });
-    console.log(longestWord);
+// function hello2(str){
+//     let longestWord ="";
+//     let word = str.split(" ").forEach(element => {
+//         if(element.length > longestWord.length){
+//             longestWord = element
+//         }
+//     });
+//     console.log(longestWord);
 
-}
+// }
 
-hello2("Hello this is Umair Ahmed from Pakistan. He is Mern Stack Developer. He is currently looking for an opportunity to join a company.") 
+// hello2("Hello this is Umair Ahmed from Pakistan. He is Mern Stack Developer. He is currently looking for an opportunity to join a company.") 
 
 // let arr = [1, 2, 3, 4 , 5];//[1, 2, 3, 4 , 51, 2, 3, 4 , 5]
 // let arr2 = [1, 2, 3, 4 , 5];
@@ -476,18 +476,30 @@ hello2("Hello this is Umair Ahmed from Pakistan. He is Mern Stack Developer. He 
 //     },1000)
 // }
 
-const input1 = {a:1, b:2, c:3,d:10,e:12}
-const input2 = {a:2, e:12, f:6,d:10}
+// const input1 = {a:1, b:2, c:3,d:10,e:12}
+// const input2 = {a:2, e:12, f:6,d:10}
 
-const outPut = {};
-for(const input in input1){
-    if(input1[input]){
-        for(const j in input2){
-            if(j ===input && input1[input] === input2[input]){
-                outPut[j] = input2[j]
-            }
-        }
-    }
+// const outPut = {};
+// for(const input in input1){
+//     if(input1[input]){
+//         for(const j in input2){
+//             if(j ===input && input1[input] === input2[input]){
+//                 outPut[j] = input2[j]
+//             }
+//         }
+//     }
+    
+// }
+// console.log(outPut);
+
+const input2 = [1, 4, 7, 2, 4, 7];
+const input = [1, 2, 2, 11, 7,1];
+function hello(input){
+    let number;
+    const srt = input.sort((a,b)=> a -b);
+   number = [... new Set(srt)];
+   return number[number.length - 2]
     
 }
-console.log(outPut);
+console.log(hello(input2)); 
+
