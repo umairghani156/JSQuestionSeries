@@ -463,16 +463,31 @@ function hello2(str){
 
 hello2("Hello this is Umair Ahmed from Pakistan. He is Mern Stack Developer. He is currently looking for an opportunity to join a company.") 
 
-let arr = [1, 2, 3, 4 , 5];//[1, 2, 3, 4 , 51, 2, 3, 4 , 5]
-let arr2 = [1, 2, 3, 4 , 5];
-let check = arr + arr2
-console.log(typeof check); //
+// let arr = [1, 2, 3, 4 , 5];//[1, 2, 3, 4 , 51, 2, 3, 4 , 5]
+// let arr2 = [1, 2, 3, 4 , 5];
+// let check = arr + arr2
+// console.log(typeof check); //
 
 
-for(var i =0; i < 4; i++){
-    console.log(i);
-    setTimeout(()=>{
-        debugger
-        console.log(i);
-    },1000)
+// for(var i =0; i < 4; i++){
+//     console.log(i);
+//     setTimeout(()=>{
+//         console.log(i);
+//     },1000)
+// }
+
+const input1 = {a:1, b:2, c:3,d:10,e:12}
+const input2 = {a:2, e:12, f:6,d:10}
+
+const outPut = {};
+for(const input in input1){
+    if(input1[input]){
+        for(const j in input2){
+            if(j ===input && input1[input] === input2[input]){
+                outPut[j] = input2[j]
+            }
+        }
+    }
+    
 }
+console.log(outPut);
