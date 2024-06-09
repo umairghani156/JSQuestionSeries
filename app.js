@@ -495,11 +495,19 @@
 const input2 = [1, 4, 7, 2, 4, 7];
 const input = [1, 2, 2, 11, 7,1];
 function hello(input){
-    let number;
     const srt = input.sort((a,b)=> a -b);
-   number = [... new Set(srt)];
-   return number[number.length - 2]
+    let arr = srt[srt.length -1]
+    console.log(arr);
+    for(let i = srt.length - 2; i >= 0; i-- ){
+       if(input[i] !=arr){
+        arr = input[i]
+        break
+       }
+    }
+   return arr;
     
 }
 console.log(hello(input2)); 
+
+//Third question
 
