@@ -509,5 +509,18 @@ function hello(input){
 }
 console.log(hello(input2)); 
 
-//Third question
+//Third question 
+function hello2(str){
+   let n = {};
+   str.split("").forEach(element => {
+     if(!n.hasOwnProperty(element)){
+       n[element] = 1
+     }else{
+      n[element]++
+     }
+
+   });
+   console.log(n);
+}
+hello2("hello world")
 
