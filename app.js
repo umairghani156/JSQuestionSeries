@@ -492,35 +492,79 @@
 // }
 // console.log(outPut);
 
-const input2 = [1, 4, 7, 2, 4, 7];
-const input = [1, 2, 2, 11, 7,1];
-function hello(input){
-    const srt = input.sort((a,b)=> a -b);
-    let arr = srt[srt.length -1]
-    console.log(arr);
-    for(let i = srt.length - 2; i >= 0; i-- ){
-       if(input[i] !=arr){
-        arr = input[i]
-        break
-       }
-    }
-   return arr;
+// const input2 = [1, 4, 7, 2, 4, 7];
+// const input = [1, 2, 2, 11, 7,1];
+// function hello(input){
+//     const srt = input.sort((a,b)=> a -b);
+//     let arr = srt[srt.length -1]
+//     console.log(arr);
+//     for(let i = srt.length - 2; i >= 0; i-- ){
+//        if(input[i] !=arr){
+//         arr = input[i]
+//         break
+//        }
+//     }
+//    return arr;
     
-}
-console.log(hello(input2)); 
+// }
+// console.log(hello(input2)); 
 
-//Third question 
-function hello2(str){
-   let n = {};
-   str.split("").forEach(element => {
-     if(!n.hasOwnProperty(element)){
-       n[element] = 1
-     }else{
-      n[element]++
+// //Third question 
+// function hello2(str){
+//    let n = {};
+//    str.split("").forEach(element => {
+//      if(!n.hasOwnProperty(element)){
+//        n[element] = 1
+//      }else{
+//       n[element]++
+//      }
+
+//    });
+//    console.log(n);
+// }
+// hello2("hello world")
+
+
+//Leet Code first Challenge Code
+
+//Given two arrays arr1 and arr2, the elements of arr2 are distinct, and all elements in arr2 are also in arr1.
+
+//Sort the elements of arr1 such that the relative ordering of items in arr1 are the same as in arr2.
+//Elements that do not appear in arr2 should be placed at the end of arr1 in ascending order.
+
+const arr1 = [2,3,1,3,2,4,6,7,9,2,19];
+const arr2 = [2,1,4,3,9,6];
+//Output: [2,2,2,1,4,3,3,9,6,7,19]
+
+function arrCvrt(a1,a2){
+   let freqNum = {};
+   for(let i =0; i < a1.length; i++){
+       if(!freqNum.hasOwnProperty(a1[i])){
+         freqNum[a1[i]] = 1
+       }else{
+         freqNum[a1[i]]++
+       }
+   }
+  
+   let result = [];
+    for (let num of a2) {
+        while (freqNum[num] > 0) {
+            result.push(num);
+            freqNum[num]--;
+        }
+    }
+    console.log(result);
+
+    let remaining = [];
+
+    for(let num in freqNum){
+      while (freqNum[num] > 0) {
+         remaining.push(parseInt(num));
+         freqNum[num]--;
      }
+    }
+    const cont = result.concat(remaining);
+    return cont
 
-   });
-   console.log(n);
 }
-hello2("hello world")
-
+console.log(arrCvrt(arr1,arr2));
