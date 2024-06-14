@@ -532,39 +532,63 @@
 //Sort the elements of arr1 such that the relative ordering of items in arr1 are the same as in arr2.
 //Elements that do not appear in arr2 should be placed at the end of arr1 in ascending order.
 
-const arr1 = [2,3,1,3,2,4,6,7,9,2,19];
-const arr2 = [2,1,4,3,9,6];
-//Output: [2,2,2,1,4,3,3,9,6,7,19]
+// const arr1 = [2,3,1,3,2,4,6,7,9,2,19];
+// const arr2 = [2,1,4,3,9,6];
+// //Output: [2,2,2,1,4,3,3,9,6,7,19]
 
-function arrCvrt(a1,a2){
-   let freqNum = {};
-   for(let i =0; i < a1.length; i++){
-       if(!freqNum.hasOwnProperty(a1[i])){
-         freqNum[a1[i]] = 1
-       }else{
-         freqNum[a1[i]]++
-       }
-   }
+// function arrCvrt(a1,a2){
+//    let freqNum = {};
+//    for(let i =0; i < a1.length; i++){
+//        if(!freqNum.hasOwnProperty(a1[i])){
+//          freqNum[a1[i]] = 1
+//        }else{
+//          freqNum[a1[i]]++
+//        }
+//    }
   
-   let result = [];
-    for (let num of a2) {
-        while (freqNum[num] > 0) {
-            result.push(num);
-            freqNum[num]--;
-        }
-    }
-    console.log(result);
+//    let result = [];
+//     for (let num of a2) {
+//         while (freqNum[num] > 0) {
+//             result.push(num);
+//             freqNum[num]--;
+//         }
+//     }
+//     console.log(result);
 
-    let remaining = [];
+//     let remaining = [];
 
-    for(let num in freqNum){
-      while (freqNum[num] > 0) {
-         remaining.push(parseInt(num));
-         freqNum[num]--;
-     }
-    }
-    const cont = result.concat(remaining);
-    return cont
+//     for(let num in freqNum){
+//       while (freqNum[num] > 0) {
+//          remaining.push(parseInt(num));
+//          freqNum[num]--;
+//      }
+//     }
+//     const cont = result.concat(remaining);
+//     return cont
 
-}
-console.log(arrCvrt(arr1,arr2));
+// }
+// console.log(arrCvrt(arr1,arr2));
+
+// const arr = [10,20,30]
+
+// const hello2 = arr.map((val)=> 44)
+// console.log(hello2);
+
+// const  arr = [1,2,3].map((val)=> val + 1);
+// console.log(arr);
+
+// const arr = [0,10,20,30].filter((f)=> f > 10);
+// console.log(arr);
+
+// const arr = [-2,-1,0,1,2].filter((val)=> val + 1);
+// console.log(arr);
+
+// const nums = [1,2,3,4].reduce((acc, cur)=> acc + cur,0);
+// console.log(nums);
+// const nums = [].reduce((acc,cur)=>{
+//    return 0
+// },25);
+// console.log(nums);
+
+const n = 1 > 2> 3> 4;
+console.log(n);
