@@ -595,18 +595,30 @@
 
 //How to find min and max value in an array
 
-const numbers = [10, 6, 3, 7, 9, 12];
+// const numbers = [10, 6, 3, 7, 9, 12];
+
+// function minAndMax(arr){
+//     let min = arr[0];
+//     let max = arr[0];
+//    for(let i = 0; i<arr.length; i++){
+//     if(arr[i] > max){
+//         max = arr[i]
+//     }else if(arr[i] < min){
+//         min = arr[i]
+//     }
+//    }
+//    return [min, max]
+// }
+// console.log(minAndMax(numbers));
+
+//Second method to find min and max value
+const numbers = [30, 60, 10, 53, 1000, 300];
 
 function minAndMax(arr){
-    let min = arr[0];
-    let max = arr[0];
-   for(let i = 0; i<arr.length; i++){
-    if(arr[i] > max){
-        max = arr[i]
-    }else if(arr[i] < min){
-        min = arr[i]
-    }
-   }
-   return [min, max]
+    const minVal = Math.min(...arr);
+    const maxVal = Math.max(...arr);
+
+   return [minVal, maxVal]
 }
 console.log(minAndMax(numbers));
+
