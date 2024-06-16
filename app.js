@@ -590,5 +590,23 @@
 // },25);
 // console.log(nums);
 
-const n = 1 > 2> 3> 4;
-console.log(n);
+// const n = 1 > 2> 3> 4;
+// console.log(n);
+
+//How to find min and max value in an array
+
+const numbers = [10, 6, 3, 7, 9, 12];
+
+function minAndMax(arr){
+    let min = arr[0];
+    let max = arr[0];
+   for(let i = 0; i<arr.length; i++){
+    if(arr[i] > max){
+        max = arr[i]
+    }else if(arr[i] < min){
+        min = arr[i]
+    }
+   }
+   return [min, max]
+}
+console.log(minAndMax(numbers));
