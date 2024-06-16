@@ -622,3 +622,33 @@ function minAndMax(arr){
 }
 console.log(minAndMax(numbers));
 
+//How to find Second Largest value and remove the largest Value
+
+const arr4 = [5, 87, 45,2, 5, 8,10,56];
+
+function largestVal(arr){
+   let sLargest = arr[0];
+   for(let i = 0; i < arr.length;i++){
+    if(arr[i] > sLargest){
+       sLargest = arr[i]
+    }
+   }
+   let i = 0;
+   while(i < arr.length){
+    if(arr[i] === sLargest){
+        arr.splice(i, 1)
+    }else{
+        i++
+    }
+   }
+   
+    let seconLargestNum = arr[0];
+    for(let j =0; j<arr.length;j++){
+        if(arr[j] > seconLargestNum){
+            seconLargestNum = arr[j]
+        }
+    }
+    return seconLargestNum
+}
+console.log(largestVal(arr4))
+
