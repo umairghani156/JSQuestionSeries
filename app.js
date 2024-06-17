@@ -650,5 +650,9 @@ function largestVal(arr){
     }
     return seconLargestNum
 }
-console.log(largestVal(arr4))
+console.log(largestVal(arr4));
+
+const arr5 = [1, 2, 3, 4, 5, 6];
+const ans = arr5.some((val)=> val === 5);
+console.log(ans);
 
