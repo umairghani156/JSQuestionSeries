@@ -658,3 +658,20 @@ console.log(ans);
 const h = arr5.copyWithin(0, 2, 3,60);
 console.log(h);
 
+//How to find missing number in an array
+const arr6 = [11, 12, 13, 14, 16, 17, 19,20];
+function missingNum(arr){
+   let newArr = [];
+   let another = new Set(arr);
+   const min = Math.min(...arr);
+   const max = Math.max(...arr);
+  for(let i = min; i <= max; i++){
+     if(!another.has(i)){
+        newArr.push(i)
+     }
+  }
+  return newArr
+
+}
+missingNum(arr6)
+
