@@ -673,5 +673,26 @@ function missingNum(arr){
   return newArr
 
 }
-missingNum(arr6)
+missingNum(arr6);
 
+//How to find odd or even number in an array
+const arr7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function oddAndEven(arr){
+    const oddNumber = [];
+    const evenNumber = [];
+    const number = arr.map((val)=>{
+        if(val % 2){
+            oddNumber.push(val)
+        }else{
+            evenNumber.push(val)
+        }
+    })
+    console.log(oddNumber);
+    console.log(evenNumber);
+    return [
+       {oddNumber,
+       evenNumber}
+    ]
+
+};
+console.log(oddAndEven(arr7))
