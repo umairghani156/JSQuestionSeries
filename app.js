@@ -695,4 +695,36 @@ function oddAndEven(arr){
     ]
 
 };
-console.log(oddAndEven(arr7))
+console.log(oddAndEven(arr7));
+
+//How to find the sum of all elements in a given an array;
+
+const arr8= [1, 2, 3, 5, ,6];
+
+function sum(arr){
+    const ans = arr.reduce((acc, cur)=> acc+ cur, 0);
+    return ans
+}
+console.log(sum(arr8));
+
+//How to find prime number in javascript
+
+const arr9 = [11, 12, 13, 15, 16, 17, 18, 19, 20];
+ 
+function isPrime(n){
+   if(n <= 0) return false;
+   if(n === 2) return true
+   if(n % 2 === 0) return false;
+   const maxDivisor =Math.floor(Math.sqrt(n));
+   for (let i = 3; i <= maxDivisor; i += 2) {
+    if (n % i === 0) return false;
+}
+return true;
+
+}
+
+function isPrimeNum(arr){
+   const ans = arr.filter((val)=> isPrime(val))
+   return ans
+}
+console.log(isPrimeNum(arr9))
