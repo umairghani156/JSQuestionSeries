@@ -728,3 +728,15 @@ function isPrimeNum(arr){
    return ans
 }
 console.log(isPrimeNum(arr9))
+const c = 'Hello';
+function check(str){
+    let n = {};
+    str.split("").forEach((val)=>{
+        if(n.hasOwnProperty(val)){
+            n[val] = 1
+}else{
+            n[val]++
+}
+        )}
+    }
+check(c)
