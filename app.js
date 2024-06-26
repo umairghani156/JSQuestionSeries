@@ -727,7 +727,7 @@ function isPrimeNum(arr){
    const ans = arr.filter((val)=> isPrime(val))
    return ans
 }
-console.log(isPrimeNum(arr9));
+console.log(isPrimeNum(arr9))
 
 function hello(number){
    const newNumber = new Set(number);
