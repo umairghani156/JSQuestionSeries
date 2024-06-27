@@ -734,3 +734,16 @@ function hello(number){
    console.log(newNumber);
 }
 hello([1, 2, 3, 4, 6,6,7,8])
+
+const arr10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arr11 = arr10.slice(0, 5);
+console.log(arr11);
+
+
+const dummyName = ["sara", "william","haroon"];
+
+function hello2(name){
+   const ans = name.map((val)=> val.toUpperCase())
+   return ans
+}
+console.log(hello2(dummyName));
