@@ -747,3 +747,28 @@ function hello2(name){
    return ans
 }
 console.log(hello2(dummyName));
+
+
+const scoreArr=[
+    {
+        id:1,
+        name: "Ahmed",
+        score: 67,
+    },
+    {
+        id:2,
+        name: "Umair",
+        score: 89,
+    },
+    {
+        id:3,
+        name: "Zakir",
+        score: 80,
+    }
+];
+
+function scoreHandler(score){
+   const ans = score.filter((val)=> val.score >= 80)
+   return ans
+}
+console.log(scoreHandler(scoreArr));
