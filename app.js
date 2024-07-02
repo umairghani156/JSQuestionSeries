@@ -781,3 +781,12 @@ function largestVal(arr){
    return ans
 }
 console.log(largestVal(arr12));
+
+
+const arr13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function largestVal(arr){
+   const ans = arr.reduce((acc, cur)=> acc < cur ? acc : cur)
+   return ans
+}
+console.log(largestVal(arr13));
