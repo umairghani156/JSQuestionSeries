@@ -790,3 +790,10 @@ function largestVal(arr){
    return ans
 }
 console.log(largestVal(arr13));
+function reverseastring(n){
+    let str =""
+   for(let i = n.length -1; i >= 0; i--){      str += n[i]    }
+     return str;
+}
+ console.log(reverseString("Yasir"));
+        
