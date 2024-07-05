@@ -784,8 +784,11 @@ console.log(largestVal(arr12));
 
 
 function ageName(){
-    "use strict";
+    // "use strict";
     agePerson = 24; // Uncaught ReferenceError: agePerson is not defined
     console.log(agePerson);
 };
-ageName()
+//ageName()
+
+const sum2 = eval('12*5 + 2');
+console.log(sum2);
