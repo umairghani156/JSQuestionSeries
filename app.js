@@ -781,3 +781,11 @@ function largestVal(arr){
    return ans
 }
 console.log(largestVal(arr12));
+
+
+function ageName(){
+    "use strict";
+    agePerson = 24; // Uncaught ReferenceError: agePerson is not defined
+    console.log(agePerson);
+};
+ageName()
