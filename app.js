@@ -781,3 +781,10 @@ function largestVal(arr){
    return ans
 }
 console.log(largestVal(arr12));
+
+ //fruit.name10 = "apple"; //Output fruit is not defined
+ const fruits = {
+
+ }
+ console.log(fruits.name10); //output is undefined
+ //console.log(fruit.name10);
