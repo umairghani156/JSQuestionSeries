@@ -792,3 +792,27 @@ function ageName(){
 
 const sum2 = eval('12*5 + 2');
 console.log(sum2);
+
+const obj = [
+    {
+        id: 1,
+        name: "Ahmed",
+        score: 67,
+    },
+    {
+        id: 2,
+        name: "Umair",
+        score: 89,
+    },
+    {
+        id: 3,
+        name: "Zakir",
+        score: 80,
+    }
+];
+
+function scoreHandler(score){
+   const ans = score.filter((val)=> val.score >= 80)
+   return ans
+}
+console.log(scoreHandler(obj));
