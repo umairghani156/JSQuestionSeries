@@ -826,3 +826,9 @@ function isPalindrome(w){
 }
 
 console.log(isPalindrome("racecar"));
+
+function isDuplicate(arr){
+    const ans = new Set(...arr);
+    return ans
+};
+console.log(isDuplicate[1,1,2,3,4,5,6,6, 19, 10, 25, 6]);
