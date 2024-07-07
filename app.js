@@ -816,3 +816,13 @@ function scoreHandler(score){
    return ans
 }
 console.log(scoreHandler(obj));
+
+
+//Whether the word is palindrome or not
+
+function isPalindrome(w){
+   const check = w.split("").reverse().join("");
+   return check === w
+}
+
+console.log(isPalindrome("racecar"));
