@@ -836,14 +836,24 @@ console.log(isDuplicate[1,1,2,3,4,5,6,6, 19, 10, 25, 6]);
 //Symbol- This datatype is a new primitive data type introduced in
 // JavaScript ES6. Symbols are immutable (they cannot be modified) and one-of-a-kind.
 
-const value1 = Symbol("World");
-const value2 = Symbol("World");
-console.log(value1 === value2);
+// const value1 = Symbol("World");
+// const value2 = Symbol("World");
+// console.log(value1 === value2);
 
-const uniqueKey = Symbol("uniqueKey");
+// const uniqueKey = Symbol("uniqueKey");
 
-const obj2 = {
-    [uniqueKey]: 1
+// const obj2 = {
+//     [uniqueKey]: 1
+// };
+// obj2[uniqueKey] = 2;
+// console.log(obj2[uniqueKey]);
+
+const oldKey = Symbol("oldKey");
+const newKey = Symbol("newKey");
+const obj3 = {
+    [oldKey]: 1
 };
-obj2[uniqueKey] = 2;
-console.log(obj2[uniqueKey]);
+obj3[newKey] = obj3[oldKey];
+delete obj3[oldKey];
+console.log(obj3[newKey]);
+console.log(obj3[oldKey]);
