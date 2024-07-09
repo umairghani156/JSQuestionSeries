@@ -888,4 +888,18 @@ console.log(obj3[oldKey]);
 //     })
 //     return c
 // }
-// console.log(fre([1,2,3,4,5,6,6,7,8,9, 10, 10]))
+// console.log(fre([1,2,3,4,5,6,6,7,8,9, 10, 10]));
+
+
+//1-Write a function that returns the reverse of a string?
+
+// function reverseString(n){
+//     let str =""
+//     for(let i = n.length -1; i >= 0; i--){
+//        str += n[i]
+//     }
+//     return str;
+// }
+
+// console.log(reverseString("Yasir"));
+
