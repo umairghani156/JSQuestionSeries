@@ -873,3 +873,19 @@ console.log(obj3[oldKey]);
 //    console.log(n);
 // }
 // hello2("hello world")
+
+
+// //Finding Frequent element in an array
+
+// function fre(arr){
+//     let c ={}
+//     arr.forEach((ele)=>{
+//        if(c.hasOwnProperty(ele)===false){
+//          c[ele] = 1
+//        }else{
+//         c[ele]++
+//        }
+//     })
+//     return c
+// }
+// console.log(fre([1,2,3,4,5,6,6,7,8,9, 10, 10]))
