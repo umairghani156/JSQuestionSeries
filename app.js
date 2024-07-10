@@ -903,3 +903,15 @@ console.log(obj3[oldKey]);
 
 // console.log(reverseString("Yasir"));
 
+//1-Write a function that returns the reverse of a string?
+
+// function reverseString(n){
+//     let str =""
+//     for(let i = n.length -1; i >= 0; i--){
+//        str += n[i]
+//     }
+//     return str;
+// }
+
+// console.log(reverseString("Yasir"));
+
