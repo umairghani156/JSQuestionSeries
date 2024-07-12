@@ -915,3 +915,8 @@ console.log(obj3[oldKey]);
 
 // console.log(reverseString("Yasir"));
 
+// if(true){
+//     console.log("Chl rha hn");
+// }else{
+//     console.log("Chl nhi rha hn");
+// }
