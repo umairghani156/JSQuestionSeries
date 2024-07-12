@@ -928,8 +928,21 @@ console.log(obj3[oldKey]);
 // }
 
 
-if(0){
-    console.log("Chl rha hn");
-}else{
-    console.log("Chl nhi rha hn");
-}
+// if(0){
+//     console.log("Chl rha hn");
+// }else{
+//     console.log("Chl nhi rha hn");
+// }
+
+const promiseName = new Promise((resolve, reject)=>{
+    if(true){
+        resolve("Yasir")
+    }else{
+        reject("Error")
+    }
+})
+promiseName.then((res)=>{
+    console.log(res);
+}).catch((err)=>{
+    console.log(err);
+})
