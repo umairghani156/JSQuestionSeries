@@ -920,3 +920,16 @@ console.log(obj3[oldKey]);
 // }else{
 //     console.log("Chl nhi rha hn");
 // }
+
+// if("0"){
+//     console.log("Chl rha hn");
+// }else{
+//     console.log("Chl nhi rha hn");
+// }
+
+
+if(0){
+    console.log("Chl rha hn");
+}else{
+    console.log("Chl nhi rha hn");
+}
