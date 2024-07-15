@@ -945,4 +945,18 @@ promiseName.then((res)=>{
     console.log(res);
 }).catch((err)=>{
     console.log(err);
-})
+});
+
+
+const hello4 = {
+    name: "Yasir",
+    age: 23,
+};
+function hello5(){
+    console.log(this.name, this.age);
+}
+
+hello5.call(hello4);
+
+ 
+
