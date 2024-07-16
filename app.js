@@ -958,5 +958,12 @@ function hello5(){
 
 hello5.call(hello4);
 
+function hello6(){
+    console.log(this.name, this.age);
+}
+
+const check = hello6.bind(hello4);
+console.log(check());
+
  
 
