@@ -965,5 +965,23 @@ function hello6(){
 const check = hello6.bind(hello4);
 console.log(check());
 
+
+const person = {
+    firstName: "Yasir",
+    lastName: "Ahmed",
+    fullName: function(){
+        console.log(this.firstName + " " + this.lastName);
+    }
+};
+
+const person2 = {
+    firstName: "Umair",
+    lastName: "Ahmed",
+};
+
+const printName = person.fullName.bind(person2);
+
+printName();
+
  
 
