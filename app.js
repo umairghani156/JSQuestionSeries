@@ -987,5 +987,9 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const ans2 = arr.filter((val)=> val % 2 === 0);
 console.log(ans);
 
+const name = "habib";
+
+const ans3 = name.split("").reverse().join("");
+
  
 
