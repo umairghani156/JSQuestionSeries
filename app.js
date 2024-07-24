@@ -991,79 +991,98 @@
 
 // const ans3 = name.split("").reverse().join("");
 
-document.addEventListener("DOMContentLoaded", function() {
-    const elementDev = document.createElement("div");
-    document.body.append(elementDev);
-    elementDev.setAttribute("id", "a");
-    elementDev.style.width = "100%";
-    elementDev.style.position = "relative";
-    elementDev.style.height = "100vh";
-    elementDev.style.backgroundColor = "white";
+//Random Coin Clickable Game
 
-    const idDev = document.getElementById("a");
-    let randomval = Math.floor(Math.random() * 6) + 1;
-    let clickCount = 0;
-    const coinCounts = {
-        rupee1: 0,
-        rupee2: 0,
-        rupee3: 0,
-        rupee4: 0,
-        rupee5: 0
-    };
+// document.addEventListener("DOMContentLoaded", function() {
+//     const elementDev = document.createElement("div");
+//     document.body.append(elementDev);
+//     elementDev.setAttribute("id", "a");
+//     elementDev.style.width = "100%";
+//     elementDev.style.position = "relative";
+//     elementDev.style.height = "100vh";
+//     elementDev.style.backgroundColor = "white";
 
-    idDev.addEventListener("click", (e) => {
-        if (clickCount < 20) {
-            const coinImage = document.createElement("img");
-            const elementDev2 = document.createElement("div");
+//     const idDev = document.getElementById("a");
+//     let randomval = Math.floor(Math.random() * 6) + 1;
+//     let clickCount = 0;
+//     const coinCounts = {
+//         rupee1: 0,
+//         rupee2: 0,
+//         rupee3: 0,
+//         rupee4: 0,
+//         rupee5: 0
+//     };
+
+//     idDev.addEventListener("click", (e) => {
+//         if (clickCount < 20) {
+//             const coinImage = document.createElement("img");
+//             const elementDev2 = document.createElement("div");
             
-            coinImage.src = `./images/rupee${randomval}.png`;
-            coinImage.style.width = "100%";
-            coinImage.style.height = "100%";
-            coinImage.style.objectFit = "cover";
+//             coinImage.src = `./images/rupee${randomval}.png`;
+//             coinImage.style.width = "100%";
+//             coinImage.style.height = "100%";
+//             coinImage.style.objectFit = "cover";
 
-            const xPosition = e.clientX - idDev.offsetLeft;
-            const yPosition = e.clientY - idDev.offsetTop;
+//             const xPosition = e.clientX - idDev.offsetLeft;
+//             const yPosition = e.clientY - idDev.offsetTop;
 
-            elementDev2.append(coinImage);
-            elementDev2.style.position = "absolute";
-            elementDev2.style.top = `${yPosition}px`;
-            elementDev2.style.left = `${xPosition}px`;
-            elementDev2.style.width = "50px";
-            elementDev2.style.height = "50px";
-            elementDev2.style.borderRadius = "50%";
-            elementDev2.style.overflow = "hidden"; 
+//             elementDev2.append(coinImage);
+//             elementDev2.style.position = "absolute";
+//             elementDev2.style.top = `${yPosition}px`;
+//             elementDev2.style.left = `${xPosition}px`;
+//             elementDev2.style.width = "50px";
+//             elementDev2.style.height = "50px";
+//             elementDev2.style.borderRadius = "50%";
+//             elementDev2.style.overflow = "hidden"; 
 
-            idDev.appendChild(elementDev2);
+//             idDev.appendChild(elementDev2);
 
-            const coinType = `rupee${randomval}`;
-            coinCounts[coinType]++;
+//             const coinType = `rupee${randomval}`;
+//             coinCounts[coinType]++;
 
             
-            randomval = Math.floor(Math.random() * 6) + 1;
+//             randomval = Math.floor(Math.random() * 6) + 1;
 
-            clickCount++;
-        } else {
+//             clickCount++;
+//         } else {
            
-            let maxCoin = "";
-            let maxCount = 0;
+//             let maxCoin = "";
+//             let maxCount = 0;
 
-            Object.keys(coinCounts).forEach(coinType => {
-                if (coinCounts[coinType] > maxCount) {
-                    maxCoin = coinType;
-                    maxCount = coinCounts[coinType];
-                }
-            });
-             if(maxCoin === "rupee1" || maxCoin === "rupee2" || maxCoin === "rupee3" || maxCoin === "rupee4" || maxCoin === "rupee5"){
-                const winningCoins = document.querySelectorAll(`img[src='./images/${maxCoin}.png']`);
-                winningCoins.forEach(coin => {
-                    coin.style.boxShadow = "0 0 10px green";
-                });
-             }
+//             Object.keys(coinCounts).forEach(coinType => {
+//                 if (coinCounts[coinType] > maxCount) {
+//                     maxCoin = coinType;
+//                     maxCount = coinCounts[coinType];
+//                 }
+//             });
+//              if(maxCoin === "rupee1" || maxCoin === "rupee2" || maxCoin === "rupee3" || maxCoin === "rupee4" || maxCoin === "rupee5"){
+//                 const winningCoins = document.querySelectorAll(`img[src='./images/${maxCoin}.png']`);
+//                 winningCoins.forEach(coin => {
+//                     coin.style.boxShadow = "0 0 10px green";
+//                 });
+//              }
 
-            alert(`Game Over! Winner is ${maxCoin} with ${maxCount} coins.`);
-        }
-    });
-});
+//             alert(`Game Over! Winner is ${maxCoin} with ${maxCount} coins.`);
+//         }
+//     });
+// });
 
  
 
+const devEle = document.createElement("div");
+const fetchData = ()=>{
+    fetch(" https://fakestoreapi.com/products")
+    .then((res)=> res.json())
+    .then((data)=> renderData(data))
+    .catch((err)=> console.log(err))
+}
+document.body.append(devEle);
+fetchData()
+function renderData(data){
+    console.log(data);
+    let output = "";
+    data?.forEach((val)=>{
+        output += `<h1>${val.title}</h1>`
+    })
+    devEle.innerHTML = output
+}
