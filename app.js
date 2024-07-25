@@ -1069,20 +1069,43 @@
 
  
 
-const devEle = document.createElement("div");
-const fetchData = ()=>{
-    fetch(" https://fakestoreapi.com/products")
-    .then((res)=> res.json())
-    .then((data)=> renderData(data))
-    .catch((err)=> console.log(err))
-}
-document.body.append(devEle);
-fetchData()
-function renderData(data){
-    console.log(data);
-    let output = "";
-    data?.forEach((val)=>{
-        output += `<h1>${val.title}</h1>`
-    })
-    devEle.innerHTML = output
-}
+// const devEle = document.createElement("div");
+// const fetchData = ()=>{
+//     fetch(" https://fakestoreapi.com/products")
+//     .then((res)=> res.json())
+//     .then((data)=> renderData(data))
+//     .catch((err)=> console.log(err))
+// }
+// document.body.append(devEle);
+// fetchData()
+// function renderData(data){
+//     console.log(data);
+//     let output = "";
+//     data?.forEach((val)=>{
+//         output += `<h1>${val.title}</h1>`
+//     })
+//     devEle.innerHTML = output
+// }
+
+
+let a = 10;
+let b = 20;
+let c = 30;
+let d = 40;
+let e = 50;
+
+let arr = [a, b, c, d, e];
+
+let arr2 = [a, b, c, d, e];
+
+let check = arr + arr2
+let val = check.split(",").map((value)=>{
+  if(value.length == 4){
+    console.log(value);
+    const check = value.split(value.charAt(1)).join("");
+    const check2 = value.split('').slice(2).join("");
+    return `${check} ${check2}`
+  }
+});
+console.log(val);
+console.log(typeof check);
