@@ -1109,3 +1109,5 @@ let val = check.split(",").map((value)=>{
 });
 console.log(val);
 console.log(typeof check);
+
+const arr = [1,2,3,4,5,6,7,8,9];
