@@ -1110,4 +1110,7 @@ let val = check.split(",").map((value)=>{
 console.log(val);
 console.log(typeof check);
 
-const arr = [1,2,3,4,5,6,7,8,9];
+const arr4 = [1,2,3,4,5,6,7,8,9];
+
+const fil = arr4.some((val)=> val === 5);
+console.log(fil);
