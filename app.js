@@ -1116,3 +1116,9 @@ const fil = arr4.some((val)=> val === 5);
 console.log(fil);
 const fil2 = arr4.includes(5);
 console.log(fil2);
+
+function check4(val){
+    return val === 5
+}
+const fil3 = arr4.every(check4);
+console.log(fil3);
