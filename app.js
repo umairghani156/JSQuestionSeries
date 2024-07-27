@@ -1114,3 +1114,5 @@ const arr4 = [1,2,3,4,5,6,7,8,9];
 
 const fil = arr4.some((val)=> val === 5);
 console.log(fil);
+const fil2 = arr4.includes(5);
+console.log(fil2);
