@@ -1122,3 +1122,13 @@ function check4(val){
 }
 const fil3 = arr4.every(check4);
 console.log(fil3);
+
+function reverseString(text){
+  let text2 = "";
+  const text3 = text.split("");
+  for(let i = text3.length -1; i >= 0; i--){
+    text2 += text3[i]
+  }
+  return text2
+}
+console.log(reverseString("Yasir"))
