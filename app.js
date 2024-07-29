@@ -1131,4 +1131,10 @@ function reverseString(text){
   }
   return text2
 }
-console.log(reverseString("Yasir"))
+console.log(reverseString("Yasir"));
+
+const x = [ 1, 2, 3];
+
+const y = x.map((val, i)=> val + i);
+
+console.log(y);
