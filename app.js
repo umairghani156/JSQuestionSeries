@@ -1155,3 +1155,42 @@ const promiseFunc = (success= true)=>{
 const promisePending =promiseFunc(false);
 console.log(promisePending);
 promisePending.then((data)=> console.log(data)).catch((err)=> console.log(err));
+
+//Dependency Injection (DI)
+
+class User{
+  constructor(name){
+    this.name = name
+  }
+  getName(){
+    return this.name
+  }
+}
+
+const user = new User("Umair");
+console.log(user.getName());
+
+//Another
+
+class dataBase{
+  connect(){
+    console.log("Connected");
+  }
+}
+
+class User2{
+  constructor(database){
+    this.dataBase = database
+  }
+  perfomTask(){
+    this.database.connect();
+    console.log("Performing Task");
+  }
+}
+
+const database = new dataBase();
+console.log(database);
+const user2 = new User2(database);
+user2.perfomTask();
+
+
