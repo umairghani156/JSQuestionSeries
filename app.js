@@ -1138,3 +1138,20 @@ const x = [ 1, 2, 3];
 const y = x.map((val, i)=> val + i);
 
 console.log(y);
+
+//Promises
+
+const promiseFunc = (success= true)=>{
+  return new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+      if(success){
+        resolve("Success")
+      }else{
+        reject("Failed")
+      }
+    }, 1000)
+  })
+}
+const promisePending =promiseFunc(false);
+console.log(promisePending);
+promisePending.then((data)=> console.log(data)).catch((err)=> console.log(err));
