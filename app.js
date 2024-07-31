@@ -1183,7 +1183,7 @@ class User2{
     this.dataBase = database
   }
   perfomTask(){
-    this.database.connect();
+    this.dataBase.connect();
     console.log("Performing Task");
   }
 }
@@ -1192,5 +1192,22 @@ const database = new dataBase();
 console.log(database);
 const user2 = new User2(database);
 user2.perfomTask();
+
+
+//Event Bubbling
+
+const itemLists = document.getElementById("itemLists");
+itemLists.addEventListener("click", (e)=>{
+//  if(e.target.tagName === "LI"){
+//     console.log(e.target.textContent);
+//  }
+ console.log(e.target);
+});
+const header = document.getElementById("header");
+header.addEventListener("click", (e)=>{
+  console.log(e.target);
+},{
+  capture: true
+});
 
 
