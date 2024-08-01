@@ -1230,3 +1230,16 @@ if(myArr === myArr2){
   console.log("Not Equal");
 }
 
+const obj1  = {
+  name: "Umair",
+  age: 20
+}
+const obj2 = {
+  name: "Umair",
+  age: 20
+}
+if(obj1 === obj2){
+  console.log("Equal");
+}else{
+  console.log("Not Equal");
+}
