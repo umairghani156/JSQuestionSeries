@@ -1222,3 +1222,11 @@ console.log(name2.giveUmairPizza());
 
 console.log("Umair".giveUmairPizza());
 
+const myArr = [1, 2, 3, 4];
+const myArr2 = [1, 2, 3, 4];
+if(myArr === myArr2){
+  console.log("Equal");
+}else{
+  console.log("Not Equal");
+}
+
