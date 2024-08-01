@@ -1246,10 +1246,28 @@ if(obj1 === obj2){
 
 //Function composition 
 
-const func1 = (x)=> x + 1;
-const func2 = (x)=> x * 2;
+// const func1 = (x)=> x + 1;
+// const func2 = (x)=> x * 2;
 
-const compose = (a) => a * a;
+// const compose = (a) => a * a;
 
-const add = compose(func1(func2(5)));
-console.log(add);
+// const add = compose(func1(func2(5)));
+// console.log(add);
+
+var compose = function(functions) {
+  const add = (y)=>{
+    return y * 2
+  }
+  const mul = (y)=>{
+    return y * y
+  }
+
+ 
+  return function(x) {
+    return mul(add(x)) + 1
+  }
+};
+
+
+const fn = compose([x => x + 1, x => 2 * x])
+console.log(fn(4))
