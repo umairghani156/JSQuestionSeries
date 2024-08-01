@@ -1242,4 +1242,14 @@ if(obj1 === obj2){
   console.log("Equal");
 }else{
   console.log("Not Equal");
-}
+};
+
+//Function composition 
+
+const func1 = (x)=> x + 1;
+const func2 = (x)=> x * 2;
+
+const compose = (a) => a * a;
+
+const add = compose(func1(func2(5)));
+console.log(add);
