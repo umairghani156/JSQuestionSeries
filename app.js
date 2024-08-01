@@ -1210,4 +1210,15 @@ header.addEventListener("click", (e)=>{
   capture: true
 });
 
+//Javascript
+
+String.prototype.giveUmairPizza = function(){
+  return "Give Umair Pizza already";
+}
+const name = "Umair";
+const name2 = "Ahmed"
+console.log(name.giveUmairPizza());
+console.log(name2.giveUmairPizza());
+
+console.log("Umair".giveUmairPizza());
 
