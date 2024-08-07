@@ -1088,161 +1088,161 @@
 // }
 
 
-let a = 10;
-let b = 20;
-let c = 30;
-let d = 40;
-let e = 50;
+// let a = 10;
+// let b = 20;
+// let c = 30;
+// let d = 40;
+// let e = 50;
 
-let arr = [a, b, c, d, e];
+// let arr = [a, b, c, d, e];
 
-let arr2 = [a, b, c, d, e];
+// let arr2 = [a, b, c, d, e];
 
-let check = arr + arr2
-let val = check.split(",").map((value)=>{
-  if(value.length == 4){
-    console.log(value);
-    const check = value.split(value.charAt(1)).join("");
-    const check2 = value.split('').slice(2).join("");
-    return `${check} ${check2}`
-  }
-});
-console.log(val);
-console.log(typeof check);
+// let check = arr + arr2
+// let val = check.split(",").map((value)=>{
+//   if(value.length == 4){
+//     console.log(value);
+//     const check = value.split(value.charAt(1)).join("");
+//     const check2 = value.split('').slice(2).join("");
+//     return `${check} ${check2}`
+//   }
+// });
+// console.log(val);
+// console.log(typeof check);
 
-const arr4 = [1,2,3,4,5,6,7,8,9];
+// const arr4 = [1,2,3,4,5,6,7,8,9];
 
-const fil = arr4.some((val)=> val === 5);
-console.log(fil);
-const fil2 = arr4.includes(5);
-console.log(fil2);
+// const fil = arr4.some((val)=> val === 5);
+// console.log(fil);
+// const fil2 = arr4.includes(5);
+// console.log(fil2);
 
-function check4(val){
-    return val === 5
-}
-const fil3 = arr4.every(check4);
-console.log(fil3);
+// function check4(val){
+//     return val === 5
+// }
+// const fil3 = arr4.every(check4);
+// console.log(fil3);
 
-function reverseString(text){
-  let text2 = "";
-  const text3 = text.split("");
-  for(let i = text3.length -1; i >= 0; i--){
-    text2 += text3[i]
-  }
-  return text2
-}
-console.log(reverseString("Yasir"));
+// function reverseString(text){
+//   let text2 = "";
+//   const text3 = text.split("");
+//   for(let i = text3.length -1; i >= 0; i--){
+//     text2 += text3[i]
+//   }
+//   return text2
+// }
+// console.log(reverseString("Yasir"));
 
-const x = [ 1, 2, 3];
+// const x = [ 1, 2, 3];
 
-const y = x.map((val, i)=> val + i);
+// const y = x.map((val, i)=> val + i);
 
-console.log(y);
+// console.log(y);
 
-//Promises
+// //Promises
 
-const promiseFunc = (success= true)=>{
-  return new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-      if(success){
-        resolve("Success")
-      }else{
-        reject("Failed")
-      }
-    }, 1000)
-  })
-}
-const promisePending =promiseFunc(false);
-console.log(promisePending);
-promisePending.then((data)=> console.log(data)).catch((err)=> console.log(err));
+// const promiseFunc = (success= true)=>{
+//   return new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//       if(success){
+//         resolve("Success")
+//       }else{
+//         reject("Failed")
+//       }
+//     }, 1000)
+//   })
+// }
+// const promisePending =promiseFunc(false);
+// console.log(promisePending);
+// promisePending.then((data)=> console.log(data)).catch((err)=> console.log(err));
 
-//Dependency Injection (DI)
+// //Dependency Injection (DI)
 
-class User{
-  constructor(name){
-    this.name = name
-  }
-  getName(){
-    return this.name
-  }
-}
+// class User{
+//   constructor(name){
+//     this.name = name
+//   }
+//   getName(){
+//     return this.name
+//   }
+// }
 
-const user = new User("Umair");
-console.log(user.getName());
+// const user = new User("Umair");
+// console.log(user.getName());
 
-//Another
+// //Another
 
-class dataBase{
-  connect(){
-    console.log("Connected");
-  }
-}
+// class dataBase{
+//   connect(){
+//     console.log("Connected");
+//   }
+// }
 
-class User2{
-  constructor(database){
-    this.dataBase = database
-  }
-  perfomTask(){
-    this.dataBase.connect();
-    console.log("Performing Task");
-  }
-}
+// class User2{
+//   constructor(database){
+//     this.dataBase = database
+//   }
+//   perfomTask(){
+//     this.dataBase.connect();
+//     console.log("Performing Task");
+//   }
+// }
 
-const database = new dataBase();
-console.log(database);
-const user2 = new User2(database);
-user2.perfomTask();
+// const database = new dataBase();
+// console.log(database);
+// const user2 = new User2(database);
+// user2.perfomTask();
 
 
-//Event Bubbling
+// //Event Bubbling
 
-const itemLists = document.getElementById("itemLists");
-itemLists.addEventListener("click", (e)=>{
-//  if(e.target.tagName === "LI"){
-//     console.log(e.target.textContent);
-//  }
- console.log(e.target);
-});
-const header = document.getElementById("header");
-header.addEventListener("click", (e)=>{
-  console.log(e.target);
-},{
-  capture: true
-});
+// const itemLists = document.getElementById("itemLists");
+// itemLists.addEventListener("click", (e)=>{
+// //  if(e.target.tagName === "LI"){
+// //     console.log(e.target.textContent);
+// //  }
+//  console.log(e.target);
+// });
+// const header = document.getElementById("header");
+// header.addEventListener("click", (e)=>{
+//   console.log(e.target);
+// },{
+//   capture: true
+// });
 
-//Javascript
+// //Javascript
 
-String.prototype.giveUmairPizza = function(){
-  return "Give Umair Pizza already";
-}
-const name = "Umair";
-const name2 = "Ahmed"
-console.log(name.giveUmairPizza());
-console.log(name2.giveUmairPizza());
+// String.prototype.giveUmairPizza = function(){
+//   return "Give Umair Pizza already";
+// }
+// const name = "Umair";
+// const name2 = "Ahmed"
+// console.log(name.giveUmairPizza());
+// console.log(name2.giveUmairPizza());
 
-console.log("Umair".giveUmairPizza());
+// console.log("Umair".giveUmairPizza());
 
-const myArr = [1, 2, 3, 4];
-const myArr2 = [1, 2, 3, 4];
-if(myArr === myArr2){
-  console.log("Equal");
-}else{
-  console.log("Not Equal");
-}
+// const myArr = [1, 2, 3, 4];
+// const myArr2 = [1, 2, 3, 4];
+// if(myArr === myArr2){
+//   console.log("Equal");
+// }else{
+//   console.log("Not Equal");
+// }
 
-const obj1  = {
-  name: "Umair",
-  age: 20
-}
-const obj2 = {
-  name: "Umair",
-  age: 20
-}
-if(obj1 === obj2){
-  console.log("Equal");
-}else{
-  console.log("Not Equal");
-};
+// const obj1  = {
+//   name: "Umair",
+//   age: 20
+// }
+// const obj2 = {
+//   name: "Umair",
+//   age: 20
+// }
+// if(obj1 === obj2){
+//   console.log("Equal");
+// }else{
+//   console.log("Not Equal");
+// };
 
 //Function composition 
 
@@ -1254,20 +1254,124 @@ if(obj1 === obj2){
 // const add = compose(func1(func2(5)));
 // console.log(add);
 
-var compose = function(functions) {
-  const add = (y)=>{
-    return y * 2
-  }
-  const mul = (y)=>{
-    return y * y
-  }
+// var compose = function(functions) {
+//   const add = (y)=>{
+//     return y * 2
+//   }
+//   const mul = (y)=>{
+//     return y * y
+//   }
 
  
-  return function(x) {
-    return mul(add(x)) + 1
+//   return function(x) {
+//     return mul(add(x)) + 1
+//   }
+// };
+
+
+// const fn = compose([x => x + 1, x => 2 * x])
+// console.log(fn(4))
+
+//var a = 20;
+
+// function testMode(){
+//  var a = 20;
+//   console.log(a);
+// }
+
+// testMode();
+// console.log(a);
+// let x;
+// console.log(x);
+// console.log(x === null);
+
+// function createCounter(){
+//   let count = 0;
+//  return function(){
+//    count++;
+//    return count
+//  }
+// }
+// const counter = createCounter();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// let a = 10;
+// function test(){
+//    b = 30;
+//   console.log(a);
+// }
+// test();
+// console.log(b);
+
+// var obj={
+//   val:"Umair",
+//   greet: function(){
+//     console.log(this.val);
+//     return this.value
+//   }
+// }
+// const val = obj.greet;
+// console.log(val(obj));
+// console.log(obj.greet());
+
+function privateCounter(){
+  let count = 0;
+  return {
+    increment: function(){
+      return count += 1
+    },
+    decrement: function(){
+      return count -= 1
+    },
+    getCount: function(){
+      return count
+    }
   }
-};
+
+}
+const privateCounter2 = privateCounter();
+console.log(privateCounter2.increment());
+console.log(privateCounter().increment());
+console.log(privateCounter().decrement());
+console.log(privateCounter().getCount());
+
+//High Order Function
+
+function val(a){
+  return function(b){
+    return a * b
+  }
+}
+const c = val(5);
+console.log(c(5));
+
+const symbols = Symbol("Umair");
+
+const obj = {
+  [symbols]: "Umair",
+  name: "Umair",
+  age: 20
+}
+console.log(obj[symbols]);
+console.log(Object.keys(obj));
+console.log(Object.values(obj));
+console.log(Object.entries(obj));
+
+const obj2 = {
+  name: "Umair",
+  age: 20,
+  class: 10
+}
+console.log(Object.assign(obj, obj2));
+console.log(Object.entries(obj2));
+console.log(Object.assign({}, obj2, obj));
 
 
-const fn = compose([x => x + 1, x => 2 * x])
-console.log(fn(4))
+
+
+
+
+
