@@ -1340,34 +1340,64 @@ console.log(privateCounter().getCount());
 
 //High Order Function
 
-function val(a){
-  return function(b){
-    return a * b
-  }
-}
-const c = val(5);
-console.log(c(5));
+// function val(a){
+//   return function(b){
+//     return a * b
+//   }
+// }
+// const c = val(5);
+// console.log(c(5));
 
-const symbols = Symbol("Umair");
+// const symbols = Symbol("Umair");
 
-const obj = {
-  [symbols]: "Umair",
-  name: "Umair",
-  age: 20
-}
-console.log(obj[symbols]);
-console.log(Object.keys(obj));
-console.log(Object.values(obj));
-console.log(Object.entries(obj));
+// const obj = {
+//   [symbols]: "Umair",
+//   name: "Umair",
+//   age: 20
+// }
+// console.log(obj[symbols]);
+// console.log(Object.keys(obj));
+// console.log(Object.values(obj));
+// console.log(Object.entries(obj));
 
-const obj2 = {
-  name: "Umair",
-  age: 20,
-  class: 10
-}
-console.log(Object.assign(obj, obj2));
-console.log(Object.entries(obj2));
-console.log(Object.assign({}, obj2, obj));
+// const obj2 = {
+//   name: "Umair",
+//   age: 20,
+//   class: 10
+// }
+// console.log(Object.assign(obj, obj2));
+// console.log(Object.entries(obj2));
+// console.log(Object.assign({}, obj2, obj));
+// console.log("1"-+"1");
+
+// console.log(String("Hello") === "Hello");
+
+// const arr = new Array(5).toString();
+// console.log(arr);
+
+// var foo = function foo(){
+  
+//   console.log(foo === foo);
+// }
+
+// foo();
+
+// function aa(){
+//   return{
+//     a: 1
+//   }
+// }
+
+// console.log(typeof aa());
+
+// var myArr = ["Umair", "Ahmed"];
+// myArr[1]
+// console.log(`1` in myArr);
+
+function foo
+
+
+
 
 
 
