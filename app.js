@@ -1317,26 +1317,26 @@
 // console.log(val(obj));
 // console.log(obj.greet());
 
-function privateCounter(){
-  let count = 0;
-  return {
-    increment: function(){
-      return count += 1
-    },
-    decrement: function(){
-      return count -= 1
-    },
-    getCount: function(){
-      return count
-    }
-  }
+// function privateCounter(){
+//   let count = 0;
+//   return {
+//     increment: function(){
+//       return count += 1
+//     },
+//     decrement: function(){
+//       return count -= 1
+//     },
+//     getCount: function(){
+//       return count
+//     }
+//   }
 
-}
-const privateCounter2 = privateCounter();
-console.log(privateCounter2.increment());
-console.log(privateCounter().increment());
-console.log(privateCounter().decrement());
-console.log(privateCounter().getCount());
+// }
+// const privateCounter2 = privateCounter();
+// console.log(privateCounter2.increment());
+// console.log(privateCounter().increment());
+// console.log(privateCounter().decrement());
+// console.log(privateCounter().getCount());
 
 //High Order Function
 
@@ -1394,7 +1394,92 @@ console.log(privateCounter().getCount());
 // myArr[1]
 // console.log(`1` in myArr);
 
-function foo
+// function foo(a,b){
+//   arguments[1] = 10;
+//   console.log(arguments);
+//   console.log(b);
+  
+// }
+
+// foo(1);
+
+// var a = 1;
+// let b = 2;
+// const c = 3;
+
+// {
+//   var a = 10;
+//   let b = 5;
+//   const c = 6;
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+// for(var i = 0; i <= 3; i++){
+//   setTimeout(function(){
+//     console.log(i);
+//   },1000)
+// }
+
+// const input = document.getElementById("input-text");
+
+// function debounce(funcCall, timing){
+//   let timerId;
+// return (...args)=>{
+//  timerId = setTimeout(()=> funcCall(...args), timing)
+//   clearTimeout(timerId)
+// }
+// }
+
+// const apiCall = (e)=>{
+//   console.log(e.target.value);
+  
+// }
+
+// const data = debounce(apiCall, 100)
+
+
+
+// input.addEventListener("change", apiCall)
+
+// function func2(num1, num2){
+//   return num1 + num2
+// }
+
+// function callBackFunc(n,cb){
+//     return cb(2,20) * n
+// }
+
+// const name2 = callBackFunc(20, func2);
+// // console.log(20 * 22);
+// console.log(name2);
+
+
+// function closureFunc(){
+//   const  n= 20;
+
+//   return function(n2){
+//     return n2 * n
+//   }
+
+// };
+
+// const clf = closureFunc();
+// console.log(clf(10));
+
+
+
+
+
+
+
+
+
+
 
 
 
