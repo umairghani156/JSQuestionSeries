@@ -1471,6 +1471,15 @@
 // const clf = closureFunc();
 // console.log(clf(10));
 
+function hello(n){
+  return n * 3;
+}
+
+function hello2(num){
+  return hello(num) + 12
+}
+console.log(hello2(10)); //output 42
+ 
 
 
 
