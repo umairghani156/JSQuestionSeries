@@ -1521,9 +1521,23 @@ function toggleEventColor(){
   selectedElement.forEach((element)=>{
     if(element.textContent % 2 !== 0){
       element.style.color = "red"
+    const btn =  document.getElementById("btn");
+    btn.setAttribute("onclick","toggleEventColor2()")
     }
   })
   
+}
+
+function toggleEventColor2(){
+  const selectedElement = document.querySelectorAll("#numbers span");
+  console.log(selectedElement);
+  selectedElement.forEach((element)=>{
+    if(element.textContent % 2 !== 0){
+      element.style.color = "black"
+    const btn =  document.getElementById("btn");
+    btn.setAttribute("onclick","toggleEventColor()")
+    }
+  })
 }
  
 
