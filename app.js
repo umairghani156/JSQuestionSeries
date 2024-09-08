@@ -1471,14 +1471,48 @@
 // const clf = closureFunc();
 // console.log(clf(10));
 
-function hello(n){
-  return n * 3;
+// function hello(n){
+//   return n * 3;
+// }
+
+// function hello2(num){
+//   return hello(num) + 12
+// }
+// console.log(hello2(10)); //output 42
+
+// //var x = 200
+// function doSomething(){
+//   "use strict"
+//   x = 100;
+//   console.log(x);
+//   var x
+  
+// };
+// doSomething()
+// console.log(x);
+
+// function formatDate(userDate) {
+ 
+  
+  
+//   }
+  
+//   console.log(formatDate("12/31/2014"));
+
+
+function calculateFinalSpeed(initialSpeed, inclinations) {
+  // Your code goes here
+  const f = inclinations.reduce((acc, cur) => {
+   if(cur === 0){
+    return acc
+   }
+    return acc + cur
+  }, 0)
+  
+  return initialSpeed - f
 }
 
-function hello2(num){
-  return hello(num) + 12
-}
-console.log(hello2(10)); //output 42
+console.log(calculateFinalSpeed(60, [0, 30, 0, -45, 0]));
  
 
 
