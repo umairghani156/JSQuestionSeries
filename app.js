@@ -1513,6 +1513,18 @@ function calculateFinalSpeed(initialSpeed, inclinations) {
 }
 
 console.log(calculateFinalSpeed(60, [0, 30, 0, -45, 0]));
+
+function toggleEventColor(){
+  const selectedElement = document.querySelectorAll("#numbers span");
+  console.log(selectedElement);
+
+  selectedElement.forEach((element)=>{
+    if(element.textContent % 2 !== 0){
+      element.style.color = "red"
+    }
+  })
+  
+}
  
 
 
