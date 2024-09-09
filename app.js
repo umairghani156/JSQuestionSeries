@@ -1500,45 +1500,49 @@
 //   console.log(formatDate("12/31/2014"));
 
 
-function calculateFinalSpeed(initialSpeed, inclinations) {
-  // Your code goes here
-  const f = inclinations.reduce((acc, cur) => {
-   if(cur === 0){
-    return acc
-   }
-    return acc + cur
-  }, 0)
+// function calculateFinalSpeed(initialSpeed, inclinations) {
+//   // Your code goes here
+//   const f = inclinations.reduce((acc, cur) => {
+//    if(cur === 0){
+//     return acc
+//    }
+//     return acc + cur
+//   }, 0)
   
-  return initialSpeed - f
-}
+//   return initialSpeed - f
+// }
 
-console.log(calculateFinalSpeed(60, [0, 30, 0, -45, 0]));
+// console.log(calculateFinalSpeed(60, [0, 30, 0, -45, 0]));
 
-function toggleEventColor(){
-  const selectedElement = document.querySelectorAll("#numbers span");
-  console.log(selectedElement);
+// function toggleEventColor(){
+//   const selectedElement = document.querySelectorAll("#numbers span");
+//   console.log(selectedElement);
 
-  selectedElement.forEach((element)=>{
-    if(element.textContent % 2 !== 0){
-      element.style.color = "red"
-    const btn =  document.getElementById("btn");
-    btn.setAttribute("onclick","toggleEventColor2()")
-    }
-  })
+//   selectedElement.forEach((element)=>{
+//     if(element.textContent % 2 !== 0){
+//       element.style.color = "red"
+//     const btn =  document.getElementById("btn");
+//     btn.setAttribute("onclick","toggleEventColor2()")
+//     }
+//   })
   
-}
+// }
 
-function toggleEventColor2(){
-  const selectedElement = document.querySelectorAll("#numbers span");
-  console.log(selectedElement);
-  selectedElement.forEach((element)=>{
-    if(element.textContent % 2 !== 0){
-      element.style.color = "black"
-    const btn =  document.getElementById("btn");
-    btn.setAttribute("onclick","toggleEventColor()")
-    }
-  })
-}
+// function toggleEventColor2(){
+//   const selectedElement = document.querySelectorAll("#numbers span");
+//   console.log(selectedElement);
+//   selectedElement.forEach((element)=>{
+//     if(element.textContent % 2 !== 0){
+//       element.style.color = "black"
+//     const btn =  document.getElementById("btn");
+//     btn.setAttribute("onclick","toggleEventColor()")
+//     }
+//   })
+// }
+
+const date = new Date().toLocaleDateString();
+console.log(date);
+
  
 
 
