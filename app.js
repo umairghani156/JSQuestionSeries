@@ -1551,29 +1551,60 @@
 // console.log(sortedArray([ 1, 10, 6, 7, 9]))
 
 
+// function sortedArray(arr){
+//    let num = Math.min(...arr);
+
+   
+
+//   for (let i = 0; i < arr.length; i++) {
+//         let minIndex = i;
+//         for(let j = i + 1; j < arr.length; j++){
+//             if(arr[j] < arr[minIndex]){
+//                 minIndex = j
+//             }
+//             [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+//         }
+//   }
+//   console.log(arr);
+  
+
+  
+  
+  
+   
+   
+  
+// }
+// console.log(sortedArray([ 1, 10, 6, 7, 9]))
+
 function sortedArray(arr){
-   let num = Math.min(...arr);
-
-   
-
-  for (let i = 0; i < arr.length; i++) {
-        let minIndex = i;
-        for(let j = i + 1; j < arr.length; j++){
-            if(arr[j] < arr[minIndex]){
-                minIndex = j
-            }
-            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
-        }
-  }
-  console.log(arr);
-  
+  let num = Math.min(...arr);
 
   
+
+ for (let i = 0; i < arr.length; i++) {
+       let minIndex = i;
+       for(let j = i + 1; j < arr.length; j++){
+          //console.log("min",minIndex);
+         // console.log("j",arr[j]);
+           if(arr[j] < arr[minIndex]){
+               minIndex = j
+           }
+           [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+
+          
+          
+       }
+ }
+ console.log(arr);
+ 
+
+ 
+ 
+ 
   
   
-   
-   
-  
+ 
 }
 console.log(sortedArray([ 1, 10, 6, 7, 9]))
 
