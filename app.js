@@ -1540,13 +1540,37 @@
 //   })
 // }
 
-const date = new Date().toLocaleDateString();
-console.log(date);
+// const date = new Date().toLocaleDateString();
+// console.log(date);
+
+
+// function sortedArray(arr){
+//    return arr.sort((a,b)=> a - b)
+   
+// }
+// console.log(sortedArray([ 1, 10, 6, 7, 9]))
 
 
 function sortedArray(arr){
-   return arr.sort((a,b)=> a - b)
+   let num = Math.min(...arr);
+  // console.log(num);
+   let arr2 = ""
+
    
+
+  for (let i = 0; i < arr.length; i++) {
+     console.log(i);
+     if(arr[i] > num){
+        num = arr[i]
+        arr2 += arr[i]
+     }
+    
+  }
+  console.log(arr2);
+  
+   
+   
+  
 }
 console.log(sortedArray([ 1, 10, 6, 7, 9]))
 
