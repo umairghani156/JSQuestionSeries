@@ -1543,6 +1543,13 @@
 const date = new Date().toLocaleDateString();
 console.log(date);
 
+
+function sortedArray(arr){
+   return arr.sort((a,b)=> a - b)
+   
+}
+console.log(sortedArray([ 1, 10, 6, 7, 9]))
+
  
 
 
