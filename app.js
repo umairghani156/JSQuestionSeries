@@ -1634,17 +1634,39 @@
 // console.log(arrayAreEqual([],[]));
 
 
-function sumOfDigits(num){
-  let cvrtArr = num.toString().split("")
-  return cvrtArr.reduce((acc, cur)=> acc + Number(cur), 0)
-}
+// function sumOfDigits(num){
+//   let cvrtArr = num.toString().split("")
+//   return cvrtArr.reduce((acc, cur)=> acc + Number(cur), 0)
+// }
 
-console.log(sumOfDigits(123456));
-
-
+// console.log(sumOfDigits(123456));
 
 
 
+// function removeDuplicates(arr){
+//    for (let i = 0; i < arr.length; i++) {
+//       if(arr[i] === 7 || arr[i] === 8){
+//         arr.splice(i, 1)
+//       }
+//    }
+//    return arr
+// }
+
+// console.log(removeDuplicates([5, 6, 7, 7,7, 8, 8, 9, 7, 7, 7]));
+// function removeDuplicates(arr){
+// let count = 0;
+// do{
+//   console.log(arr[count]);
+//   if(arr[count] === 7 || arr[count] === 8){
+//     arr.splice(count, 1)
+//   }
+  
+//    count++
+  
+// }while(count < arr.length)
+//   return arr
+// }
+// console.log(removeDuplicates([5, 6, 7, 7,7, 8, 8, 9, 7, 7, 7]));
  
 
 
