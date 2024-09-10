@@ -1701,16 +1701,36 @@
 // }
 // console.log(sumOfsquares([1, 2, 3]));
 
-function findMinVal(arr){
-  if(arr.length === 0){
-    return 'Should not be empty'
-  }
-  const sortedval = arr.sort((a, b)=> a - b);
-  return sortedval[0]
+// function findMinVal(arr){
+//   if(arr.length === 0){
+//     return 'Should not be empty'
+//   }
+//   const sortedval = arr.sort((a, b)=> a - b);
+//   return sortedval[0]
+  
+// }
+// console.log(findMinVal([1, -7, 8, -2]));
+// console.log(findMinVal([]));
+
+
+function toCamelCase(str){
+  const h= str.split(" ")
+  const h2 = h.map((val, index)=>{
+      console.log(val,index);
+      if(index > 0){
+        return val.slice(0,1).toUpperCase() + val.slice(1).toLowerCase();
+      }else{
+        return val
+      }
+      
+  })
+  return h2.join("")
+  console.log(h2);
   
 }
-console.log(findMinVal([1, -7, 8, -2]));
-console.log(findMinVal([]));
+
+console.log(toCamelCase("hello world kah hhh ty "));
+
 
 
 
