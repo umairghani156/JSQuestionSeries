@@ -1716,7 +1716,6 @@
 function toCamelCase(str){
   const h= str.split(" ")
   const h2 = h.map((val, index)=>{
-      console.log(val,index);
       if(index > 0){
         return val.slice(0,1).toUpperCase() + val.slice(1).toLowerCase();
       }else{
@@ -1725,11 +1724,15 @@ function toCamelCase(str){
       
   })
   return h2.join("")
-  console.log(h2);
   
 }
 
 console.log(toCamelCase("hello world kah hhh ty "));
+
+function toSnakeCase(str){
+    return str.split(" ").join("_")
+}
+console.log(toSnakeCase("hello habib"));
 
 
 
