@@ -1682,18 +1682,24 @@
  
 // console.log(removeDuplicates([5, 6, 7, 7,7, 8, 8, 9, 7, 7, 7]));
 
-function isPowerOfTwo(num){
-  let op = false;
-   for(let i = 0; i <= num; i++){
-    if(2 ** i === num){
-       op = true
-    }
-   }
-   return op;
+// function isPowerOfTwo(num){
+//   let op = false;
+//    for(let i = 0; i <= num; i++){
+//     if(2 ** i === num){
+//        op = true
+//     }
+//    }
+//    return op;
+// }
+// console.log(isPowerOfTwo(8));
+// console.log(isPowerOfTwo(7));
+// console.log(isPowerOfTwo(16));
+
+function sumOfsquares(arr){
+   return arr.map((val)=> val * val).reduce((acc, cur)=> acc + cur, 0)
 }
-console.log(isPowerOfTwo(8));
-console.log(isPowerOfTwo(7));
-console.log(isPowerOfTwo(16));
+console.log(sumOfsquares([1, 2, 3]));
+
 
 
 
