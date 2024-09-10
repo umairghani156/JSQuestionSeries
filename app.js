@@ -1695,11 +1695,24 @@
 // console.log(isPowerOfTwo(7));
 // console.log(isPowerOfTwo(16));
 
-function sumOfsquares(arr){
-   //return arr.map((val)=> val * val).reduce((acc, cur)=> acc + cur, 0)
-   return arr.reduce((acc, cur)=> (acc + cur * cur),0)
+// function sumOfsquares(arr){
+//    //return arr.map((val)=> val * val).reduce((acc, cur)=> acc + cur, 0)
+//    return arr.reduce((acc, cur)=> (acc + cur * cur),0)
+// }
+// console.log(sumOfsquares([1, 2, 3]));
+
+function findMinVal(arr){
+  if(arr.length === 0){
+    return 'Should not be empty'
+  }
+  const sortedval = arr.sort((a, b)=> a - b);
+  return sortedval[0]
+  
 }
-console.log(sumOfsquares([1, 2, 3]));
+console.log(findMinVal([1, -7, 8, -2]));
+console.log(findMinVal([]));
+
+
 
 
 
