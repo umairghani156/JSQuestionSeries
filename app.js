@@ -1608,15 +1608,25 @@
 // }
 // console.log(sortedArray([ 1, 10, 6, 7, 9]))
 
-const calculateAverage = (numbers)=>{
-   const totalNumbers = numbers.reduce((acc, cur)=>{
-    return (acc + cur)
-   }, 0)
+// const calculateAverage = (numbers)=>{
+//    const totalNumbers = numbers.reduce((acc, cur)=>{
+//     return (acc + cur)
+//    }, 0)
 
-   return totalNumbers / numbers.length
+//    return totalNumbers / numbers.length
+// }
+// console.log(calculateAverage([8, 6, 7, 4, 3]));
+// console.log(calculateAverage([5, 10, 2, 8]));
+
+
+function arrayAreEqual(arr1, arr2){
+  return arr1 === arr2
 }
-console.log(calculateAverage([8, 6, 7, 4, 3]));
-console.log(calculateAverage([5, 10, 2, 8]));
+
+console.log(arrayAreEqual([1, 2],[1, 2]));
+console.log(arrayAreEqual([],[]));
+
+
 
 
 
