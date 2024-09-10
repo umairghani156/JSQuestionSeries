@@ -1696,7 +1696,8 @@
 // console.log(isPowerOfTwo(16));
 
 function sumOfsquares(arr){
-   return arr.map((val)=> val * val).reduce((acc, cur)=> acc + cur, 0)
+   //return arr.map((val)=> val * val).reduce((acc, cur)=> acc + cur, 0)
+   return arr.reduce((acc, cur)=> (acc + cur * cur),0)
 }
 console.log(sumOfsquares([1, 2, 3]));
 
