@@ -1774,6 +1774,18 @@ function reverseString(str){
 }
 console.log(reverseString("govena"));
 
+function calculateMean(arr){
+   const val = arr.reduce((acc, cur)=> acc + cur, 0);
+
+   return val / arr.length
+}
+
+console.log(calculateMean([1, 2, 3, 4, 5]));
+console.log(calculateMean([10, 20, 30]));
+console.log(calculateMean([-1, 0, 1]));
+
+
+
 
 
 
