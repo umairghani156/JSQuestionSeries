@@ -1619,19 +1619,27 @@
 // console.log(calculateAverage([5, 10, 2, 8]));
 
 
-function arrayAreEqual(arr1, arr2){
- if(arr1.length !== arr2.length)
- {
-   return false
- }
+// function arrayAreEqual(arr1, arr2){
+//  if(arr1.length !== arr2.length)
+//  {
+//    return false
+//  }
 
- return arr1.every((cur, index)=> cur === arr2[index])
+//  return arr1.every((cur, index)=> cur === arr2[index])
+// }
+
+// console.log(arrayAreEqual([1, 2],[1, 2]));
+// console.log(arrayAreEqual([1, 2],[1, 2, 3]));
+
+// console.log(arrayAreEqual([],[]));
+
+
+function sumOfDigits(num){
+  let cvrtArr = num.toString().split("")
+  return cvrtArr.reduce((acc, cur)=> acc + Number(cur), 0)
 }
 
-console.log(arrayAreEqual([1, 2],[1, 2]));
-console.log(arrayAreEqual([1, 2],[1, 2, 3]));
-
-console.log(arrayAreEqual([],[]));
+console.log(sumOfDigits(123456));
 
 
 
