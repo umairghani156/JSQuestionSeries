@@ -1730,9 +1730,23 @@ function toCamelCase(str){
 console.log(toCamelCase("hello world kah hhh ty "));
 
 function toSnakeCase(str){
-    return str.split(" ").join("_")
+    return str.trim().split(" ").join("_")
 }
 console.log(toSnakeCase("hello habib"));
+
+
+function checkUpperCase(str){
+  // if(str === str.toUpperCase()){
+  //   return true
+  // }else{
+  //   return false
+  // }
+  
+}
+
+console.log(checkUpperCase("s"));
+console.log(checkUpperCase("T"));
+
 
 
 
