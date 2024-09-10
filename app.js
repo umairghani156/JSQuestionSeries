@@ -1713,43 +1713,51 @@
 // console.log(findMinVal([]));
 
 
-function toCamelCase(str){
-  const h= str.split(" ")
-  const h2 = h.map((val, index)=>{
-      if(index > 0){
-        return val.slice(0,1).toUpperCase() + val.slice(1).toLowerCase();
-      }else{
-        return val
-      }
+// function toCamelCase(str){
+//   const h= str.split(" ")
+//   const h2 = h.map((val, index)=>{
+//       if(index > 0){
+//         return val.slice(0,1).toUpperCase() + val.slice(1).toLowerCase();
+//       }else{
+//         return val
+//       }
       
-  })
-  return h2.join("")
+//   })
+//   return h2.join("")
   
+// }
+
+// console.log(toCamelCase("hello world kah hhh ty "));
+
+// function toSnakeCase(str){
+//     return str.trim().split(" ").join("_")
+// }
+// console.log(toSnakeCase("hello habib"));
+
+
+// function checkUpperCase(str){
+//   // if(str === str.toUpperCase()){
+//   //   return true
+//   // }else{
+//   //   return false
+//   // }
+//    if(str.charCodeAt(0) >= 65 && str.charCodeAt(0) <= 90){
+//     return true
+//    }else{
+//     return false
+//    }
+// }
+
+// console.log(checkUpperCase("s"));
+// console.log(checkUpperCase("T"));
+
+function startWith(str1, str2){
+  const val = str1.trim().split(" ");
+  // return val.includes(str2)
+  return val[0].slice(0,1).toUpperCase() + val[0].slice(1).toLowerCase() == str2.charAt(0).toUpperCase() + str2.slice(1).toLowerCase()
 }
+console.log(startWith("Hello world", "hello"));
 
-console.log(toCamelCase("hello world kah hhh ty "));
-
-function toSnakeCase(str){
-    return str.trim().split(" ").join("_")
-}
-console.log(toSnakeCase("hello habib"));
-
-
-function checkUpperCase(str){
-  // if(str === str.toUpperCase()){
-  //   return true
-  // }else{
-  //   return false
-  // }
-   if(str.charCodeAt(0) >= 65 && str.charCodeAt(0) <= 90){
-    return true
-   }else{
-    return false
-   }
-}
-
-console.log(checkUpperCase("s"));
-console.log(checkUpperCase("T"));
 
 
 
