@@ -1751,13 +1751,28 @@
 // console.log(checkUpperCase("s"));
 // console.log(checkUpperCase("T"));
 
-function startWith(str1, str2){
-  const val = str1.trim().split(" ");
-  // return val.includes(str2)
-  return val[0].slice(0,1).toUpperCase() + val[0].slice(1).toLowerCase() == str2.charAt(0).toUpperCase() + str2.slice(1).toLowerCase()
-}
-console.log(startWith("Hello world", "hello"));
+// function startWith(str1, str2){
+//   const val = str1.trim().split(" ");
+//   // return val.includes(str2)
+//   return val[0].slice(0,1).toUpperCase() + val[0].slice(1).toLowerCase() == str2.charAt(0).toUpperCase() + str2.slice(1).toLowerCase()
+// }
+// console.log(startWith("Hello world", "hello"));
 
+// function reverseString(str){
+//    return str.split("").reverse().join("")
+// }
+// console.log(reverseString("hello"));
+
+
+function reverseString(str){
+   const splitVal = str.split("");
+   let rvsVal = ""
+   for(let i = splitVal.length - 1; i >= 0; i--){
+      rvsVal += splitVal[i]
+   }
+   return rvsVal
+}
+console.log(reverseString("govena"));
 
 
 
