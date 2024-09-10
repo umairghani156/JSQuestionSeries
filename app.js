@@ -1577,26 +1577,26 @@
 // }
 // console.log(sortedArray([ 1, 10, 6, 7, 9]))
 
-function sortedArray(arr){
-  let num = Math.min(...arr);
+// function sortedArray(arr){
+//   let num = Math.min(...arr);
 
   
 
- for (let i = 0; i < arr.length; i++) {
-       let minIndex = i;
-       for(let j = i + 1; j < arr.length; j++){
-          //console.log("min",minIndex);
-         // console.log("j",arr[j]);
-           if(arr[j] < arr[minIndex]){
-               minIndex = j
-           }
-           [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+//  for (let i = 0; i < arr.length; i++) {
+//        let minIndex = i;
+//        for(let j = i + 1; j < arr.length; j++){
+//           //console.log("min",minIndex);
+//          // console.log("j",arr[j]);
+//            if(arr[j] < arr[minIndex]){
+//                minIndex = j
+//            }
+//            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
 
           
           
-       }
- }
- console.log(arr);
+//        }
+//  }
+//  console.log(arr);
  
 
  
@@ -1605,8 +1605,20 @@ function sortedArray(arr){
   
   
  
+// }
+// console.log(sortedArray([ 1, 10, 6, 7, 9]))
+
+const calculateAverage = (numbers)=>{
+   const totalNumbers = numbers.reduce((acc, cur)=>{
+    return (acc + cur)
+   }, 0)
+
+   return totalNumbers / numbers.length
 }
-console.log(sortedArray([ 1, 10, 6, 7, 9]))
+console.log(calculateAverage([8, 6, 7, 4, 3]));
+console.log(calculateAverage([5, 10, 2, 8]));
+
+
 
  
 
