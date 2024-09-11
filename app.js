@@ -1764,25 +1764,41 @@
 // console.log(reverseString("hello"));
 
 
-function reverseString(str){
-   const splitVal = str.split("");
-   let rvsVal = ""
-   for(let i = splitVal.length - 1; i >= 0; i--){
-      rvsVal += splitVal[i]
-   }
-   return rvsVal
-}
-console.log(reverseString("govena"));
+// function reverseString(str){
+//    const splitVal = str.split("");
+//    let rvsVal = ""
+//    for(let i = splitVal.length - 1; i >= 0; i--){
+//       rvsVal += splitVal[i]
+//    }
+//    return rvsVal
+// }
+// console.log(reverseString("govena"));
+
+// function calculateMean(arr){
+//    const val = arr.reduce((acc, cur)=> acc + cur, 0);
+
+//    return val / arr.length
+// }
+
+// console.log(calculateMean([1, 2, 3, 4, 5]));
+// console.log(calculateMean([10, 20, 30]));
+// console.log(calculateMean([-1, 0, 1]));
+
+
+//How to find a mean value in the array
 
 function calculateMean(arr){
-   const val = arr.reduce((acc, cur)=> acc + cur, 0);
+  const meanVal = arr.reduce((acc, cur)=> acc + cur, 0);
+  console.log(meanVal);
+  
+  return meanVal /arr.length
+};
 
-   return val / arr.length
-}
+console.log(calculateMean([1,2,3,4, 5,6,7,8, 9,10]));
+console.log(calculateMean([10, 20, 30, 40, 50]));
+console.log(calculateMean([60, 70, 40, 20, 100]));
 
-console.log(calculateMean([1, 2, 3, 4, 5]));
-console.log(calculateMean([10, 20, 30]));
-console.log(calculateMean([-1, 0, 1]));
+
 
 
 
