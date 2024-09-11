@@ -1787,16 +1787,35 @@
 
 //How to find a mean value in the array
 
-function calculateMean(arr){
-  const meanVal = arr.reduce((acc, cur)=> acc + cur, 0);
-  console.log(meanVal);
+// function calculateMean(arr){
+//   const meanVal = arr.reduce((acc, cur)=> acc + cur, 0);
+//   console.log(meanVal);
   
-  return meanVal /arr.length
-};
+//   return meanVal /arr.length
+// };
 
-console.log(calculateMean([1,2,3,4, 5,6,7,8, 9,10]));
-console.log(calculateMean([10, 20, 30, 40, 50]));
-console.log(calculateMean([60, 70, 40, 20, 100]));
+// console.log(calculateMean([1,2,3,4, 5,6,7,8, 9,10]));
+// console.log(calculateMean([10, 20, 30, 40, 50]));
+// console.log(calculateMean([60, 70, 40, 20, 100]));
+
+
+function findMedian(arr){
+  arr.sort((a,b)=> a-b);
+   let length = arr.length;
+   let middle = Math.floor(length / 2);
+   if(length % 2 === 0){
+      return (arr[middle] + arr[middle -1]) /2;
+      
+   }else{
+      return arr[middle]
+      
+   }
+   
+}
+console.log(findMedian([5, 3, 9, 1, 7]));
+console.log(findMedian([2, 4, 6, 8]));
+
+
 
 
 
