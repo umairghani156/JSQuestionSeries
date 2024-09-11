@@ -1817,8 +1817,10 @@
 // console.log(findMedian([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 async function hello(){
- await new Promise((resolve, reject)=>{
-    setTimeout(()=> resolve("Hii"), 3000)
+ return await new Promise((resolve, reject)=>{
+   for(var i = 0; i < 5; i++){
+    setTimeout(()=> resolve(i), 0)
+   }
  }
  )
 
@@ -1833,7 +1835,7 @@ async function hello(){
     console.log("Hello",await hello());
     
    return k
-};
+}
 
 h().then((val)=> val())
 
