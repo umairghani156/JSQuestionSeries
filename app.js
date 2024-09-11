@@ -1799,22 +1799,45 @@
 // console.log(calculateMean([60, 70, 40, 20, 100]));
 
 
-function findMedian(arr){
-  arr.sort((a,b)=> a-b);
-   let length = arr.length;
-   let middle = Math.floor(length / 2);
-   if(length % 2 === 0){
-      return (arr[middle] + arr[middle -1]) /2;
+// function findMedian(arr){
+//   arr.sort((a,b)=> a-b);
+//    let length = arr.length;
+//    let middle = Math.floor(length / 2);
+//    if(length % 2 === 0){
+//       return (arr[middle] + arr[middle -1]) /2;
       
-   }else{
-      return arr[middle]
+//    }else{
+//       return arr[middle]
+      
+//    }
+   
+// }
+// console.log(findMedian([5, 3, 9, 1, 7]));
+// console.log(findMedian([2, 4, 6, 8]));
+// console.log(findMedian([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+async function hello(){
+ await new Promise((resolve, reject)=>{
+    setTimeout(()=> resolve("Hii"), 3000)
+ }
+ )
+
+}
+ async function h(){
+   let i = 0
+    function k(){
+      console.log(i);
       
    }
-   
-}
-console.log(findMedian([5, 3, 9, 1, 7]));
-console.log(findMedian([2, 4, 6, 8]));
-console.log(findMedian([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+   await hello();
+    console.log("Hello",await hello());
+    
+   return k
+};
+
+h().then((val)=> val())
+
+
 
 
 
