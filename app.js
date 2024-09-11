@@ -1816,28 +1816,60 @@
 // console.log(findMedian([2, 4, 6, 8]));
 // console.log(findMedian([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
-async function hello(){
- return await new Promise((resolve, reject)=>{
-   for(var i = 0; i < 5; i++){
-    setTimeout(()=> resolve(i), 0)
-   }
- }
- )
+// async function hello(){
+//  return await new Promise((resolve, reject)=>{
+//    for(var i = 0; i < 5; i++){
+//     setTimeout(()=> resolve(i), 0)
+//    }
+//  }
+//  )
 
-}
- async function h(){
-   let i = 0
-    function k(){
-      console.log(i);
+// }
+//  async function h(){
+//    let i = 0
+//     function k(){
+//       console.log(i);
       
-   }
-   await hello();
-    console.log("Hello",await hello());
+//    }
+//    await hello();
+//     console.log("Hello",await hello());
     
-   return k
-}
+//    return k
+// }
 
-h().then((val)=> val())
+// h().then((val)=> val());
+
+
+// function occurenceElement(arr){
+//    const h = arr.reduce((acc, cur)=>{
+//      if(acc[cur] === undefined){
+//       acc[cur] = 1
+//      }else{
+//       acc[cur] += 1
+//      }
+//      return acc
+//    },{})
+
+//    return h
+   
+// };
+// console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]))
+
+function occurenceElement(arr){
+   let count = {};
+   arr.forEach(val => {
+      if(!count.hasOwnProperty(val)){
+         count[val] = 1
+      }else{
+         count[val] += 1
+      }
+   });
+   console.log(count);
+   
+   
+};
+console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]))
+
 
 
 
