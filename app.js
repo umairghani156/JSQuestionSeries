@@ -1855,17 +1855,28 @@
 // };
 // console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]))
 
-function occurenceElement(arr){
-   let count = {};
-   arr.forEach(val => {
-      if(!count.hasOwnProperty(val)){
-         count[val] = 1
-      }else{
-         count[val] += 1
-      }
-   });
-   console.log(count);
+// function occurenceElement(arr){
+//    let count = {};
+//    arr.forEach(val => {
+//       if(!count.hasOwnProperty(val)){
+//          count[val] = 1
+//       }else{
+//          count[val] += 1
+//       }
+//    });
+//    console.log(count);
    
+   
+// };
+// console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]))
+
+function occurenceElement(arr){
+   let count = {}
+   for(const val of arr){
+     count[val] = (count[val] || 0) + 1
+   }
+   
+   console.log(count);
    
 };
 console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]))
