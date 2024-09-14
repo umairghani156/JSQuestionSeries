@@ -1870,16 +1870,30 @@
 // };
 // console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]))
 
-function occurenceElement(arr){
-   let count = {}
-   for(const val of arr){
-     count[val] = (count[val] || 0) + 1
-   }
+// function occurenceElement(arr){
+//    let count = {}
+//    for(const val of arr){
+//      count[val] = (count[val] || 0) + 1
+//    }
    
-   console.log(count);
+//    console.log(count);
    
-};
-console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]))
+// };
+// console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]));
+
+
+// const h2 = Number(prompt("Enter number"));
+
+// function h(input){
+
+//    input = input ^ 9;
+//    input = input ^ 6;
+//    console.log(input);
+
+ 
+// }
+// h(h2)
+
 
 
 
