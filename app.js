@@ -1895,15 +1895,46 @@
 // h(h2)
 
 
-function recursion(num){
-   if(num === 1){
-      return 1
-   }else{
-      return num * recursion(num - 1)
-   }
-}
+// function recursion(num){
+//    if(num === 1){
+//       return 1
+//    }else{
+//       return num * recursion(num - 1)
+//    }
+// }
 
-console.log(recursion(6));
+// console.log(recursion(6));
+// const arrData = ["umair", "ahmed"]
+
+// function arr(data){
+//   // console.log(data);
+//    // const arrData = `#${(data[0].slice(0,1).toUpperCase()+data[0].slice(1).toLowerCase()) + (data[1].slice(0,1).toUpperCase() +data[1].slice(1).toLowerCase())}`;
+//    // return arrData;
+
+   
+// }
+
+// console.log(arr(arrData)); // output #UmairAhmed
+
+
+// const promptVal = prompt("Please enter your name");
+
+
+const jonas = {
+    firstName:"Umair",
+    age: 23,
+    calAge: function (){
+        console.log(this);
+        
+        return 2024 - this.age
+    },
+    greet: ()=> console.log(this)
+    
+};
+
+console.log(jonas.calAge());
+console.log(jonas.greet());
+
 
 
 
