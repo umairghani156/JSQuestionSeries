@@ -1882,7 +1882,7 @@
 // console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]));
 
 
-// const h2 = Number(prompt("Enter number"));
+//  const h2 = Number(prompt("Enter number"));
 
 // function h(input){
 
@@ -1893,6 +1893,18 @@
  
 // }
 // h(h2)
+
+
+function recursion(num){
+   if(num === 1){
+      return 1
+   }else{
+      return num * recursion(num - 1)
+   }
+}
+
+console.log(recursion(6));
+
 
 
 
