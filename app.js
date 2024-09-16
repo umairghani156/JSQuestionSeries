@@ -1963,20 +1963,36 @@
 // console.log(repeatedString("abc",10));
 
 
-function truncateString(str, num){
-   const maxlength  = str.split(" ")
-   const check = maxlength.map((str2)=>{
-      if(str2.length > num){
-        return str2.slice(0, num) + "..."
-      }else{
-        return str2
-      }
-   })
-   console.log(check);
+// function truncateString(str, num){
+//    const maxlength  = str.split(" ")
+//    const check = maxlength.map((str2)=>{
+//       if(str2.length > num){
+//         return str2.slice(0, num) + "..."
+//       }else{
+//         return str2
+//       }
+//    })
+//    console.log(check);
    
    
+// }
+// console.log(truncateString("A-tiskit a-tasket a green and yellow basket hellortwe", 8));
+
+
+function numberRange(start, end){
+   const arr = [];
+   for(let i = start; i <= end; i++){
+    arr.push(i)
+   }
+   return arr
 }
-console.log(truncateString("A-tiskit a-tasket a green and yellow basket hellortwe", 8));
+
+console.log(numberRange(0, 5));
+console.log(numberRange(3, 7));
+console.log(numberRange(3, 7));
+
+
+
 
 
 
