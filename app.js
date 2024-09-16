@@ -1920,20 +1920,41 @@
 // const promptVal = prompt("Please enter your name");
 
 
-const jonas = {
-    firstName:"Umair",
-    age: 23,
-    calAge: function (){
-        console.log(this);
+// const jonas = {
+//     firstName:"Umair",
+//     age: 23,
+//     calAge: function (){
+//         console.log(this);
         
-        return 2024 - this.age
-    },
-    greet: ()=> console.log(this)
+//         return 2024 - this.age
+//     },
+//     greet: ()=> console.log(this)
     
-};
+// };
 
-console.log(jonas.calAge());
-console.log(jonas.greet());
+// console.log(jonas.calAge());
+// console.log(jonas.greet());
+
+// const pr = prompt("enter kuch bhi");
+
+// function hello(inp){
+//     console.log(inp.length);
+    
+// }
+
+// hello(pr);
+
+
+function repeatedString(str, num){
+    let embeddedStr= ""
+    for(let i = 1; i <= num; i++){
+         embeddedStr += str
+    }
+    return embeddedStr
+}
+
+console.log(repeatedString("abc",5));
+
 
 
 
