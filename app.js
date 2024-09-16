@@ -1945,15 +1945,22 @@
 // hello(pr);
 
 
+// function repeatedString(str, num){
+//     let embeddedStr= ""
+//     for(let i = 1; i <= num; i++){
+//          embeddedStr += str
+//     }
+//     return embeddedStr
+// }
+
+// console.log(repeatedString("abc",5));
+
+//Second Method
 function repeatedString(str, num){
-    let embeddedStr= ""
-    for(let i = 1; i <= num; i++){
-         embeddedStr += str
-    }
-    return embeddedStr
+   return str.repeat(num)
 }
 
-console.log(repeatedString("abc",5));
+console.log(repeatedString("abc",10));
 
 
 
