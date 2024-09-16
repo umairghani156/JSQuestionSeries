@@ -1956,11 +1956,27 @@
 // console.log(repeatedString("abc",5));
 
 //Second Method
-function repeatedString(str, num){
-   return str.repeat(num)
-}
+// function repeatedString(str, num){
+//    return str.repeat(num)
+// }
 
-console.log(repeatedString("abc",10));
+// console.log(repeatedString("abc",10));
+
+
+function truncateString(str, num){
+   const maxlength  = str.split(" ")
+   const check = maxlength.map((str2)=>{
+      if(str2.length > num){
+        return str2.slice(0, num) + "..."
+      }else{
+        return str2
+      }
+   })
+   console.log(check);
+   
+   
+}
+console.log(truncateString("A-tiskit a-tasket a green and yellow basket hellortwe", 8));
 
 
 
