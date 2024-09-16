@@ -1990,6 +1990,7 @@ function numberRange(start, end){
 console.log(numberRange(0, 5));
 console.log(numberRange(3, 7));
 console.log(numberRange(3, 7));
+console.log(numberRange(-2, 2));
 
 
 
