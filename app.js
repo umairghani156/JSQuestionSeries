@@ -1979,18 +1979,54 @@
 // console.log(truncateString("A-tiskit a-tasket a green and yellow basket hellortwe", 8));
 
 
-function numberRange(start, end){
-   const arr = [];
-   for(let i = start; i <= end; i++){
-    arr.push(i)
-   }
-   return arr
-}
+// function numberRange(start, end){
+//    const arr = [];
+//    for(let i = start; i <= end; i++){
+//     arr.push(i)
+//    }
+//    return arr
+// }
 
-console.log(numberRange(0, 5));
-console.log(numberRange(3, 7));
-console.log(numberRange(3, 7));
-console.log(numberRange(-2, 2));
+// console.log(numberRange(0, 5));
+// console.log(numberRange(3, 7));
+// console.log(numberRange(3, 7));
+// console.log(numberRange(-2, 2));
+
+function simplePasswordValidator(password){
+    if(password.length < 8){
+       return false
+    }
+    const totalPassword = password.split("");
+    const upperCaseFind = totalPassword.find((pas)=> pas === pas.toUpperCase());
+    if(upperCaseFind === "1"){
+        return false
+    }else{
+        const isInteger = totalPassword.filter((pas)=>{
+            if(pas === "0"|| pas === "1" || pas === "2" || pas === "3" || pas === "4" || pas === "5" || pas === "6"
+              || pas === "7" || pas === "8" || pas === "9"
+            ){
+                return true
+            }
+           
+
+            
+        })
+       if(isInteger.length === 0){
+        return false
+       }else{
+        return true
+       }
+       
+    }
+    
+  
+   
+    
+    
+    
+}
+console.log(simplePasswordValidator("helLok2"));
+
 
 
 
