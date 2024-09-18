@@ -2027,81 +2027,154 @@
 // }
 // console.log(simplePasswordValidator("helLok2"));
 
-const navbarItems = ["all","animal","bird","nature"];
+// const navbarItems = ["all","animal","bird","nature"];
 
+// const imagesData = [
+//     {
+//         id: 1,
+//         image: "./images/animal.jpg",
+//         name: "animal"
+//     },
+//     {
+//         id: 2,
+//         image: "./images/animal2.jpg",
+//         name: "animal"
+//     },
+//     {
+//         id: 3,
+//         image: "./images/bird.jpg",
+//         name: "bird"
+//     },
+//     {
+//         id: 4,
+//         image: "./images/bird2.jpg",
+//         name: "bird"
+//     },
+//     {
+//         id: 5,
+//         image: "./images/nature.jpg",
+//         name: "nature"
+//     },
+//     {
+//         id: 6,
+//         image: "./images/nature2.jpg",
+//         name: "nature"
+//     },
+// ]
+
+// let imageWrapper = document.querySelector(".imageWrapper");
+// let navbar = document.querySelector(".navbarItems");
+
+// function navbarShow(data){
+//     data.forEach((item)=>{
+//        let items = `<li onClick="showRelatedItems('${item}')">${item.slice(0,1).toUpperCase()+item.slice(1).toLowerCase()}</li>`;
+//        navbar.innerHTML +=items
+
+
+//     })
+// }
+// navbarShow(navbarItems)
+
+// function showRelatedItems(data){
+//     console.log(data);
+//     let filteredData = imagesData.filter((d)=> d.name === data);
+//     console.log(filteredData);
+//     if(filteredData.length === 0) {
+//         filteredData = imagesData
+//     }
+//     showImage(filteredData)
+    
+    
+// }
+
+// function showImage(data){
+//     console.log(data);
+//     imageWrapper.innerHTML = ""
+//     let  dataImgs = ""
+//     data.forEach(element => {
+//      dataImgs = `
+//         <div class="imageWrapperCon">
+//         <img class="imgSrc" src="${element.image}" alt="${element.name}">
+        
+//         </div>`
+//         imageWrapper.innerHTML += dataImgs
+//     });
+// };
+
+// showImage(imagesData);
 const imagesData = [
     {
         id: 1,
         image: "./images/animal.jpg",
-        name: "animal"
+        type: "animal"
     },
     {
         id: 2,
         image: "./images/animal2.jpg",
-        name: "animal"
+        type: "animal"
     },
     {
         id: 3,
         image: "./images/bird.jpg",
-        name: "bird"
+        type: "bird"
     },
     {
         id: 4,
         image: "./images/bird2.jpg",
-        name: "bird"
+        type: "bird"
     },
     {
         id: 5,
         image: "./images/nature.jpg",
-        name: "nature"
+        type: "nature"
     },
     {
         id: 6,
         image: "./images/nature2.jpg",
-        name: "nature"
+        type: "nature"
     },
 ]
-
+const listItems = ["all","bird","animal","nature"]
+const navbarItemsList = document.querySelector(".navbarItems");
 let imageWrapper = document.querySelector(".imageWrapper");
-let navbar = document.querySelector(".navbarItems");
-
-function navbarShow(data){
-    data.forEach((item)=>{
-       let items = `<li onClick="showRelatedItems('${item}')">${item.slice(0,1).toUpperCase()+item.slice(1).toLowerCase()}</li>`;
-       navbar.innerHTML +=items
 
 
-    })
-}
-navbarShow(navbarItems)
-
-function showRelatedItems(data){
-    console.log(data);
-    let filteredData = imagesData.filter((d)=> d.name === data);
-    console.log(filteredData);
-    if(filteredData.length === 0) {
-        filteredData = imagesData
-    }
-    showImage(filteredData)
-    
-    
-}
-
-function showImage(data){
-    console.log(data);
-    imageWrapper.innerHTML = ""
-    let  dataImgs = ""
+function navbarFunc(data){
     data.forEach(element => {
-     dataImgs = `
-        <div class="imageWrapperCon">
-        <img class="imgSrc" src="${element.image}" alt="${element.name}">
-        
-        </div>`
-        imageWrapper.innerHTML += dataImgs
+       let items = `<li onclick="handleClick('${element}')">${element.substring(0,1).toUpperCase()+element.substring(1).toLowerCase()}</li>`  
+       navbarItemsList.innerHTML += items
     });
-};
+    
+}
+navbarFunc(listItems);
 
-showImage(imagesData)
+function handleClick(n){
+   let filteredData = imagesData.filter((val)=> val.type === n);
+   if(filteredData.length === 0){
+    filteredData = imagesData
+   }
+   
+   renderData(filteredData)
+   
+    
+}
+
+function renderData(data){
+    imageWrapper.innerHTML = "";
+   data.forEach((d)=>{
+    let imgsRender = `
+    <div class="imageWrapperCon">
+    <img class="imgSrc" src="${d.image}" alt="${d.name}">
+    </div>
+    `;
+    imageWrapper.innerHTML +=imgsRender
+
+   })
+}
+renderData(imagesData)
+
+
+
 
 
 
