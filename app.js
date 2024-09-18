@@ -1992,40 +1992,117 @@
 // console.log(numberRange(3, 7));
 // console.log(numberRange(-2, 2));
 
-function simplePasswordValidator(password){
-    if(password.length < 8){
-       return false
-    }
-    const totalPassword = password.split("");
-    const upperCaseFind = totalPassword.find((pas)=> pas === pas.toUpperCase());
-    if(upperCaseFind === "1"){
-        return false
-    }else{
-        const isInteger = totalPassword.filter((pas)=>{
-            if(pas === "0"|| pas === "1" || pas === "2" || pas === "3" || pas === "4" || pas === "5" || pas === "6"
-              || pas === "7" || pas === "8" || pas === "9"
-            ){
-                return true
-            }
+// function simplePasswordValidator(password){
+//     if(password.length < 8){
+//        return false
+//     }
+//     const totalPassword = password.split("");
+//     const upperCaseFind = totalPassword.find((pas)=> pas === pas.toUpperCase());
+//     if(upperCaseFind === "1"){
+//         return false
+//     }else{
+//         const isInteger = totalPassword.filter((pas)=>{
+//             if(pas === "0"|| pas === "1" || pas === "2" || pas === "3" || pas === "4" || pas === "5" || pas === "6"
+//               || pas === "7" || pas === "8" || pas === "9"
+//             ){
+//                 return true
+//             }
            
 
             
-        })
-       if(isInteger.length === 0){
-        return false
-       }else{
-        return true
-       }
+//         })
+//        if(isInteger.length === 0){
+//         return false
+//        }else{
+//         return true
+//        }
        
-    }
+//     }
     
   
    
     
     
     
+// }
+// console.log(simplePasswordValidator("helLok2"));
+
+const navbarItems = ["all","animal","bird","nature"];
+
+const imagesData = [
+    {
+        id: 1,
+        image: "./images/animal.jpg",
+        name: "animal"
+    },
+    {
+        id: 2,
+        image: "./images/animal2.jpg",
+        name: "animal"
+    },
+    {
+        id: 3,
+        image: "./images/bird.jpg",
+        name: "bird"
+    },
+    {
+        id: 4,
+        image: "./images/bird2.jpg",
+        name: "bird"
+    },
+    {
+        id: 5,
+        image: "./images/nature.jpg",
+        name: "nature"
+    },
+    {
+        id: 6,
+        image: "./images/nature2.jpg",
+        name: "nature"
+    },
+]
+
+let imageWrapper = document.querySelector(".imageWrapper");
+let navbar = document.querySelector(".navbarItems");
+
+function navbarShow(data){
+    data.forEach((item)=>{
+       let items = `<li onClick="showRelatedItems('${item}')">${item.slice(0,1).toUpperCase()+item.slice(1).toLowerCase()}</li>`;
+       navbar.innerHTML +=items
+
+
+    })
 }
-console.log(simplePasswordValidator("helLok2"));
+navbarShow(navbarItems)
+
+function showRelatedItems(data){
+    console.log(data);
+    let filteredData = imagesData.filter((d)=> d.name === data);
+    console.log(filteredData);
+    if(filteredData.length === 0) {
+        filteredData = imagesData
+    }
+    showImage(filteredData)
+    
+    
+}
+
+function showImage(data){
+    console.log(data);
+    imageWrapper.innerHTML = ""
+    let  dataImgs = ""
+    data.forEach(element => {
+     dataImgs = `
+        <div class="imageWrapperCon">
+        <img class="imgSrc" src="${element.image}" alt="${element.name}">
+        
+        </div>`
+        imageWrapper.innerHTML += dataImgs
+    });
+};
+
+showImage(imagesData)
+
 
 
 
