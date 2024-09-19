@@ -2102,76 +2102,87 @@
 // };
 
 // showImage(imagesData);
-const imagesData = [
-    {
-        id: 1,
-        image: "./images/animal.jpg",
-        type: "animal"
-    },
-    {
-        id: 2,
-        image: "./images/animal2.jpg",
-        type: "animal"
-    },
-    {
-        id: 3,
-        image: "./images/bird.jpg",
-        type: "bird"
-    },
-    {
-        id: 4,
-        image: "./images/bird2.jpg",
-        type: "bird"
-    },
-    {
-        id: 5,
-        image: "./images/nature.jpg",
-        type: "nature"
-    },
-    {
-        id: 6,
-        image: "./images/nature2.jpg",
-        type: "nature"
-    },
-]
-const listItems = ["all","bird","animal","nature"]
-const navbarItemsList = document.querySelector(".navbarItems");
-let imageWrapper = document.querySelector(".imageWrapper");
+// const imagesData = [
+//     {
+//         id: 1,
+//         image: "./images/animal.jpg",
+//         type: "animal"
+//     },
+//     {
+//         id: 2,
+//         image: "./images/animal2.jpg",
+//         type: "animal"
+//     },
+//     {
+//         id: 3,
+//         image: "./images/bird.jpg",
+//         type: "bird"
+//     },
+//     {
+//         id: 4,
+//         image: "./images/bird2.jpg",
+//         type: "bird"
+//     },
+//     {
+//         id: 5,
+//         image: "./images/nature.jpg",
+//         type: "nature"
+//     },
+//     {
+//         id: 6,
+//         image: "./images/nature2.jpg",
+//         type: "nature"
+//     },
+// ]
+// const listItems = ["all","bird","animal","nature"]
+// const navbarItemsList = document.querySelector(".navbarItems");
+// let imageWrapper = document.querySelector(".imageWrapper");
 
 
-function navbarFunc(data){
-    data.forEach(element => {
-       let items = `<li onclick="handleClick('${element}')">${element.substring(0,1).toUpperCase()+element.substring(1).toLowerCase()}</li>`  
-       navbarItemsList.innerHTML += items
-    });
+// function navbarFunc(data){
+//     data.forEach(element => {
+//        let items = `<li onclick="handleClick('${element}')">${element.substring(0,1).toUpperCase()+element.substring(1).toLowerCase()}</li>`  
+//        navbarItemsList.innerHTML += items
+//     });
     
-}
-navbarFunc(listItems);
+// }
+// navbarFunc(listItems);
 
-function handleClick(n){
-   let filteredData = imagesData.filter((val)=> val.type === n);
-   if(filteredData.length === 0){
-    filteredData = imagesData
-   }
+// function handleClick(n){
+//    let filteredData = imagesData.filter((val)=> val.type === n);
+//    if(filteredData.length === 0){
+//     filteredData = imagesData
+//    }
    
-   renderData(filteredData)
+//    renderData(filteredData)
    
     
-}
+// }
 
-function renderData(data){
-    imageWrapper.innerHTML = "";
-   data.forEach((d)=>{
-    let imgsRender = `
-    <div class="imageWrapperCon">
-    <img class="imgSrc" src="${d.image}" alt="${d.name}">
-    </div>
-    `;
-    imageWrapper.innerHTML +=imgsRender
+// function renderData(data){
+//     imageWrapper.innerHTML = "";
+//    data.forEach((d)=>{
+//     let imgsRender = `
+//     <div class="imageWrapperCon">
+//     <img class="imgSrc" src="${d.image}" alt="${d.name}">
+//     </div>
+//     `;
+//     imageWrapper.innerHTML +=imgsRender
 
-   })
-}
-renderData(imagesData)
+//    })
+// }
+// renderData(imagesData);
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click",()=>{
+   const num = Math.floor(Math.random() * 900000);
+   document.body.style.backgroundColor = `#${num}`
+   btn.innerText = `Hex Code #${num}`
+   console.log(num);
+   
+   
+})
 
 
 
