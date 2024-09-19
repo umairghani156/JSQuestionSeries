@@ -2197,12 +2197,25 @@
 //     return arr
 // }
 // console.log(removeDuplicates([5, 6, 7, 7, 8, 8,8, 8,8, 9]));
+// function removeDuplicates(arr) {
+//   return arr.filter((value, index) => arr.indexOf(value) === index);
+// }
+
+// console.log(removeDuplicates([5, 6, 7, 7, 8, 8, 8, 8, 8, 9,9,9,9]));
+
+
 function removeDuplicates(arr) {
-  return arr.filter((value, index) => arr.indexOf(value) === index);
+   let uniqueVal = [];
+
+   for(let i = 0; i < arr.length; i++){
+    if(!uniqueVal.includes(arr[i])){
+      uniqueVal.push(arr[i])
+    }
+   }
+   return uniqueVal;
 }
 
-console.log(removeDuplicates([5, 6, 7, 7, 8, 8, 8, 8, 8, 9,9,9,9]));
-
+console.log(removeDuplicates([5, 6, 7, 7, 8, 8, 8, 8, 8, 9,9,9,9, 9, 9, 9, 9, 9,]));
 
 
 
