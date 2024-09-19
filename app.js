@@ -2185,25 +2185,20 @@
 // })
 
 
-const removeDuplicates = (arr) =>{
-let index = arr.length - 1
-//    do{
-//        if(arr[index] === 4){
-//            arr.splice(index, 1)
-//         }
-//         index++
-
-//    }while (index < arr.length)
-//    return arr
-    while (index >= 0) {
-        index--
-        if(arr[index] === 3 || arr[index] === 4 ){
-            arr.splice(index, 1)
+function removeDuplicates(arr){
+    let count = arr.length - 1;
+       while (count >= 0) {
+       
+        count--
+        if(arr[count] === 7){
+          arr.splice(count, 1)
+        }else if( arr[count] === 8){
+            arr.splice(count, 1)
         }
-    }
-    return arr
+       }
+       return arr
 }
-console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 4, 4, 4]));
+console.log(removeDuplicates([5, 6, 7, 7,7, 8, 8, 9, 7, 7, 7]));
 
 
 
