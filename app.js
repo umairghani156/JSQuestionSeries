@@ -2173,16 +2173,38 @@
 // }
 // renderData(imagesData);
 
-const btn = document.getElementById("btn");
+// const btn = document.getElementById("btn");
 
-btn.addEventListener("click",()=>{
-   const num = Math.floor(Math.random() * 900000);
-   document.body.style.backgroundColor = `#${num}`
-   btn.innerText = `Hex Code #${num}`
-   console.log(num);
+// btn.addEventListener("click",()=>{
+//    const num = Math.floor(Math.random() * 900000);
+//    document.body.style.backgroundColor = `#${num}`
+//    btn.innerText = `Hex Code #${num}`
+//    console.log(num);
    
    
-})
+// })
+
+
+const removeDuplicates = (arr) =>{
+let index = arr.length - 1
+//    do{
+//        if(arr[index] === 4){
+//            arr.splice(index, 1)
+//         }
+//         index++
+
+//    }while (index < arr.length)
+//    return arr
+    while (index >= 0) {
+        index--
+        if(arr[index] === 3 || arr[index] === 4 ){
+            arr.splice(index, 1)
+        }
+    }
+    return arr
+}
+console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 4, 4, 4]));
+
 
 
 
