@@ -2272,6 +2272,14 @@ function filterEvenNumbers(numbers) {
 const nums = [1, 2, 3, 4, 5, 6];
 console.log(filterEvenNumbers(nums));
 
+function greet(name) {
+    var message = "Hello, " + name + "!";
+    return message;
+}
+
+console.log(greet("Umair"));
+
+
 
 
 
