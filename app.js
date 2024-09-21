@@ -2265,27 +2265,37 @@
 // }
 // console.log(isInclude(["sami","umair","saad","farooq","apple","noman"]));
 
-function filterEvenNumbers(numbers) {
-    return numbers.filter(num => num % 2 === 0);
+// function filterEvenNumbers(numbers) {
+//     return numbers.filter(num => num % 2 === 0);
+// }
+
+// const nums = [1, 2, 3, 4, 5, 6];
+// console.log(filterEvenNumbers(nums));
+
+// function greet(name) {
+//     var message = "Hello, " + name + "!";
+//     return message;
+// }
+
+// console.log(greet("Umair"));
+// const user = {
+//     name: "John",
+//     age: 30,
+// };
+
+// console.log(user["age"]);
+// console.log(user.age);
+// console.log(user['gender'] = "male");
+
+for (var i = 0; i < 5; i++) {
+    function a(val) {
+        setTimeout(() => {
+            console.log(val);
+        }, 1000);
+    }
+    a(i)
+   
 }
-
-const nums = [1, 2, 3, 4, 5, 6];
-console.log(filterEvenNumbers(nums));
-
-function greet(name) {
-    var message = "Hello, " + name + "!";
-    return message;
-}
-
-console.log(greet("Umair"));
-const user = {
-    name: "John",
-    age: 30,
-};
-
-console.log(user["age"]);
-console.log(user.age);
-console.log(user['gender'] = "male");
 
 
 
