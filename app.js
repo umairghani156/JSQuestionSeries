@@ -2204,18 +2204,75 @@
 // console.log(removeDuplicates([5, 6, 7, 7, 8, 8, 8, 8, 8, 9,9,9,9]));
 
 
-function removeDuplicates(arr) {
-   let uniqueVal = [];
+// function removeDuplicates(arr) {
+//    let uniqueVal = [];
 
-   for(let i = 0; i < arr.length; i++){
-    if(!uniqueVal.includes(arr[i])){
-      uniqueVal.push(arr[i])
-    }
-   }
-   return uniqueVal;
+//    for(let i = 0; i < arr.length; i++){
+//     if(!uniqueVal.includes(arr[i])){
+//       uniqueVal.push(arr[i])
+//     }
+//    }
+//    return uniqueVal;
+// }
+
+// console.log(removeDuplicates([5, 6, 7, 7, 8, 8, 8, 8, 8, 9,9,9,9, 9, 9, 9, 9, 9,]));
+
+// function isEmptyObject(obj){
+//       if(Object.keys(obj).length === 0){
+//         return false
+//       }else{
+//         return true
+//       }
+// }
+// console.log(isEmptyObject({"name": "umair"}));
+// function isEmptyObject(obj){
+//   if(JSON.stringify(obj)=== "{}"){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+// console.log(isEmptyObject({"name": "umair"}));
+// console.log(isEmptyObject({}));
+// function isEmptyObject(obj){
+//   let check = true
+//    for(let key in obj){
+//      if(obj.hasOwnProperty(key)){
+//         check = false
+//      }
+//      break
+//    }
+//    return check
+// }
+// console.log(isEmptyObject({"name": "umair"}));
+// console.log(isEmptyObject({}));
+
+
+// function isInclude(arr){
+//  const val = arr.filter(element => {
+// //    if(element.charAt(0) === "u" || element.charAt(0) === "n"){
+// //     return element
+// //    }
+//       if(element.indexOf("u") || element.indexOf("n")){
+//         return element
+//       }
+//     // if(element.charAt(0) === "n" && element.charAt(0) === "u"){
+//     //     return element
+//     // }
+//   });
+//   console.log(val);
+  
+// }
+// console.log(isInclude(["sami","umair","saad","farooq","apple","noman"]));
+
+function filterEvenNumbers(numbers) {
+    return numbers.filter(num => num % 2 === 0);
 }
 
-console.log(removeDuplicates([5, 6, 7, 7, 8, 8, 8, 8, 8, 9,9,9,9, 9, 9, 9, 9, 9,]));
+const nums = [1, 2, 3, 4, 5, 6];
+console.log(filterEvenNumbers(nums));
+
+
 
 
 
