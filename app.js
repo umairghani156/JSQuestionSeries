@@ -2278,6 +2278,15 @@ function greet(name) {
 }
 
 console.log(greet("Umair"));
+const user = {
+    name: "John",
+    age: 30,
+};
+
+console.log(user["age"]);
+console.log(user.age);
+console.log(user['gender'] = "male");
+
 
 
 
