@@ -2359,6 +2359,14 @@
 //     timeStamps: true
 // });
 
+function objToArr(obj){
+   const vl = Object.entries(obj)
+   console.log(vl);
+   
+}
+console.log(objToArr({name: "Umair", age: 20}));
+
+
 
 
 
