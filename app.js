@@ -2287,28 +2287,77 @@
 // console.log(user.age);
 // console.log(user['gender'] = "male");
 
-for (var i = 0; i < 5; i++) {
-    function a(val) {
-        setTimeout(() => {
-            console.log(val);
-        }, 1000);
-    }
-    a(i)
+// for (var i = 0; i < 5; i++) {
+//     function a(val) {
+//         setTimeout(() => {
+//             console.log(val);
+//         }, 1000);
+//     }
+//     a(i)
    
-}
+// }
 
-function add(a, b) {
-    return a + b;
-}
+// function add(a, b) {
+//     return a + b;
+// }
 
-const result = add(5, 10);
-console.log(result);
+// const result = add(5, 10);
+// console.log(result);
 
+//Problem 1: Duplicate Entries
 
+// const userSchema = new mongoose.Schema({
+//     name: String,
+//     email:{
+//         type: String,
+//         required: true,
+//         unique: true
+//     }
 
+// });
 
+// //Problem 2: Data Validation
 
+// const userSchema = new mongoose.Schema({
+//     name: String,
+//     age:{
+//         type: Number,
+//         min: 0
+//     }
+// });
 
+// //Problem 3: Nested Documents
+
+// const postSchema = new mongoose.Schema({
+//     title: String,
+//     content: String,
+//     comments: ["user1","userId2","userId3"],
+// });
+
+// //Problem 4: Relationship Between Collections
+
+// const userSchema = new mongoose.Schema({
+//     name: String,
+//     posts:[{
+//         type: mongoose.Schema.Types.ObjectId,
+//         ref: 'Post',
+//     }]
+// });
+
+// const postSchema = new mongoose.Schema({
+//     title: String,
+//     content: String,
+//     author: String,
+// });
+
+// //Problem 5: Date Fields
+// const postSchema = new mongoose.Schema({
+//     title: String,
+//     content: String
+// }, 
+// {
+//     timeStamps: true
+// });
 
 
 
