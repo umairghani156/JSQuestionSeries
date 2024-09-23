@@ -2359,12 +2359,18 @@
 //     timeStamps: true
 // });
 
-function objToArr(obj){
-   const vl = Object.entries(obj)
-   console.log(vl);
+// function objToArr(obj){
+//    const vl = Object.entries(obj)
+//    console.log(vl);
    
+// }
+// console.log(objToArr({name: "Umair", age: 20}));
+
+function simplecal(a, b, c){
+   return (a * b * c)/100
 }
-console.log(objToArr({name: "Umair", age: 20}));
+console.log(simplecal(1000, 5, 3));
+
 
 
 
