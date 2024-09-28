@@ -2385,14 +2385,34 @@
 // }
 // console.log(calculateDaysBetweenDays("2024-01-01","2024-01-31"));
 
-function calculateAge(db){
-   const age = new Date(db);
-   const curdate = new Date();
-   const d = curdate.getFullYear() - age.getFullYear()
-  console.log(d);
+// function calculateAge(db){
+//    const age = new Date(db);
+//    const curdate = new Date();
+//    const d = curdate.getFullYear() - age.getFullYear()
+//   console.log(d);
   
+// }
+// console.log(calculateAge("1989-05-15"));
+
+
+function generateBarChart(arr){
+   let obj = {};
+   for(let i = 0; i < arr.length ; i++){
+      for(let j = 0; j < arr[i]; j++){
+        if(obj.hasOwnProperty(arr[i])){
+         obj[arr[i]] += "*"
+        }else{
+         obj[arr[i]] = "*"
+        }
+        
+      }
+   }
+   console.log(obj);
+   return obj
+   
 }
-console.log(calculateAge("1989-05-15"));
+console.log(generateBarChart([5, 3, 9, 2]));
+
 
 
 
