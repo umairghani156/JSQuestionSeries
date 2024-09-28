@@ -2371,19 +2371,29 @@
 // }
 // console.log(simplecal(1000, 5, 3));
 
-function calculateDaysBetweenDays(d1,d2){
-   const cd1 = new Date(d1);
-   const cd2 = new Date(d2);
-   const h = Math.abs(cd2 - cd1)
-   const t = h /(1000 * 60 * 60 * 24)
-   console.log(t);
+// function calculateDaysBetweenDays(d1,d2){
+//    const cd1 = new Date(d1);
+//    const cd2 = new Date(d2);
+//    const h = Math.abs(cd2 - cd1)
+//    const t = h /(1000 * 60 * 60 * 24)
+//    console.log(t);
    
    
 
 
 
+// }
+// console.log(calculateDaysBetweenDays("2024-01-01","2024-01-31"));
+
+function calculateAge(db){
+   const age = new Date(db);
+   const curdate = new Date();
+   const d = curdate.getFullYear() - age.getFullYear()
+  console.log(d);
+  
 }
-console.log(calculateDaysBetweenDays("2024-01-01","2024-01-31"));
+console.log(calculateAge("1989-05-15"));
+
 
 
 
