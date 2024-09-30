@@ -2395,23 +2395,58 @@
 // console.log(calculateAge("1989-05-15"));
 
 
-function generateBarChart(arr){
-   let obj = {};
-   for(let i = 0; i < arr.length ; i++){
-      for(let j = 0; j < arr[i]; j++){
-        if(obj.hasOwnProperty(arr[i])){
-         obj[arr[i]] += "*"
-        }else{
-         obj[arr[i]] = "*"
-        }
+// function generateBarChart(arr){
+//    let obj = {};
+//    for(let i = 0; i < arr.length ; i++){
+//       for(let j = 0; j < arr[i]; j++){
+//         if(obj.hasOwnProperty(arr[i])){
+//          obj[arr[i]] += "*"
+//         }else{
+//          obj[arr[i]] = "*"
+//         }
         
-      }
-   }
-   console.log(obj);
-   return obj
+//       }
+//    }
+//    console.log(obj);
+//    return obj
    
+// }
+// console.log(generateBarChart([5, 3, 9, 2]));
+
+
+
+function validateCreditCard(num){
+    
+    
+if(typeof Number(num.indexOf(0)) === "number"){
+       const cvrt = num.split(" ").join("").split("").reverse();
+       const an = cvrt.map((n)=> Number(n) * Number(n)).map((v)=>{
+        
+        if(v > 9){
+          return v - 9
+           
+        }else{
+            return v
+        }
+       });
+     const add = an.reduce((acc, cur)=> acc + cur, 0);
+    
+     if(add % 10){
+        return true
+     }else{
+        return false
+     }
+    
+    
+       
+       
+
+     }
+
 }
-console.log(generateBarChart([5, 3, 9, 2]));
+console.log(validateCreditCard("4539 1488 0343 6467"));
+console.log(validateCreditCard("8273 1232 7352 0569"));
+
 
 
 
