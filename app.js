@@ -2454,39 +2454,39 @@
 // console.log(validateCreditCard("4539 1488 0343 6467"));
 // console.log(validateCreditCard("8273 1232 7352 0569"));
 
-function paginate(arr, page, pageSize) {
-  const totalItems = arr.length;
-  const totalPages = Math.ceil(totalItems / pageSize);
+// function paginate(arr, page, pageSize) {
+//   const totalItems = arr.length;
+//   const totalPages = Math.ceil(totalItems / pageSize);
 
-  // Ensure the page is within valid range
-  if (page < 1 || page > totalPages) {
-    return {
-      page: page,
-      totalPages: totalPages,
-      items: []
-    };
-  }
+//   // Ensure the page is within valid range
+//   if (page < 1 || page > totalPages) {
+//     return {
+//       page: page,
+//       totalPages: totalPages,
+//       items: []
+//     };
+//   }
 
-  const startIndex = (page - 1) * pageSize;
-  const endIndex = Math.min(startIndex + pageSize, totalItems);
-  const items = arr.slice(startIndex, endIndex);
+//   const startIndex = (page - 1) * pageSize;
+//   const endIndex = Math.min(startIndex + pageSize, totalItems);
+//   const items = arr.slice(startIndex, endIndex);
 
-  return {
-    page: page,
-    totalPages: totalPages,
-    items: items
-  };
-}
+//   return {
+//     page: page,
+//     totalPages: totalPages,
+//     items: items
+//   };
+// }
 
-// Test karein
-const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+// // Test karein
+// const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
-console.log(paginate(data, 1, 10)); // Page 1
-console.log(paginate(data, 2, 10)); // Page 2
-console.log(paginate(data, 3, 10)); // Page 3
-console.log(paginate(data, 4, 10)); // Page 4
-console.log(paginate(data, 5, 10)); // Page 5
-console.log(paginate(data, 6, 10)); // Page 6 (khaali array)
+// console.log(paginate(data, 1, 10)); // Page 1
+// console.log(paginate(data, 2, 10)); // Page 2
+// console.log(paginate(data, 3, 10)); // Page 3
+// console.log(paginate(data, 4, 10)); // Page 4
+// console.log(paginate(data, 5, 10)); // Page 5
+// console.log(paginate(data, 6, 10)); // Page 6 (khaali array)
 
 
 
