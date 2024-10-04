@@ -2489,6 +2489,36 @@
 // console.log(paginate(data, 6, 10)); // Page 6 (khaali array)
 
 
+function paginate(arr, page, pageSize) {
+  const totalItems = arr.length;
+  const totalPages = Math.ceil(totalItems / pageSize);
+
+  // Ensure the page is within valid range
+  if (page < 1 || page > totalPages) {
+    return {
+      page: page,
+      totalPages: totalPages,
+      items: []
+    };
+  }
+
+  const startIndex = (page - 1) * pageSize;
+  const endIndex = Math.min(startIndex + pageSize, totalItems);
+  const items = arr.slice(startIndex, endIndex);
+
+  return {
+    page: page,
+    totalPages: totalPages,
+    items: items
+  };
+}
+
+// Test karein
+const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+console.log(paginate(data, 1, 10)); // Page 1
+
+
 
 
 
