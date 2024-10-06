@@ -2489,36 +2489,51 @@
 // console.log(paginate(data, 6, 10)); // Page 6 (khaali array)
 
 
-function paginate(arr, page, pageSize) {
-  const totalItems = arr.length;
-  const totalPages = Math.ceil(totalItems / pageSize);
+// function paginate(arr, page, pageSize) {
+//   const totalItems = arr.length;
+//   const totalPages = Math.ceil(totalItems / pageSize);
 
-  // Ensure the page is within valid range
-  if (page < 1 || page > totalPages) {
-    return {
-      page: page,
-      totalPages: totalPages,
-      items: []
-    };
+//   // Ensure the page is within valid range
+//   if (page < 1 || page > totalPages) {
+//     return {
+//       page: page,
+//       totalPages: totalPages,
+//       items: []
+//     };
+//   }
+
+//   const startIndex = (page - 1) * pageSize;
+//   const endIndex = Math.min(startIndex + pageSize, totalItems);
+//   const items = arr.slice(startIndex, endIndex);
+
+//   return {
+//     page: page,
+//     totalPages: totalPages,
+//     items: items
+//   };
+// }
+
+// // Test karein
+// const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+// console.log(paginate(data, 1, 10)); // Page 1
+
+function isInclude(arr){
+   const val = arr.filter(element => {
+     if(element.charAt(0) === "u" || element.charAt(0) === "n"){
+      return element
+     }
+        if(element.indexOf("u") || element.indexOf("n")){
+          return element
+        }
+      if(element.charAt(0) === "n" && element.charAt(0) === "u"){
+          return element
+      }
+    });
+    console.log(val);
+    
   }
-
-  const startIndex = (page - 1) * pageSize;
-  const endIndex = Math.min(startIndex + pageSize, totalItems);
-  const items = arr.slice(startIndex, endIndex);
-
-  return {
-    page: page,
-    totalPages: totalPages,
-    items: items
-  };
-}
-
-// Test karein
-const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-
-console.log(paginate(data, 1, 10)); // Page 1
-
-
+  console.log(isInclude(["sami","umair","saad","farooq","apple","noman"]));
 
 
 
