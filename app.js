@@ -2518,22 +2518,46 @@
 
 // console.log(paginate(data, 1, 10)); // Page 1
 
-function isInclude(arr){
-   const val = arr.filter(element => {
-     if(element.charAt(0) === "u" || element.charAt(0) === "n"){
-      return element
-     }
-        if(element.indexOf("u") || element.indexOf("n")){
-          return element
-        }
-      if(element.charAt(0) === "n" && element.charAt(0) === "u"){
-          return element
-      }
-    });
-    console.log(val);
+// function isInclude(arr){
+//    const val = arr.filter(element => {
+//      if(element.charAt(0) === "u" || element.charAt(0) === "n"){
+//       return element
+//      }
+//         if(element.indexOf("u") || element.indexOf("n")){
+//           return element
+//         }
+//       if(element.charAt(0) === "n" && element.charAt(0) === "u"){
+//           return element
+//       }
+//     });
+//     console.log(val);
     
-  }
-  console.log(isInclude(["sami","umair","saad","farooq","apple","noman"]));
+//   }
+//   console.log(isInclude(["sami","umair","saad","farooq","apple","noman"]));
+
+
+//Check the number the number is applicable for multiplication or not
+
+function multiplication(num1, num2){
+  const answer = [];
+   for(let i = num1; i <= num2; i++){
+    if(i % 3 === 0 && i % 5 === 0){
+      answer.push('Fizzbuzz')
+    }
+    else if(i % 5 === 0){
+      answer.push("Buzz")
+    }
+    else if(i % 3 === 0){
+      answer.push('Fizz')
+    }
+    else{
+      answer.push(i)
+    }
+    
+   }
+   return answer
+}
+console.log(multiplication(1,15));
 
 
 
