@@ -2538,6 +2538,27 @@
 
 //Check the number the number is applicable for multiplication or not
 
+// function multiplication(num1, num2){
+//   const answer = [];
+//    for(let i = num1; i <= num2; i++){
+//     if(i % 3 === 0 && i % 5 === 0){
+//       answer.push('Fizzbuzz')
+//     }
+//     else if(i % 5 === 0){
+//       answer.push("Buzz")
+//     }
+//     else if(i % 3 === 0){
+//       answer.push('Fizz')
+//     }
+//     else{
+//       answer.push(i)
+//     }
+    
+//    }
+//    return answer
+// }
+// console.log(multiplication(1,15));
+
 function multiplication(num1, num2){
   const answer = [];
    for(let i = num1; i <= num2; i++){
