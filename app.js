@@ -2599,10 +2599,15 @@
 
 // }
 
+// const validateNumber = (num)=>{
+//   return /^[6-9][\d]{9}$/.test(num)
+// }
+// console.log(validateNumber('9876456778'));
+
 const validateNumber = (num)=>{
-  return /^[6-9][\d]{9}$/.test(num)
+  return /^(?:\+92|0)?(3[0-9]{2})[0-9]{7}$/.test(num)
 }
-console.log(validateNumber('9876456778'));
+console.log(validateNumber('+923001234567'));
 
 
 
