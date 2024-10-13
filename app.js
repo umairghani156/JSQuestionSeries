@@ -2610,13 +2610,29 @@
 // console.log(validateNumber('+923001234567'));
 
 
+// function extractNumber(num){
+//    const val = num.split("");
+//    const h = val.filter((v)=> Number(v)).map((v)=> Number(v));
+//    return h
+   
+   
+   
+// }
+
+// console.log(extractNumber("gagha56788kkj45"));
+
 function extractNumber(num){
-   const val = num.split("");
-   const h = val.filter((v)=> Number(v)).map((v)=> Number(v));
-   return h
-   
-   
-   
+  let val = num.split("");
+  const numbers = [];
+  for(let i = 0; i <= val.length; i++){
+    if(Number(val[i])){
+      numbers.push(Number(val[i]))
+    }
+    
+  }
+  
+  return numbers
+  
 }
 
 console.log(extractNumber("gagha56788kkj45"));
