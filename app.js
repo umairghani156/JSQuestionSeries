@@ -2604,10 +2604,23 @@
 // }
 // console.log(validateNumber('9876456778'));
 
-const validateNumber = (num)=>{
-  return /^(?:\+92|0)?(3[0-9]{2})[0-9]{7}$/.test(num)
+// const validateNumber = (num)=>{
+//   return /^(?:\+92|0)?(3[0-9]{2})[0-9]{7}$/.test(num)
+// }
+// console.log(validateNumber('+923001234567'));
+
+
+function extractNumber(num){
+   const val = num.split("");
+   const h = val.filter((v)=> Number(v)).map((v)=> Number(v));
+   return h
+   
+   
+   
 }
-console.log(validateNumber('+923001234567'));
+
+console.log(extractNumber("gagha56788kkj45"));
+
 
 
 
