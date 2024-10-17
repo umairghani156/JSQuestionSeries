@@ -2638,6 +2638,67 @@ function extractNumber(num){
 console.log(extractNumber("gagha56788kkj45"));
 
 
+// if(typeof Number(num.indexOf(0)) === "number"){
+//     let curDegit = ""
+//        const cvrt = num.split(" ").join("").split("").reverse();
+//        const an = cvrt.map((v, ind)=>{
+//         if(ind % 2 !== 0){
+//             v = v * 2
+//             if(v > 9){
+//               v= v - 9
+               
+//             }else{
+//              v = v
+//             }
+//         }
+//         return v
+//        });
+//        console.log(an);
+       
+//     //  const add = an.reduce((acc, cur)=> acc + cur, 0);
+     
+    
+//     //  if(add % 10){
+//     //     return true
+//     //  }else{
+//     //     return false
+//     //  }
+    
+    
+       
+       
+
+//      }
+
+// }
+// console.log(validateCreditCard("4539 1488 0343 6467"));
+// console.log(validateCreditCard("8273 1232 7352 0569"));
+
+// function paginate(arr, page, pageSize) {
+//   const totalItems = arr.length;
+//   const totalPages = Math.ceil(totalItems / pageSize);
+
+//   // Ensure the page is within valid range
+//   if (page < 1 || page > totalPages) {
+//     return {
+//       page: page,
+//       totalPages: totalPages,
+//       items: []
+//     };
+//   }
+
+//   const startIndex = (page - 1) * pageSize;
+//   const endIndex = Math.min(startIndex + pageSize, totalItems);
+//   const items = arr.slice(startIndex, endIndex);
+
+//   return {
+//     page: page,
+//     totalPages: totalPages,
+//     items: items
+//   };
+// }
+
+
 
 
 
