@@ -2716,6 +2716,23 @@ console.log(extractNumber("gagha56788kkj45"));
 //     }]
 // });
 
+// //Problem 3: Nested Documents
+
+// const postSchema = new mongoose.Schema({
+//     title: String,
+//     content: String,
+//     comments: ["user1","userId2","userId3"],
+// });
+
+// //Problem 4: Relationship Between Collections
+
+// const userSchema = new mongoose.Schema({
+//     name: String,
+//     posts:[{
+//         type: mongoose.Schema.Types.ObjectId,
+//         ref: 'Post',
+//     }]
+// });
 
 
 
