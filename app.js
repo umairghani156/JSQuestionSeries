@@ -2735,6 +2735,18 @@ console.log(extractNumber("gagha56788kkj45"));
 // });
 
 
+// const obj = {
+//   name: "Umair",
+//   age: 23
+// }
+// const obj2 = {...obj};
+// obj2.name = "fahad"
+// console.log("obj1", obj);
+// console.log("obj2", obj2);
+
+
+
+
 
 
 
