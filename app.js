@@ -2744,6 +2744,29 @@ console.log(extractNumber("gagha56788kkj45"));
 // console.log("obj1", obj);
 // console.log("obj2", obj2);
 
+// const data = {
+//   name : "Umair",
+//   age: 23,
+//   favourite:{
+//     book: "Warrior",
+//     sport: "Cricket"
+//   }
+// }
+
+// const data2 = {
+//   ...data,
+//   favourite:{
+//     ...data.favourite
+//   }
+// };
+
+// data.age = 24;
+// data.name = "Faiz"
+// data.favourite.book = "Novel"
+// console.log("data", data);
+// console.log("dat2", data2);
+
+
 
 
 
