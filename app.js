@@ -2789,22 +2789,44 @@ console.log(extractNumber("gagha56788kkj45"));
 // data.hello()
 // console.log("data2", data2);
 
-var obj = {
-  foo: "Umair",
-  func: function(){
-    var self = this;
-    console.log("This.foo", this.foo);
-    console.log("self.foo", self.foo);
-    (function(){
-      console.log("this.foo", this.foo);
-      console.log("self.foo", self.foo);
+// var obj = {
+//   foo: "Umair",
+//   func: function(){
+//     var self = this;
+//     console.log("This.foo", this.foo);
+//     console.log("self.foo", self.foo);
+//     (function(){
+//       console.log("this.foo", this.foo);
+//       console.log("self.foo", self.foo);
 
 
       
-    })()
-  }
+//     })()
+//   }
+// }
+// obj.func()
+
+const str = "Hello";
+
+const cvrt = Array.from(str);
+console.log(cvrt);
+
+const numbers = [1, 2, 3];
+
+const arr = Array.from(numbers, (num)=> num * 2);
+console.log(arr);
+const arr2 = new Array(100)
+console.log(arr2);
+
+const nums =Array.from(arr2, (val, index)=>
+{
+  return index + 1
 }
-obj.func()
+);
+console.log(nums);
+
+
+
 
 
 
