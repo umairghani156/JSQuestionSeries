@@ -2766,6 +2766,32 @@ console.log(extractNumber("gagha56788kkj45"));
 // console.log("data", data);
 // console.log("dat2", data2);
 
+let data = {
+  name: "Umair",
+  age: 23,
+  favourites:{
+    book:"Drama",
+    sport:"Cricket"
+  },
+  hello: function(){
+    console.log("My name is " + this.name);
+    
+  }
+}
+
+const data2 = JSON.parse(JSON.stringify(data));
+
+data2.name = "Kashif";
+data2.age = 24;
+data2.favourites.book = "Islamic";
+
+console.log("data", data);
+data.hello()
+console.log("data2", data2);
+
+
+
+
 
 
 
