@@ -2857,30 +2857,55 @@
 // hiFun()
 
 
-Object.prototype.myBind = function (bindObj, ...arg){
-  bindObj.kuchBhi = this;
-  return function (){
-    bindObj.kuchBhi(...arg)
-  }
-}
+// Object.prototype.myBind = function (bindObj, ...arg){
+//   bindObj.kuchBhi = this;
+//   return function (){
+//     bindObj.kuchBhi(...arg)
+//   }
+// }
 
 
+// let obj = {
+//   name: "Faiz"
+// }
+
+// let obj2 = {
+//   name: "Habib",
+//   sayHi: function(age, desc){
+//     console.log("hello my Friend " + this.name + age + desc);
+    
+//   }
+// }
+
+// let printObj = obj2.sayHi.myBind(obj, 23, "hello");
+// printObj()
+
+//Polyfill is made because of inavailabilty in older environment that is exist in new version which we set in old environment.
+
+
+//Call Method
+//call a function directly
+
+// Object.prototype.myCall = function (callObj, ...arg){
+//   callObj.myMethod = this;
+//   function hello(){
+//     callObj.myMethod(...arg)
+//   }
+//   return hello()
+// }
 let obj = {
-  name: "Faiz"
-}
-
-let obj2 = {
-  name: "Habib",
-  sayHi: function(age, desc){
-    console.log("hello my Friend " + this.name + age + desc);
+  name: "Aamir",
+  sayHi:function(age, desc){
+    console.log("Hello "+ this.name + " " + age + " " + desc);
     
   }
 }
 
-let printObj = obj2.sayHi.myBind(obj, 23, "hello");
-printObj()
+let obj2 = {name: "Kashif"};
 
-//Polyfill is made because of inavailabilty in older environment that is exist in new version which we set in old environment.
+obj.sayHi.myCall(obj2, 26, "Accountant");
+
+
 
 
 
