@@ -2621,21 +2621,21 @@
 
 // console.log(extractNumber("gagha56788kkj45"));
 
-function extractNumber(num){
-  let val = num.split("");
-  const numbers = [];
-  for(let i = 0; i <= val.length; i++){
-    if(Number(val[i])){
-      numbers.push(Number(val[i]))
-    }
+// function extractNumber(num){
+//   let val = num.split("");
+//   const numbers = [];
+//   for(let i = 0; i <= val.length; i++){
+//     if(Number(val[i])){
+//       numbers.push(Number(val[i]))
+//     }
     
-  }
+//   }
   
-  return numbers
+//   return numbers
   
-}
+// }
 
-console.log(extractNumber("gagha56788kkj45"));
+// console.log(extractNumber("gagha56788kkj45"));
 
 
 // if(typeof Number(num.indexOf(0)) === "number"){
@@ -2835,27 +2835,50 @@ console.log(extractNumber("gagha56788kkj45"));
 
 //Bind Method 
 
+// Object.prototype.myBind = function (bindObj, ...arg){
+//   bindObj.myMethod = this;
+//   console.log("bindObj ->",bindObj);
+//   return function (){
+//     bindObj.myMethod(...arg)
+//   }
+// }
+
+// let obj = {
+//   name: "Umair",
+//   sayHi:function(age, des, exp){
+//     console.log('Hello ' + this.name + " " + age + " "+des + " " + exp);
+    
+//   }
+// };
+
+// let obj2 = {name: "Habib"};
+
+// const hiFun = obj.sayHi.myBind(obj2, 20, "developer", "2years");
+// hiFun()
+
+
 Object.prototype.myBind = function (bindObj, ...arg){
-  bindObj.myMethod = this;
-  console.log("bindObj ->",bindObj);
+  bindObj.kuchBhi = this;
   return function (){
-    bindObj.myMethod(...arg)
+    bindObj.kuchBhi(...arg)
   }
 }
 
+
 let obj = {
-  name: "Umair",
-  sayHi:function(age, des, exp){
-    console.log('Hello ' + this.name + " " + age + " "+des + " " + exp);
+  name: "Faiz"
+}
+
+let obj2 = {
+  name: "Habib",
+  sayHi: function(age, desc){
+    console.log("hello my Friend " + this.name + age + desc);
     
   }
-};
+}
 
-let obj2 = {name: "Habib"};
-
-const hiFun = obj.sayHi.myBind(obj2, 20, "developer", "2years");
-hiFun()
-
+let printObj = obj2.sayHi.myBind(obj, 23, "hello");
+printObj()
 
 
 
