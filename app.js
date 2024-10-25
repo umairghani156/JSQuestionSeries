@@ -2880,6 +2880,8 @@ let obj2 = {
 let printObj = obj2.sayHi.myBind(obj, 23, "hello");
 printObj()
 
+//Polyfill is made because of inavailabilty in older environment that is exist in new version which we set in old environment.
+
 
 
 
