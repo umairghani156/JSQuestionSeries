@@ -2893,6 +2893,11 @@
 //   }
 //   return hello()
 // }
+
+Object.prototype.myCall = function (callObj, ...arg){
+  callObj.myMethod = this;
+  return callObj.myMethod(...arg)
+}
 let obj = {
   name: "Aamir",
   sayHi:function(age, desc){
