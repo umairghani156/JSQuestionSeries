@@ -2806,24 +2806,63 @@ console.log(extractNumber("gagha56788kkj45"));
 // }
 // obj.func()
 
-const str = "Hello";
+// const str = "Hello";
 
-const cvrt = Array.from(str);
-console.log(cvrt);
+// const cvrt = Array.from(str);
+// console.log(cvrt);
 
-const numbers = [1, 2, 3];
+// const numbers = [1, 2, 3];
 
-const arr = Array.from(numbers, (num)=> num * 2);
-console.log(arr);
-const arr2 = new Array(100)
-console.log(arr2);
+// const arr = Array.from(numbers, (num)=> num * 2);
+// console.log(arr);
+// const arr2 = new Array(100)
+// console.log(arr2);
 
-const nums =Array.from(arr2, (val, index)=>
-{
-  return index + 1
+// const nums =Array.from(arr2, (val, index)=>
+// {
+//   return index + 1
+// }
+// );
+// console.log(nums);
+
+// console.log([] == []);
+// console.log({} == "");
+// console.log({} == 0);
+// console.log([] == 10);
+// console.log([] + 1);
+// console.log({});
+// console.log(typeof []);
+
+//Bind Method 
+
+Object.prototype.myBind = function (bindObj, ...arg){
+  bindObj.myMethod = this;
+  console.log("bindObj ->",bindObj);
+  return function (){
+    bindObj.myMethod(...arg)
+  }
 }
-);
-console.log(nums);
+
+let obj = {
+  name: "Umair",
+  sayHi:function(age, des, exp){
+    console.log('Hello ' + this.name + " " + age + " "+des + " " + exp);
+    
+  }
+};
+
+let obj2 = {name: "Habib"};
+
+const hiFun = obj.sayHi.myBind(obj2, 20, "developer", "2years");
+hiFun()
+
+
+
+
+
+
+
+
 
 
 
