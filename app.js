@@ -2968,6 +2968,77 @@
   
 // }
 
+//Promise in JavaScript
+
+const data = [
+  {
+    name: "umair"
+  },
+  {
+    name: "umair"
+  },
+  {
+    name: "umair"
+  },
+  {
+    name: "umair"
+  },
+  
+
+]
+// function renderVal(users){
+//   return users
+// }
+// const myPromise = new Promise(async(resolve, reject)=>{
+  
+//     const check = await renderVal(data);
+//     return check
+ 
+// })
+// myPromise.then((resolve)=>{
+//   console.log("hhh",resolve);
+  
+// }, (reject)=>{
+//   console.log("rej",reject);
+  
+// })
+
+const promiseBtn = document.getElementById("promiseBtn");
+
+ function helloFunc(arg){
+  const myPromise = new Promise((resolve, reject)=>{
+     setTimeout(()=>{
+      if(arg ==="res"){
+       return  resolve("Resolve Hogiiya he!")
+      }
+       
+      reject("Reject Hogiya he!")
+     },1000)
+  })
+
+  
+
+  return myPromise
+}
+
+
+promiseBtn.addEventListener("click", ()=>{
+  console.log("h");
+ const check =  helloFunc("rej");
+ 
+ check.then((res)=>res).then((res)=>{
+  console.log("resolved", res);
+  
+ }).catch((error)=>{
+  console.log("Error", error);
+  
+ })
+ 
+  
+  
+})
+
+
 
 
 
