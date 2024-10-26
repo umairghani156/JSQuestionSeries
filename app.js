@@ -2894,21 +2894,79 @@
 //   return hello()
 // }
 
-Object.prototype.myCall = function (callObj, ...arg){
-  callObj.myMethod = this;
-  return callObj.myMethod(...arg)
-}
-let obj = {
-  name: "Aamir",
-  sayHi:function(age, desc){
-    console.log("Hello "+ this.name + " " + age + " " + desc);
+// Object.prototype.myCall = function (callObj, ...arg){
+//   callObj.myMethod = this;
+//   return callObj.myMethod(...arg)
+// }
+// let obj = {
+//   name: "Aamir",
+//   sayHi:function(age, desc){
+//     console.log("Hello "+ this.name + " " + age + " " + desc);
     
-  }
-}
+//   }
+// }
 
-let obj2 = {name: "Kashif"};
+// let obj2 = {name: "Kashif"};
 
-obj.sayHi.myCall(obj2, 26, "Accountant");
+// obj.sayHi.myCall(obj2, 26, "Accountant");
+
+
+//Apply Method 
+
+// Object.prototype.myApply = function (ObjApply,[...arg]){
+//    ObjApply.myMethod = this;
+//    ObjApply.myMethod(...arg)
+// }
+// let nameObj = {
+//   name : 'Umair'
+// }
+
+// let printName = {
+//   name : "Ahmed",
+//   sayHi: function (...age){
+//     console.log("Welcome " + this.name + " " + age[0] + " " + age[1] + " " + age[2]);
+    
+//   }
+// }
+// printName.sayHi.myApply(nameObj, [23, "Umair", "Developer"]);
+
+// Object.prototype.myCall = function (callObj, ...arg){
+//   callObj.kuchbhi = this
+//   return function (){
+//     callObj.kuchbhi(...arg)
+//   }
+// }
+
+// let users = [
+//   {
+//     id: 1,
+//     name: "Umair"
+//   },
+//   {
+//     id: 2,
+//     name: "Faiz"
+//   },
+//   {
+//     id: 3,
+//     name: "Kashif"
+//   },
+
+// ]
+
+// function greet(greeting, age){
+//   alert(`Hello ${this.name}! ${greeting} ${age}`)
+// }
+
+// const userHandler = ()=>{
+//   console.log("Hello");
+//   let checkUser = users.find((userHandler) => userHandler.id == 2);
+//   console.log(checkUser);
+//  const myBind = greet.myCall(checkUser,"Welcome to the page",24)
+//  myBind()
+ 
+  
+  
+// }
 
 
 
