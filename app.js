@@ -3057,9 +3057,9 @@ const data = [
 // }
 // console.log(hello1()("ali"));
 
-let arr = [["umair","habib","faiz"],["faiz","habib"]];
-let v = arr[0]
-console.log(v[1]);
+// let arr = [["umair","habib","faiz"],["faiz","habib"]];
+// let v = arr[0]
+// console.log(v[1]);
 
 
 
