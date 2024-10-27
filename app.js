@@ -3003,40 +3003,64 @@ const data = [
   
 // })
 
-const promiseBtn = document.getElementById("promiseBtn");
+// const promiseBtn = document.getElementById("promiseBtn");
 
- function helloFunc(arg){
-  const myPromise = new Promise((resolve, reject)=>{
-     setTimeout(()=>{
-      if(arg ==="res"){
-       return  resolve("Resolve Hogiiya he!")
-      }
+//  function helloFunc(arg){
+//   const myPromise = new Promise((resolve, reject)=>{
+//      setTimeout(()=>{
+//       if(arg ==="res"){
+//        return  resolve("Resolve Hogiiya he!")
+//       }
        
-      reject("Reject Hogiya he!")
-     },1000)
-  })
+//       reject("Reject Hogiya he!")
+//      },1000)
+//   })
 
   
 
-  return myPromise
-}
+//   return myPromise
+// }
 
 
-promiseBtn.addEventListener("click", ()=>{
-  console.log("h");
- const check =  helloFunc("rej");
+// promiseBtn.addEventListener("click", ()=>{
+//   console.log("h");
+//  const check =  helloFunc("rej");
  
- check.then((res)=>res).then((res)=>{
-  console.log("resolved", res);
+//  check.then((res)=>res).then((res)=>{
+//   console.log("resolved", res);
   
- }).catch((error)=>{
-  console.log("Error", error);
+//  }).catch((error)=>{
+//   console.log("Error", error);
   
- })
+//  })
  
   
   
-})
+// })
+
+// function User(name,age){
+//   this.name = name;
+//   this.age = age
+// }
+// const user1 =new User("Umair", 24);
+// const user2 =new User("Faiz", 14);
+// User.prototype.designation = "Developer"
+// user1.name = "Hello"
+
+// console.log(user1, user2);
+
+
+// function hello1(){
+//   return function hello2(name){
+//     return name
+//   }
+// }
+// console.log(hello1()("ali"));
+
+let arr = [["umair","habib","faiz"],["faiz","habib"]];
+let v = arr[0]
+console.log(v[1]);
+
 
 
 
