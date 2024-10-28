@@ -3093,7 +3093,21 @@ const data = [
 
 // hello2(displayData)
 
+const inputVal = document.getElementById("inputVal");
+const submitBtn = document.getElementById("submitBtn");
+let timeOut;
+function showData(e) {
+   clearTimeout(timeOut)
+   timeOut= setTimeout(()=>{
+      console.log(e.target.value);
+      
+    },1000)
+    console.log(timeOut);
+    
+   
+}
 
+inputVal.addEventListener("input", showData)
 
 
 
