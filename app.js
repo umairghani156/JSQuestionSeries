@@ -3061,7 +3061,37 @@ const data = [
 // let v = arr[0]
 // console.log(v[1]);
 
+// function LevelTwo() {
+//   console.log("Inside Level Two!")
+// }
 
+// function LevelOne() {
+//   console.log("LevelOne");
+  
+//   LevelTwo()
+// }
+
+// function main() {
+//   console.log("Main");
+  
+//   LevelOne()
+// }
+
+// main()
+
+// function hello2(callback){
+//   setTimeout(()=>{
+//     const data = {name:"Umair", age:24}
+//     callback(data)
+//   },1000)
+// }
+
+// function displayData(data){
+//   console.log(`Fetched Data: ID = ${data.age}, Name = ${data.name}`);
+  
+// }
+
+// hello2(displayData)
 
 
 
