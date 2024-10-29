@@ -3093,21 +3093,55 @@ const data = [
 
 // hello2(displayData)
 
-const inputVal = document.getElementById("inputVal");
-const submitBtn = document.getElementById("submitBtn");
-let timeOut;
-function showData(e) {
-   clearTimeout(timeOut)
-   timeOut= setTimeout(()=>{
-      console.log(e.target.value);
+// const inputVal = document.getElementById("inputVal");
+// const submitBtn = document.getElementById("submitBtn");
+// let timeOut;
+// function showData(e) {
+//    clearTimeout(timeOut)
+//    timeOut= setTimeout(()=>{
+//       console.log(e.target.value);
       
-    },1000)
-    console.log(timeOut);
+//     },1000)
+//     console.log(timeOut);
     
    
-}
+// }
 
-inputVal.addEventListener("input", showData)
+// inputVal.addEventListener("input", showData)
+
+
+// const obj = {
+//   name:"Umair",
+//   age: 24,
+//   designation:"Developer",
+//   interests: "Programming"
+// }
+// const hello = Object.valueOf(obj)
+
+// console.log(hello)
+// console.log(obj);
+
+const Person = function (firstName, lastName, age, eyeColor) {
+  this.name = firstName + " " + lastName;
+  this.age = age;
+  this.eyeColor = eyeColor;
+
+  this.sayHello = function (g) {
+    console.log(this.name);
+    return g
+  };
+};
+const obj2 = {
+  name: "Umair kakkakk",
+  age: 20,
+  eyeColor:"Dark"
+}
+let text = new Person("Umair", "Habib", 24, "Blue");
+const c= text.sayHello.bind(obj2)
+console.log(c("hey"));
+
+
+
 
 
 
