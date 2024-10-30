@@ -3121,24 +3121,42 @@ const data = [
 // console.log(hello)
 // console.log(obj);
 
-const Person = function (firstName, lastName, age, eyeColor) {
-  this.name = firstName + " " + lastName;
-  this.age = age;
-  this.eyeColor = eyeColor;
+// const Person = function (firstName, lastName, age, eyeColor) {
+//   this.name = firstName + " " + lastName;
+//   this.age = age;
+//   this.eyeColor = eyeColor;
 
-  this.sayHello = function (g) {
-    console.log(this.name);
-    return g
-  };
-};
-const obj2 = {
-  name: "Umair kakkakk",
-  age: 20,
-  eyeColor:"Dark"
-}
-let text = new Person("Umair", "Habib", 24, "Blue");
-const c= text.sayHello.bind(obj2)
-console.log(c("hey"));
+//   this.sayHello = function (g) {
+//     console.log(this.name);
+//     return g
+//   };
+// };
+// const obj2 = {
+//   name: "Umair kakkakk",
+//   age: 20,
+//   eyeColor:"Dark"
+// }
+// let text = new Person("Umair", "Habib", 24, "Blue");
+// const c= text.sayHello.bind(obj2)
+// console.log(c("hey"));
+
+// const arr = [1, 2, 3, function(){
+//   console.log("Hello world");
+  
+// }, "umair"]
+
+// console.log(arr[3]());
+
+
+const arr = [1, 2, 3, function(){
+  console.log("Hello world");
+  
+}, "umair"]
+
+console.log(arr[3]());
+
+
+
 
 
 
