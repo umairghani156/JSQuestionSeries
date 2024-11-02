@@ -3203,34 +3203,31 @@ const data = [
 const colors = ["red", "green", "blue","yellow","gray","black"];
 
 const listItems = document.querySelectorAll("li");
-let count = 0;
-let bgColor;
+
+let lastClickedIndex = -1; // Pichle clicked box ka index
+
 listItems.forEach((item, ind) => {
-  console.log(ind);
   item.style.backgroundColor = colors[ind];
-  
+
   item.addEventListener("click", () => {
-    //item.classList.toggle("highlight");
-  if(count === 0){
-    bgColor = item.style.backgroundColor
-  }else{
-    colors[ind] = bgColor
-    item.style.backgroundColor = bgColor
-    console.log(colors[ind]);
-    console.log(colors);
-    
-    
-  }
-  
-  
-  count++
-    
-   
-    
+    // Agar ye pehli baar click hai
+    if (lastClickedIndex === -1) {
+      lastClickedIndex = ind; // Ab is index ko store karo
+      return; // Kuch nahi karna, function khatam
+    }
+
+    // Pichle clicked box ka color naye box ko de do
+    const previousItem = listItems[lastClickedIndex];
+    const currentColor = previousItem.style.backgroundColor;
+
+    // Naye box ka background color pichle box ka color
+    previousItem.style.backgroundColor = colors[ind];
+    item.style.backgroundColor = currentColor;
+
+    // Ab naye clicked index ko store karo
+    lastClickedIndex = ind;
   });
-})
-
-
+});
 
 
 
