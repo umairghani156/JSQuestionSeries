@@ -3148,58 +3148,87 @@ const data = [
 // console.log(arr[3]());
 
 
-const arr = [1, 2, 3, function(){
-  console.log("Hello world");
+// const arr = [1, 2, 3, function(){
+//   console.log("Hello world");
   
-}, "umair"]
+// }, "umair"]
 
-console.log(arr[3]());
+// console.log(arr[3]());
 
-const Person = function (firstName, lastName, age, eyeColor) {
-  this.name = firstName + " " + lastName;
-  this.age = age;
-  this.eyeColor = eyeColor;
+// const Person = function (firstName, lastName, age, eyeColor) {
+//   this.name = firstName + " " + lastName;
+//   this.age = age;
+//   this.eyeColor = eyeColor;
 
-  this.sayHello = function (g) {
-    console.log(this.name);
-    return g
-  };
-};
-const obj2 = {
-  name: "Umair kakkakk",
-  age: 20,
-  eyeColor:"Dark"
-}
-let text = new Person("Umair", "Habib", 24, "Blue");
-const c= text.sayHello.bind(obj2)
-console.log(c("hey"));
+//   this.sayHello = function (g) {
+//     console.log(this.name);
+//     return g
+//   };
+// };
+// const obj2 = {
+//   name: "Umair kakkakk",
+//   age: 20,
+//   eyeColor:"Dark"
+// }
+// let text = new Person("Umair", "Habib", 24, "Blue");
+// const c= text.sayHello.bind(obj2)
+// console.log(c("hey"));
 
 
-const arr = [1, 2, 3, function(){
-  console.log("Hello world");
+// const arr = [1, 2, 3, function(){
+//   console.log("Hello world");
   
-}, "umair"]
+// }, "umair"]
 
-console.log(arr[3]());
+// console.log(arr[3]());
 
-const Person = function (firstName, lastName, age, eyeColor) {
-  this.name = firstName + " " + lastName;
-  this.age = age;
-  this.eyeColor = eyeColor;
+// const Person = function (firstName, lastName, age, eyeColor) {
+//   this.name = firstName + " " + lastName;
+//   this.age = age;
+//   this.eyeColor = eyeColor;
 
-  this.sayHello = function (g) {
-    console.log(this.name);
-    return g
-  };
-};
-const obj2 = {
-  name: "Umair kakkakk",
-  age: 20,
-  eyeColor:"Dark"
-}
-let text = new Person("Umair", "Habib", 24, "Blue");
-const c= text.sayHello.bind(obj2)
-console.log(c("hey"));
+//   this.sayHello = function (g) {
+//     console.log(this.name);
+//     return g
+//   };
+// };
+// const obj2 = {
+//   name: "Umair kakkakk",
+//   age: 20,
+//   eyeColor:"Dark"
+// }
+// let text = new Person("Umair", "Habib", 24, "Blue");
+// const c= text.sayHello.bind(obj2)
+// console.log(c("hey"));
+const colors = ["red", "green", "blue","yellow","gray","black"];
+
+const listItems = document.querySelectorAll("li");
+let count = 0;
+let bgColor;
+listItems.forEach((item, ind) => {
+  console.log(ind);
+  item.style.backgroundColor = colors[ind];
+  
+  item.addEventListener("click", () => {
+    //item.classList.toggle("highlight");
+  if(count === 0){
+    bgColor = item.style.backgroundColor
+  }else{
+    colors[ind] = bgColor
+    item.style.backgroundColor = bgColor
+    console.log(colors[ind]);
+    console.log(colors);
+    
+    
+  }
+  
+  
+  count++
+    
+   
+    
+  });
+})
 
 
 

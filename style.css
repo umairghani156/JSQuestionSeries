@@ -92,3 +92,14 @@
     filter: blur(30px) brightness(150%) hue-rotate(90deg); 
     z-index: -1; 
 }
+.box ul{
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    justify-content: center;
+}
+.box ul >li{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
