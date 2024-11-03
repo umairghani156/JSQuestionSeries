@@ -3200,35 +3200,58 @@ const data = [
 // let text = new Person("Umair", "Habib", 24, "Blue");
 // const c= text.sayHello.bind(obj2)
 // console.log(c("hey"));
+
+
+// let lastClickedIndex = -1; // Pichle clicked box ka index
+
+// listItems.forEach((item, ind) => {
+//   item.style.backgroundColor = colors[ind];
+
+//   item.addEventListener("click", () => {
+//     // Agar ye pehli baar click hai
+//     if (lastClickedIndex === -1) {
+//       lastClickedIndex = ind; // Ab is index ko store karo
+//       return; // Kuch nahi karna, function khatam
+//     }
+
+//     // Pichle clicked box ka color naye box ko de do
+//     const previousItem = listItems[lastClickedIndex];
+//     const currentColor = previousItem.style.backgroundColor;
+
+//     // Naye box ka background color pichle box ka color
+//     previousItem.style.backgroundColor = colors[ind];
+//     item.style.backgroundColor = currentColor;
+
+//     // Ab naye clicked index ko store karo
+//     lastClickedIndex = ind;
+//   });
+// });
+
 const colors = ["red", "green", "blue","yellow","gray","black"];
 
 const listItems = document.querySelectorAll("li");
+let listCount = -1;
+listItems.forEach((item, index)=>{
+  item.style.backgroundColor = colors[index]
+  item.addEventListener('click', (e)=>{
+   if(listCount === -1){
+    listCount = index;
+    return
+   }
 
-let lastClickedIndex = -1; // Pichle clicked box ka index
+   console.log(listCount);
+   const previousItem = listItems[listCount];
+   console.log(previousItem);
+   const currentColor = previousItem.style.backgroundColor;
+   previousItem.style.backgroundColor = colors[index];
 
-listItems.forEach((item, ind) => {
-  item.style.backgroundColor = colors[ind];
+   item.style.backgroundColor = currentColor
+   listCount = index
 
-  item.addEventListener("click", () => {
-    // Agar ye pehli baar click hai
-    if (lastClickedIndex === -1) {
-      lastClickedIndex = ind; // Ab is index ko store karo
-      return; // Kuch nahi karna, function khatam
-    }
-
-    // Pichle clicked box ka color naye box ko de do
-    const previousItem = listItems[lastClickedIndex];
-    const currentColor = previousItem.style.backgroundColor;
-
-    // Naye box ka background color pichle box ka color
-    previousItem.style.backgroundColor = colors[ind];
-    item.style.backgroundColor = currentColor;
-
-    // Ab naye clicked index ko store karo
-    lastClickedIndex = ind;
-  });
-});
-
+   
+    
+  })
+})
 
 
 
