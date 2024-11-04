@@ -3227,31 +3227,56 @@ const data = [
 //   });
 // });
 
-const colors = ["red", "green", "blue","yellow","gray","black"];
+// const colors = ["red", "green", "blue","yellow","gray","black"];
 
-const listItems = document.querySelectorAll("li");
-let listCount = -1;
-listItems.forEach((item, index)=>{
-  item.style.backgroundColor = colors[index]
-  item.addEventListener('click', (e)=>{
-   if(listCount === -1){
-    listCount = index;
-    return
-   }
+// const listItems = document.querySelectorAll("li");
+// let listCount = -1;
+// listItems.forEach((item, index)=>{
+//   item.style.backgroundColor = colors[index]
+//   item.addEventListener('click', (e)=>{
+//    if(listCount === -1){
+//     listCount = index;
+//     return
+//    }
 
-   console.log(listCount);
-   const previousItem = listItems[listCount];
-   console.log(previousItem);
-   const currentColor = previousItem.style.backgroundColor;
-   previousItem.style.backgroundColor = colors[index];
+//    console.log(listCount);
+//    const previousItem = listItems[listCount];
+//    console.log(previousItem);
+//    const currentColor = previousItem.style.backgroundColor;
+//    previousItem.style.backgroundColor = colors[index];
 
-   item.style.backgroundColor = currentColor
-   listCount = index
+//    item.style.backgroundColor = currentColor
+//    listCount = index
 
    
     
-  })
-})
+//   })
+// })
+
+function howManyChar(str){
+  const cvrtArr = str.split("");
+  const mapval = cvrtArr.map((val, ind)=>{
+    if(val == " "){
+      return 
+    }
+    return val
+  }).filter((val)=> val !== undefined);
+
+  let countVal = {};
+  mapval.reduce((acc, cur)=>{
+     if(countVal.hasOwnProperty(cur)){
+       countVal[cur] += 1
+     }else{
+       countVal[cur] = 1
+     }
+  },0)
+  console.log(countVal);
+  return countVal
+  
+  
+
+}
+console.log(howManyChar("Habib kahan ho tum aaj kl nazar nhi arha he"));
 
 
 
