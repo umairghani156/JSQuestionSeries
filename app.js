@@ -3281,19 +3281,34 @@ const data = [
 // console.log(howManyChar("Habib kahan ho tum aaj kl nazar nhi arha he"));
 
 //const hello = "habib";
-const {habib} = hello;
-console.log();
+// const {habib} = hello;
+// console.log();
 
-name2 = "Umair"
+// name2 = "Umair"
 
-const {name}= {
-  name: "Umair"
+// const {name}= {
+//   name: "Umair"
+// }
+// const []= [1,2,3,4]
+
+// console.log(length);//
+// console.log(name);//
+// console.log(age);//
+
+function hello(str){
+ try {
+  if(str == "hell"){
+    return str + " Hello world"
+  }
+ } catch (error) {
+  
+ }
 }
-const []= [1,2,3,4]
+console.log(hello("ka"));
 
-console.log(length);//
-console.log(name);//
-console.log(age);//
+
+
+
 
 
 
