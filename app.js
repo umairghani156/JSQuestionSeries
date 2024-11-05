@@ -1,3 +1,5 @@
+
+
 // // //1-Write a function that returns the reverse of a string?
 
 // // function reverseString(n){
@@ -3253,30 +3255,50 @@ const data = [
 //   })
 // })
 
-function howManyChar(str){
-  const cvrtArr = str.split("");
-  const mapval = cvrtArr.map((val, ind)=>{
-    if(val == " "){
-      return 
-    }
-    return val
-  }).filter((val)=> val !== undefined);
+// function howManyChar(str){
+//   const cvrtArr = str.split("");
+//   const mapval = cvrtArr.map((val, ind)=>{
+//     if(val == " "){
+//       return 
+//     }
+//     return val
+//   }).filter((val)=> val !== undefined);
 
-  let countVal = {};
-  mapval.reduce((acc, cur)=>{
-     if(countVal.hasOwnProperty(cur)){
-       countVal[cur] += 1
-     }else{
-       countVal[cur] = 1
-     }
-  },0)
-  console.log(countVal);
-  return countVal
+//   let countVal = {};
+//   mapval.reduce((acc, cur)=>{
+//      if(countVal.hasOwnProperty(cur)){
+//        countVal[cur] += 1
+//      }else{
+//        countVal[cur] = 1
+//      }
+//   },0)
+//   console.log(countVal);
+//   return countVal
   
   
 
+// }
+// console.log(howManyChar("Habib kahan ho tum aaj kl nazar nhi arha he"));
+
+//const hello = "habib";
+const {habib} = hello;
+console.log();
+
+name2 = "Umair"
+
+const {name}= {
+  name: "Umair"
 }
-console.log(howManyChar("Habib kahan ho tum aaj kl nazar nhi arha he"));
+const []= [1,2,3,4]
+
+console.log(length);//
+console.log(name);//
+console.log(age);//
+
+
+
+
+
 
 
 
