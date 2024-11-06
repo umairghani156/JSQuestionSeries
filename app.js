@@ -3295,16 +3295,17 @@ const data = [
 // console.log(name);//
 // console.log(age);//
 
-function hello(str){
- try {
-  if(str == "hell"){
-    return str + " Hello world"
-  }
- } catch (error) {
+// function hello(str){
+//  try {
+//   if(str == "hell"){
+//     return str + " Hello world"
+//   }
+//  } catch (error) {
   
- }
-}
-console.log(hello("ka"));
+//  }
+// }
+// console.log(hello("ka"));
+
 
 
 
