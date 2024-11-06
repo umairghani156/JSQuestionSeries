@@ -3324,15 +3324,24 @@ const inputTag = document.querySelector("input")
 
 function addText(){
    console.log(inputTag.value);
-   let lists = `<li>${inputTag.value}<button onclick="editHandler(this)">Edit</button><button>Delete</button></li>`;
+   let lists = `<li>${inputTag.value}<button onclick="editHandler(this)">Edit</button><button onclick="deleteHandler(this)">Delete</button></li>`;
    ulList.innerHTML += lists
    
 }
 
 function editHandler(d){
-  console.log(d.parentElement.textContent);
+  console.log(d.parentElement);
   
 }
+function deleteHandler(d){
+  console.log(d);
+  
+};
+
+let arr = [["hello"]];
+let arr2 = arr[0][0];
+console.log(arr2.charAt(arr2.length -1));
+
 
 
 
