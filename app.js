@@ -3304,20 +3304,36 @@ const data = [
   
 //  }
 // }
-// console.log(hello("ka"));
+// // console.log(hello("ka"));
 
-function hello(){
-  {
-    (function(){
+// function hello(){
+//   {
+//     (function(){
 
-      var x = 10;
-      var y = 12;
-    })()
-  }
-  console.log(x, y);
+//       var x = 10;
+//       var y = 12;
+//     })()
+//   }
+//   console.log(x, y);
+  
+// }
+// hello()
+
+let ulList = document.querySelector(".ulList");
+const inputTag = document.querySelector("input")
+
+function addText(){
+   console.log(inputTag.value);
+   let lists = `<li>${inputTag.value}<button onclick="editHandler(this)">Edit</button><button>Delete</button></li>`;
+   ulList.innerHTML += lists
+   
+}
+
+function editHandler(d){
+  console.log(d.parentElement.textContent);
   
 }
-hello()
+
 
 
 
