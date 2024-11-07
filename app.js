@@ -3389,6 +3389,23 @@ db.products.aggregate([
 ]);
 
 
+db.col.aggregate([
+  {
+    $project:{
+      name: 1,
+      _id: 0,
+      umairValue:{
+        $filter:{
+          input:"$values",
+          as: "val",
+          cond: {
+            $gt:["$$val", 30]
+          }
+        }
+      }
+    }
+  }
+]);
 
 
 
