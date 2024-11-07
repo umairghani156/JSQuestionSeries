@@ -3338,9 +3338,57 @@ function deleteHandler(d){
   
 };
 
-let arr = [["hello"]];
-let arr2 = arr[0][0];
-console.log(arr2.charAt(arr2.length -1));
+// let arr = [["hello"]];
+// let arr2 = arr[0][0];
+// console.log(arr2.charAt(arr2.length -1));
+
+async function hello1(){
+  setTimeout(() => {
+    console.log("hello world");
+    
+  }, 0);
+
+  
+  console.log("hello");
+ 
+
+  
+
+}
+hello1();
+
+
+db.products.aggregate([
+  {
+    $match:{
+      price:{
+        $gt: 1200
+      }
+    }
+  },
+  {
+    $unwind:"$colors"
+  },
+  {
+    $group:{
+      _id:{
+        priceGroup:"$price"
+      },
+      allColors:{
+        $addToSet:"$colors"
+      }
+    }
+  },
+  {
+    $project:{
+      _id: 1,
+      allColors: 1,
+      colorLength:{$size: "$allColors"}
+    }
+  }
+]);
+
+
 
 
 
