@@ -3321,91 +3321,110 @@ const data = [
 
 let ulList = document.querySelector(".ulList");
 const inputTag = document.querySelector("input")
-
+const submitBtn = document.querySelector("#submitBtn")
+let currentEditItem = null
 function addText(){
    console.log(inputTag.value);
    let lists = `<li>${inputTag.value}<button onclick="editHandler(this)">Edit</button><button onclick="deleteHandler(this)">Delete</button></li>`;
    ulList.innerHTML += lists
+   inputTag.value = ""
    
 }
 
 function editHandler(d){
-  console.log(d.parentElement);
+  currentEditItem = d.parentElement
+  console.log(d.parentElement.firstChild.nodeValue);
+  inputTag.value = d.parentElement.firstChild.nodeValue;
+  submitBtn.setAttribute('onclick',`editValueHandler()`)
   
 }
 function deleteHandler(d){
-  console.log(d);
+  d.parentElement.remove()
   
 };
+
+function editValueHandler(d){
+  console.log(d);
+  console.log(currentEditItem);
+  if(currentEditItem){
+    currentEditItem.firstChild.nodeValue = inputTag.value;
+    submitBtn.setAttribute('onclick',"addText()");
+    currentEditItem = null
+    inputTag.value =""
+  }
+  
+  
+  
+}
 
 // let arr = [["hello"]];
 // let arr2 = arr[0][0];
 // console.log(arr2.charAt(arr2.length -1));
 
-async function hello1(){
-  setTimeout(() => {
-    console.log("hello world");
+// async function hello1(){
+//   setTimeout(() => {
+//     console.log("hello world");
     
-  }, 0);
+//   }, 0);
 
   
-  console.log("hello");
+//   console.log("hello");
  
 
   
 
-}
-hello1();
+// }
+// hello1();
 
 
-db.products.aggregate([
-  {
-    $match:{
-      price:{
-        $gt: 1200
-      }
-    }
-  },
-  {
-    $unwind:"$colors"
-  },
-  {
-    $group:{
-      _id:{
-        priceGroup:"$price"
-      },
-      allColors:{
-        $addToSet:"$colors"
-      }
-    }
-  },
-  {
-    $project:{
-      _id: 1,
-      allColors: 1,
-      colorLength:{$size: "$allColors"}
-    }
-  }
-]);
+// db.products.aggregate([
+//   {
+//     $match:{
+//       price:{
+//         $gt: 1200
+//       }
+//     }
+//   },
+//   {
+//     $unwind:"$colors"
+//   },
+//   {
+//     $group:{
+//       _id:{
+//         priceGroup:"$price"
+//       },
+//       allColors:{
+//         $addToSet:"$colors"
+//       }
+//     }
+//   },
+//   {
+//     $project:{
+//       _id: 1,
+//       allColors: 1,
+//       colorLength:{$size: "$allColors"}
+//     }
+//   }
+// ]);
 
 
-db.col.aggregate([
-  {
-    $project:{
-      name: 1,
-      _id: 0,
-      umairValue:{
-        $filter:{
-          input:"$values",
-          as: "val",
-          cond: {
-            $gt:["$$val", 30]
-          }
-        }
-      }
-    }
-  }
-]);
+// db.col.aggregate([
+//   {
+//     $project:{
+//       name: 1,
+//       _id: 0,
+//       umairValue:{
+//         $filter:{
+//           input:"$values",
+//           as: "val",
+//           cond: {
+//             $gt:["$$val", 30]
+//           }
+//         }
+//       }
+//     }
+//   }
+// ]);
 
 
 
