@@ -3319,43 +3319,43 @@ const data = [
 // }
 // hello()
 
-let ulList = document.querySelector(".ulList");
-const inputTag = document.querySelector("input")
-const submitBtn = document.querySelector("#submitBtn")
-let currentEditItem = null
-function addText(){
-   console.log(inputTag.value);
-   let lists = `<li>${inputTag.value}<button onclick="editHandler(this)">Edit</button><button onclick="deleteHandler(this)">Delete</button></li>`;
-   ulList.innerHTML += lists
-   inputTag.value = ""
+// let ulList = document.querySelector(".ulList");
+// const inputTag = document.querySelector("input")
+// const submitBtn = document.querySelector("#submitBtn")
+// let currentEditItem = null
+// function addText(){
+//    console.log(inputTag.value);
+//    let lists = `<li>${inputTag.value}<button onclick="editHandler(this)">Edit</button><button onclick="deleteHandler(this)">Delete</button></li>`;
+//    ulList.innerHTML += lists
+//    inputTag.value = ""
    
-}
+// }
 
-function editHandler(d){
-  currentEditItem = d.parentElement
-  console.log(d.parentElement.firstChild.nodeValue);
-  inputTag.value = d.parentElement.firstChild.nodeValue;
-  submitBtn.setAttribute('onclick',`editValueHandler()`)
+// function editHandler(d){
+//   currentEditItem = d.parentElement
+//   console.log(d.parentElement.firstChild.nodeValue);
+//   inputTag.value = d.parentElement.firstChild.nodeValue;
+//   submitBtn.setAttribute('onclick',`editValueHandler()`)
   
-}
-function deleteHandler(d){
-  d.parentElement.remove()
+// }
+// function deleteHandler(d){
+//   d.parentElement.remove()
   
-};
+// };
 
-function editValueHandler(d){
-  console.log(d);
-  console.log(currentEditItem);
-  if(currentEditItem){
-    currentEditItem.firstChild.nodeValue = inputTag.value;
-    submitBtn.setAttribute('onclick',"addText()");
-    currentEditItem = null
-    inputTag.value =""
-  }
+// function editValueHandler(d){
+//   console.log(d);
+//   console.log(currentEditItem);
+//   if(currentEditItem){
+//     currentEditItem.firstChild.nodeValue = inputTag.value;
+//     submitBtn.setAttribute('onclick',"addText()");
+//     currentEditItem = null
+//     inputTag.value =""
+//   }
   
   
   
-}
+// }
 
 // let arr = [["hello"]];
 // let arr2 = arr[0][0];
@@ -3425,6 +3425,34 @@ function editValueHandler(d){
 //     }
 //   }
 // ]);
+
+
+// let obj = {
+//   name:{
+//     firstname:"Umair",
+//     lastName:"Ahmed"
+//   }
+// };
+
+// let obj2 = structuredClone(obj);
+// obj2.name.firstname = "Habib";
+
+// console.log(obj);
+// console.log(obj2);
+let obj = {
+  name:{
+    firstname:"Umair",
+    lastName:"Ahmed"
+  }
+};
+
+let obj2 = JSON.parse(JSON.stringify(obj));
+obj2.name.firstname = "Habib";
+
+console.log(obj);
+console.log(obj2);
+
+
 
 
 
