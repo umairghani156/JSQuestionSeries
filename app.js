@@ -3439,18 +3439,23 @@ const data = [
 
 // console.log(obj);
 // console.log(obj2);
-let obj = {
-  name:{
-    firstname:"Umair",
-    lastName:"Ahmed"
-  }
-};
+// let obj = {
+//   name:{
+//     firstname:"Umair",
+//     lastName:"Ahmed"
+//   }
+// };
 
-let obj2 = JSON.parse(JSON.stringify(obj));
-obj2.name.firstname = "Habib";
+// let obj2 = JSON.parse(JSON.stringify(obj));
+// obj2.name.firstname = "Habib";
 
-console.log(obj);
-console.log(obj2);
+// console.log(obj);
+// console.log(obj2);
+
+const obj = {
+  name: "Umair ",
+  age: 23
+}
 
 
 
