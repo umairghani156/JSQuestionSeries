@@ -3518,21 +3518,48 @@ const data = [
 //  console.log(counter.decrement()); // 4
  
 
-function helloFunc(val){
+// function helloFunc(val){
  
-  return val + 1
+//   return val + 1
+// }
+
+// var map = function(arr, fn) {
+//     let returnedArray = [];
+//       for(let i = 0; i < arr.length; i++){
+//        returnedArray[i] = fn(arr[i], i)
+//       }
+//       return returnedArray
+
+// };
+
+// console.log(map([1, 2, 3], helloFunc));
+
+function callBackFunc(i){
+  console.log(i);
+  
+   return i === 0;
 }
+/**
+ * Takes an array and a callback function, 
+ * Applies the callback function to each element of the array, 
+ * If the callback function returns true, the element is included in the new array, 
+ * otherwise it is excluded
+ * @param  {Array} arr The array to be filtered
+ * @param  {Function} fn The callback function to be applied to each element
+ * @return {Array} The filtered array
+ */
+var filter = function(arr, fn) {
 
-var map = function(arr, fn) {
-    let returnedArray = [];
-      for(let i = 0; i < arr.length; i++){
-       returnedArray[i] = fn(arr[i], i)
-      }
-      return returnedArray
-
+  let filteredVal = []
+    for(let i = 0; i < arr.length; i++){
+       if(fn(i) === true){
+         filteredVal.push(arr[i])
+       }
+    }
+    return filteredVal
 };
+console.log(filter([1, 2, 3], callBackFunc));
 
-console.log(map([1, 2, 3], helloFunc));
 
 
 
