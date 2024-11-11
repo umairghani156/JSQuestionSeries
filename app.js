@@ -3452,10 +3452,28 @@ const data = [
 // console.log(obj);
 // console.log(obj2);
 
-const obj = {
-  name: "Umair ",
-  age: 23
-}
+// const obj = {
+//   name: "Umair ",
+//   age: 23
+// }
+let counter = 0
+function createCount(num){
+  return function(){
+    //counter++
+    return num + counter++
+  }
+};
+const val = createCount(10)
+console.log(val());
+console.log(val());
+console.log(val());
+console.log(val());
+console.log(val());
+console.log(val());
+console.log(val());
+
+
+
 
 
 
