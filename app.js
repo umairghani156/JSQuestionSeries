@@ -3472,25 +3472,51 @@ const data = [
 // console.log(val());
 // console.log(val());
 
-var expect = function(val) {
+// var expect = function(val) {
+//   return {
+//    toBe:function(n){
+//        if(val ===n ){
+//            return true
+//        }
+//        throw new Error("Not Equal")
+//    },
+//    notToBe:function(n){
+//        if(val !==n ){
+//           return true
+//        }
+//        throw new Error("Equal")
+//    }
+//   }
+// };
+
+// console.log(expect(5).toBe(5)); // true
+// console.log(expect(5).notToBe(5)); // throws "Equal";
+
+var createCounter = function(init) {
+  let count = init
   return {
-   toBe:function(n){
-       if(val ===n ){
-           return true
-       }
-       throw new Error("Not Equal")
-   },
-   notToBe:function(n){
-       if(val !==n ){
-          return true
-       }
-       throw new Error("Equal")
-   }
+    increment: function(){
+      count++
+       return count
+    },
+    reset:function(){
+      count = init
+      return count
+    },
+    decrement:function(){
+      count--
+      return count
+    },
   }
+    
 };
 
-console.log(expect(5).toBe(5)); // true
-console.log(expect(5).notToBe(5)); // throws "Equal"
+
+ const counter = createCounter(5)
+ console.log(counter.increment()); // 6
+ console.log(counter.reset()); // 5
+ console.log(counter.decrement()); // 4
+ 
 
 
 
