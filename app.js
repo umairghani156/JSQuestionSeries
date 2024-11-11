@@ -3492,31 +3492,49 @@ const data = [
 // console.log(expect(5).toBe(5)); // true
 // console.log(expect(5).notToBe(5)); // throws "Equal";
 
-var createCounter = function(init) {
-  let count = init
-  return {
-    increment: function(){
-      count++
-       return count
-    },
-    reset:function(){
-      count = init
-      return count
-    },
-    decrement:function(){
-      count--
-      return count
-    },
-  }
+// var createCounter = function(init) {
+//   let count = init
+//   return {
+//     increment: function(){
+//       count++
+//        return count
+//     },
+//     reset:function(){
+//       count = init
+//       return count
+//     },
+//     decrement:function(){
+//       count--
+//       return count
+//     },
+//   }
     
+// };
+
+
+//  const counter = createCounter(5)
+//  console.log(counter.increment()); // 6
+//  console.log(counter.reset()); // 5
+//  console.log(counter.decrement()); // 4
+ 
+
+function helloFunc(val){
+ 
+  return val + 1
+}
+
+var map = function(arr, fn) {
+    let returnedArray = [];
+      for(let i = 0; i < arr.length; i++){
+       returnedArray[i] = fn(arr[i], i)
+      }
+      return returnedArray
+
 };
 
+console.log(map([1, 2, 3], helloFunc));
 
- const counter = createCounter(5)
- console.log(counter.increment()); // 6
- console.log(counter.reset()); // 5
- console.log(counter.decrement()); // 4
- 
+
 
 
 
