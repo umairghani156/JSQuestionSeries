@@ -3575,18 +3575,29 @@ const data = [
 // };
 // console.log(reduce([1, 2, 3, 4], reduceCallback, 0));
 
-var compose = function(functions) {
-  return function(x) {
+// var compose = function(functions) {
+//   return function(x) {
     
-   let val = functions.reduceRight((acc,fn)=> fn(acc),x)
-   return val
+//    let val = functions.reduceRight((acc,fn)=> fn(acc),x)
+//    return val
    
    
-  }
-};
+//   }
+// };
 
-const fn = compose([x => x + 1, x => 2 * x])
-console.log(fn(4)) // 9
+// const fn = compose([x => x + 1, x => 2 * x])
+// console.log(fn(4)) // 9
+
+const arr = [1, 2, 3, 4, 5, 6];
+const val =arr.reduceRight((acc, curr)=> {
+ if(curr == 5){
+  curr = 20
+ }
+ return acc + curr
+  
+}, 0);
+console.log(val);
+
 
 
 
