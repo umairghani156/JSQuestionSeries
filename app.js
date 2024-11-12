@@ -3534,11 +3534,11 @@ const data = [
 
 // console.log(map([1, 2, 3], helloFunc));
 
-function callBackFunc(i){
-  console.log(i);
+// function callBackFunc(i){
+//   console.log(i);
   
-   return i === 0;
-}
+//    return i === 0;
+// }
 /**
  * Takes an array and a callback function, 
  * Applies the callback function to each element of the array, 
@@ -3547,18 +3547,47 @@ function callBackFunc(i){
  * @param  {Array} arr The array to be filtered
  * @param  {Function} fn The callback function to be applied to each element
  * @return {Array} The filtered array
- */
-var filter = function(arr, fn) {
+//  */
+// var filter = function(arr, fn) {
 
-  let filteredVal = []
-    for(let i = 0; i < arr.length; i++){
-       if(fn(i) === true){
-         filteredVal.push(arr[i])
-       }
-    }
-    return filteredVal
+//   let filteredVal = []
+//     for(let i = 0; i < arr.length; i++){
+//        if(fn(i) === true){
+//          filteredVal.push(arr[i])
+//        }
+//     }
+//     return filteredVal
+// };
+// console.log(filter([1, 2, 3], callBackFunc));
+
+// function reduceCallback(accum, curr){
+//   return accum + curr
+// }
+
+// var reduce = function(nums, fn, init) {
+//   let val = init
+//      for(let i =0; i< nums.length; i++){
+      
+      
+//        val = fn(val, nums[i])
+//      }
+//   return val
+// };
+// console.log(reduce([1, 2, 3, 4], reduceCallback, 0));
+
+var compose = function(functions) {
+  return function(x) {
+    
+   let val = functions.reduceRight((acc,fn)=> fn(acc),x)
+   return val
+   
+   
+  }
 };
-console.log(filter([1, 2, 3], callBackFunc));
+
+const fn = compose([x => x + 1, x => 2 * x])
+console.log(fn(4)) // 9
+
 
 
 
