@@ -3588,15 +3588,60 @@ const data = [
 // const fn = compose([x => x + 1, x => 2 * x])
 // console.log(fn(4)) // 9
 
-const arr = [1, 2, 3, 4, 5, 6];
-const val =arr.reduceRight((acc, curr)=> {
- if(curr == 5){
-  curr = 20
- }
- return acc + curr
+// const arr = [1, 2, 3, 4, 5, 6];
+// const val =arr.reduceRight((acc, curr)=> {
+//  if(curr == 5){
+//   curr = 20
+//  }
+//  return acc + curr
   
-}, 0);
-console.log(val);
+// }, 0);
+// console.log(val);
+
+// var compose = function(functions) {
+//   return function(x) {
+//     let val = x
+//   for(let i = functions.length -1; i >= 0; i--){
+//      val = functions[i](val)
+//   }
+//   return val
+  
+   
+//   }
+// };
+
+// const fn = compose([x => x + 1, x => 2 * x])
+// console.log(fn(4)) // 9
+
+// var argumentsLength = function(...args) {
+//   console.log(...args);
+  
+//     return args.length
+// };
+
+
+// console.log(argumentsLength(1, 2, 3)); // 3
+
+var once = function(fn) {
+    let calledVal = false;
+    let result;
+  return function(...args){
+   if(!calledVal){
+    result = fn(...args)
+    calledVal = true
+    return result
+   }
+   result = undefined
+   return result
+  }
+};
+
+ let fn = (a,b,c) => (a + b + c)
+ let onceFn = once(fn)
+console.log(onceFn(1,2,3)); // 6
+
+console.log(onceFn(2,3,6)); // returns undefined without calling fn
+
 
 
 
