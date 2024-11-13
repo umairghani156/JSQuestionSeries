@@ -3704,39 +3704,64 @@ const data = [
 
 // console.log(count);
 
-let count = 0;
-const fn =(a,b)=>{
-  count += 1
-  return a * b
-}
-function outerFunc(fn){
-  let val = {};
+// let count = 0;
+// const fn =(a,b)=>{
+//   count += 1
+//   return a * b
+// }
+// function outerFunc(fn){
+//   let val = {};
   
-  return function (...args){
-    let key = JSON.stringify(args);
-    console.log(key);
+//   return function (...args){
+//     let key = JSON.stringify(args);
+//     console.log(key);
     
-     if(!val[key]){
-      val[key] = fn(...args)
-      return val
-     }
+//      if(!val[key]){
+//       val[key] = fn(...args)
+//       return val
+//      }
 
-     return undefined
-  }
+//      return undefined
+//   }
+// }
+
+// const result = outerFunc(fn);
+// console.log(result(2,4));
+// console.log(result(2,4));
+// console.log(result(2,4));
+// console.log(result(2,20));
+// console.log(result(2,30));
+
+
+
+// console.log(count);
+
+
+// const addTwoPromises = async (promise1, promise2)=>{
+//   let p1 =await  promise1.then((val)=> val);
+//   let p2 =await  promise2.then((val)=> val);
+//  return new Promise((resolve, reject)=>{
+//      resolve(p1 + p2)
+//   })
+// }
+// addTwoPromises(Promise.resolve(2), Promise.resolve(2))
+//  .then(console.log); 
+
+async function sleep(millis) {
+    return new Promise((resolve, reject)=>{
+      setTimeout(()=>{
+        resolve()
+      }, millis)
+    })
+    
 }
 
-const result = outerFunc(fn);
-console.log(result(2,4));
-console.log(result(2,4));
-console.log(result(2,4));
-console.log(result(2,20));
-console.log(result(2,30));
 
+let t = Date.now()
+sleep(200).then(() => console.log(Date.now() - t)) // 100
+console.log(Date.now()- Date.now());
 
-
-console.log(count);
-
-
+ 
 
 
 
