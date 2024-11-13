@@ -3622,25 +3622,63 @@ const data = [
 
 // console.log(argumentsLength(1, 2, 3)); // 3
 
-var once = function(fn) {
-    let calledVal = false;
-    let result;
-  return function(...args){
-   if(!calledVal){
-    result = fn(...args)
-    calledVal = true
-    return result
-   }
-   result = undefined
-   return result
-  }
-};
+// var once = function(fn) {
+//     let calledVal = false;
+//     let result;
+//   return function(...args){
+//    if(!calledVal){
+//     result = fn(...args)
+//     calledVal = true
+//     return result
+//    }
+//    result = undefined
+//    return result
+//   }
+// };
 
- let fn = (a,b,c) => (a + b + c)
- let onceFn = once(fn)
-console.log(onceFn(1,2,3)); // 6
+//  let fn = (a,b,c) => (a + b + c)
+//  let onceFn = once(fn)
+// console.log(onceFn(1,2,3)); // 6
 
-console.log(onceFn(2,3,6)); // returns undefined without calling fn
+// console.log(onceFn(2,3,6)); // returns undefined without calling fn
+
+// function memoize(fn) {
+//   let memo = {}
+    
+//   return function(...args) {
+//     let key = JSON.stringify(args)
+    
+//     if(!memo[key]){
+//       memo[key] = fn(...args)
+//     }
+//     return memo[key]
+      
+      
+//   }
+// }
+
+
+
+// let callCount = 0;
+//  const memoizedFn = memoize(function (a, b) {
+// 	 callCount += 1;
+//    return a + b;
+//  })
+//  console.log(memoizedFn(2, 3)) // 5
+//  console.log(memoizedFn(2, 3)) // 5
+//  console.log(memoizedFn(2, 3)) // 5
+
+//  console.log(callCount) // 1 
+
+const addToNum = (x)=> x + 10;
+const multiplyNum = (a)=> a * 5;
+
+const composite = (g, f)=> (x)=> g(f(x));
+const final = composite(addToNum, multiplyNum)
+
+console.log(final(10));
+
+
 
 
 
