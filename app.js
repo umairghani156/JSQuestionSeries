@@ -3670,13 +3670,41 @@ const data = [
 
 //  console.log(callCount) // 1 
 
-const addToNum = (x)=> x + 10;
-const multiplyNum = (a)=> a * 5;
+// const addToNum = (x)=> x + 10;
+// const multiplyNum = (a)=> a * 5;
 
-const composite = (g, f)=> (x)=> g(f(x));
-const final = composite(addToNum, multiplyNum)
+// const composite = (g, f)=> (x)=> g(f(x));
+// const final = composite(addToNum, multiplyNum)
 
-console.log(final(10));
+// console.log(final(10));
+// let count = 0;
+// const fn =(a,b)=>{
+//   count += 1
+//   return a * b
+// }
+// function outerFunc(fn){
+//   let val = false
+  
+//   return function (...args){
+//      if(!val){
+//       val = true
+//       return fn(...args)
+//      }
+
+//      return undefined
+//   }
+// }
+
+// const result = outerFunc(fn);
+// console.log(result(2,4));
+// console.log(result(2,4));
+// console.log(result(2,4));
+// console.log(result(2,4));
+
+
+// console.log(count);
+
+
 
 
 
