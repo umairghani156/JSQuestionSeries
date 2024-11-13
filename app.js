@@ -3704,7 +3704,37 @@ const data = [
 
 // console.log(count);
 
+let count = 0;
+const fn =(a,b)=>{
+  count += 1
+  return a * b
+}
+function outerFunc(fn){
+  let val = {};
+  
+  return function (...args){
+    let key = JSON.stringify(args);
+    console.log(key);
+    
+     if(!val[key]){
+      val[key] = fn(...args)
+      return val
+     }
 
+     return undefined
+  }
+}
+
+const result = outerFunc(fn);
+console.log(result(2,4));
+console.log(result(2,4));
+console.log(result(2,4));
+console.log(result(2,20));
+console.log(result(2,30));
+
+
+
+console.log(count);
 
 
 
