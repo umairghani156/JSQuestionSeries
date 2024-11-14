@@ -3747,57 +3747,92 @@ const data = [
 // addTwoPromises(Promise.resolve(2), Promise.resolve(2))
 //  .then(console.log); 
 
-async function sleep(millis) {
-    return new Promise((resolve, reject)=>{
-      setTimeout(()=>{
-        resolve()
-      }, millis)
-    })
+// async function sleep(millis) {
+//     return new Promise((resolve, reject)=>{
+//       setTimeout(()=>{
+//         resolve()
+//       }, millis)
+//     })
     
-}
+// }
 
-let t = Date.now()
-sleep(1000).then(() => console.log(Date.now() - t)) // 100
-console.log(Date.now()- Date.now());
+// let t = Date.now()
+// sleep(1000).then(() => console.log(Date.now() - t)) // 100
+// console.log(Date.now()- Date.now());
 
 
 
-async function run() {
-  let t = Date.now();
-  const result = await sleep(1000);
-  console.log("result", result);
+// async function run() {
+//   let t = Date.now();
+//   const result = await sleep(1000);
+//   console.log("result", result);
   
 
-  console.log("inner",Date.now() - t);
+//   console.log("inner",Date.now() - t);
   
 
   
-}
-run()
+// }
+// run()
 
 
-db.products.aggregate([
-  {
-    $project:{
-      _id:0,
-      name:1,
-      price:1
-    }
-  }
-])
+// db.products.aggregate([
+//   {
+//     $project:{
+//       _id:0,
+//       name:1,
+//       price:1
+//     }
+//   }
+// ])
 
-function memoize(fn){
-   let memo = {}
+// function memoize(fn){
+//    let memo = {}
 
-   return function (...args){
-    let key = JSON.stringify(args);
-    if(!memo[key]){
-      memo[key] = fn(...args)
-    }
-    return memo[key]
-   }
-}
+//    return function (...args){
+//     let key = JSON.stringify(args);
+//     if(!memo[key]){
+//       memo[key] = fn(...args)
+//     }
+//     return memo[key]
+//    }
+// }
  
+
+var cancellable = function(fn, args, t) {
+  let timer =setTimeout(()=>{
+    fn(...args); 
+     },t)
+  return function cancelFn(){
+    
+   clearTimeout(timer)
+  }
+};
+
+
+ const result = [];
+
+ const fn = (x) => x * 5;
+ const args = [2], t = 20, cancelTimeMs = 50;
+ 
+  const start = performance.now();
+
+  const log = (...argsArr) => {
+      const diff = Math.floor(performance.now() - start);
+      result.push({"time": diff, "returned": fn(...argsArr)});
+  }
+       
+  const cancel = cancellable(log, args, t);
+  console.log(cancel);
+  
+
+  const maxT = Math.max(t, cancelTimeMs);
+           
+  setTimeout(cancel, cancelTimeMs);
+
+  setTimeout(() => {
+      console.log("result",result); // [{"time":20,"returned":10}]
+  }, maxT + 15)
 
 
 
