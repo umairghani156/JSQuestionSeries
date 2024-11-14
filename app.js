@@ -3785,6 +3785,18 @@ db.products.aggregate([
     }
   }
 ])
+
+function memoize(fn){
+   let memo = {}
+
+   return function (...args){
+    let key = JSON.stringify(args);
+    if(!memo[key]){
+      memo[key] = fn(...args)
+    }
+    return memo[key]
+   }
+}
  
 
 
