@@ -3756,11 +3756,35 @@ async function sleep(millis) {
     
 }
 
-
 let t = Date.now()
-sleep(200).then(() => console.log(Date.now() - t)) // 100
+sleep(1000).then(() => console.log(Date.now() - t)) // 100
 console.log(Date.now()- Date.now());
 
+
+
+async function run() {
+  let t = Date.now();
+  const result = await sleep(1000);
+  console.log("result", result);
+  
+
+  console.log("inner",Date.now() - t);
+  
+
+  
+}
+run()
+
+
+db.products.aggregate([
+  {
+    $project:{
+      _id:0,
+      name:1,
+      price:1
+    }
+  }
+])
  
 
 
