@@ -3835,43 +3835,81 @@ const data = [
 //   }, maxT + 15)
 
 
-var cancellable = function(fn, args, t) {
-  function imdFunc(){
-    fn(...args)
-  }
-  imdFunc();
-  let interval = setInterval(()=>{
-    imdFunc()
-  }, t)
-  return function cancelFn(){
-    clearInterval(interval)
-  }
+// var cancellable = function(fn, args, t) {
+//   function imdFunc(){
+//     fn(...args)
+//   }
+//   imdFunc();
+//   let interval = setInterval(()=>{
+//     imdFunc()
+//   }, t)
+//   return function cancelFn(){
+//     clearInterval(interval)
+//   }
+    
+// };
+
+
+//  const result = [];
+//   const fn = (x) => x * 2;
+//  const args = [4], t = 35, cancelTimeMs = 190;
+//   const start = performance.now();
+//   const log = (...argsArr) => {
+//      const diff = Math.floor(performance.now() - start);
+//      result.push({"time": diff, "returned": fn(...argsArr)});
+//  }
+      
+//  const cancel = cancellable(log, args, t);
+//   setTimeout(cancel, cancelTimeMs);
+  
+//  setTimeout(() => {
+//      console.log(result); // [
+//                           //     {"time":0,"returned":8},
+//                           //     {"time":35,"returned":8},
+//                           //     {"time":70,"returned":8},
+//                           //     {"time":105,"returned":8},
+//                           //     {"time":140,"returned":8},
+//                           //     {"time":175,"returned":8}
+//                           // ]
+//  }, cancelTimeMs + t + 15)   
+
+
+// var timeLimit = function(fn, t) {
+//     let newTime = Date.now()
+//   return async function(...args) {
+//    return new Promise((resolve, reject)=>{
+//     let timer = setTimeout(()=>{
+//       reject("Time Limit Exceeded")
+//     }, t)
+
+    
+//    })
+//   }
+// };
+
+
+// const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
+// limited(150).then((res)=>{
+//   console.log(res);
+  
+// }).catch((error)=>{
+//   console.log(error)
+  
+//}) // "Time Limit Exceeded" at t=100ms
+
+TimeLimitedCache.prototype.set = function(key, value, duration) {
+    
+    let timer = setTimeout(()=>{
+
+    }, duration)
     
 };
 
+const timelimit = new TimeLimitedCache();
+timelimit.set(1, 42, 1000);
+console.log(timelimit);
 
- const result = [];
-  const fn = (x) => x * 2;
- const args = [4], t = 35, cancelTimeMs = 190;
-  const start = performance.now();
-  const log = (...argsArr) => {
-     const diff = Math.floor(performance.now() - start);
-     result.push({"time": diff, "returned": fn(...argsArr)});
- }
-      
- const cancel = cancellable(log, args, t);
-  setTimeout(cancel, cancelTimeMs);
-  
- setTimeout(() => {
-     console.log(result); // [
-                          //     {"time":0,"returned":8},
-                          //     {"time":35,"returned":8},
-                          //     {"time":70,"returned":8},
-                          //     {"time":105,"returned":8},
-                          //     {"time":140,"returned":8},
-                          //     {"time":175,"returned":8}
-                          // ]
- }, cancelTimeMs + t + 15)    
+
  
 
 
