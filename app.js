@@ -3898,10 +3898,19 @@ const data = [
 //}) // "Time Limit Exceeded" at t=100ms
 
 TimeLimitedCache.prototype.set = function(key, value, duration) {
-    
+    this.key = key;
+    this.value =value;
+    this.duration = duration
     let timer = setTimeout(()=>{
+      this.value = null
+    }, this.duration);
+    if(this.key === key){
+      this.value = value
+      this.duration = duration
+      return true
 
-    }, duration)
+    }
+    return false
     
 };
 
