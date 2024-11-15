@@ -3898,20 +3898,38 @@ const data = [
 //}) // "Time Limit Exceeded" at t=100ms
 
 TimeLimitedCache.prototype.set = function(key, value, duration) {
-    this.key = key;
-    this.value =value;
-    this.duration = duration
-    let timer = setTimeout(()=>{
-      this.value = null
-    }, this.duration);
-    if(this.key === key){
-      this.value = value
-      this.duration = duration
-      return true
+   this.cache = {};
 
-    }
-    return false
+   const currentTime = Date.now();
+   let isExistingKey = false;
+   if(this.cache[key] && this.cache[key].expiryTime > currentTime){
+    isExistingKey = true;
+   }
+
+   this.cache[key] = {
+    count: value,
+    expiryTime: currentTime + duration
+   }
+  return isExistingKey
     
+};
+TimeLimitedCache.prototype.get = function(key) {
+    const currentTime = Date.now();
+    if(this.cache[key] && this.cache[key].expiryTime > currentTime){
+      return this.cache[key].value
+    }
+    return -1
+};
+TimeLimitedCache.prototype.count = function() {
+    let currentTime = Date.now();
+    let validateCount = 0
+    for (let key in this.cache) {
+      if (this.cache[key].expiryTime > currentTime) {
+          validateCount++
+      }
+  }
+  return validateCount
+
 };
 
 const timelimit = new TimeLimitedCache();
