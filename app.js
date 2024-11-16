@@ -3932,46 +3932,46 @@ const data = [
 
 // };
 
-class TimeLimitedCache{
-  constructor(key, value, duration){
-    let cache = {};
-    this.cache = cache;
+// class TimeLimitedCache{
+//   constructor(key, value, duration){
+//     let cache = {};
+//     this.cache = cache;
 
-    const currentTime = Date.now();
-    if(cache[key] && cache[key].expiryTime > currentTime){
-      return cache[key]
-    }
-    cache[key] = {
-      count: value,
-      expiryTime: currentTime + duration
-    }
+//     const currentTime = Date.now();
+//     if(cache[key] && cache[key].expiryTime > currentTime){
+//       return cache[key]
+//     }
+//     cache[key] = {
+//       count: value,
+//       expiryTime: currentTime + duration
+//     }
 
-  }
+//   }
 
-  greet(key){
-    const currentTime = Date.now();
-    console.log(this.cache)
-    if(this.cache[key] && this.cache[key].expiryTime > currentTime){
-      return this.cache[key].count
-    }
-    return -1
-  }
-  countVal(){
-    let currentTime = Date.now();
-    let validateCount = 0
-    for (let key in this.cache) {
-      if (this.cache[key].expiryTime > currentTime) {
-          validateCount++
-      }
-  }
-  return validateCount
-  }
+//   greet(key){
+//     const currentTime = Date.now();
+//     console.log(this.cache)
+//     if(this.cache[key] && this.cache[key].expiryTime > currentTime){
+//       return this.cache[key].count
+//     }
+//     return -1
+//   }
+//   countVal(){
+//     let currentTime = Date.now();
+//     let validateCount = 0
+//     for (let key in this.cache) {
+//       if (this.cache[key].expiryTime > currentTime) {
+//           validateCount++
+//       }
+//   }
+//   return validateCount
+//   }
 
-}
+// }
 
-const timelimit = new TimeLimitedCache(1, 42, 1000);
+// const timelimit = new TimeLimitedCache(1, 42, 1000);
 
-console.log(timelimit.countVal());
+// console.log(timelimit.countVal());
 
 
 
