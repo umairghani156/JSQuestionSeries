@@ -3973,28 +3973,70 @@ const data = [
 
 // console.log(timelimit.countVal());
 
-const inputVal = document.getElementById("inputVal");
+// const inputVal = document.getElementById("inputVal");
 
-const debounceHandler = (func, delay)=>{
- console.log(func, delay);
- let timer;
- return function(e){
-   clearTimeout(timer)
-   timer = setTimeout(()=>{
-    func(e)
-   }, delay)
- }
+// const debounceHandler = (func, delay)=>{
+//  console.log(func, delay);
+//  let timer;
+//  return function(e){
+//    clearTimeout(timer)
+//    timer = setTimeout(()=>{
+//     func(e)
+//    }, delay)
+//  }
 
   
-}
+// }
 
-const hanledebounce = debounceHandler(function(e){
-  console.log(e.target.value);
+// const hanledebounce = debounceHandler(function(e){
+//   console.log(e.target.value);
   
-}, 500)
+// }, 500)
 
 
-inputVal.addEventListener("input", hanledebounce)
+// inputVal.addEventListener("input", hanledebounce)
+
+
+// var promiseAll = function(functions) {
+//   let results = [];
+//   let completed = 0;
+//   let hasError = false;
+
+//   return new Promise((resolve, reject)=>{
+//     functions.forEach((element, index) => {
+//       element().then((res)=>{
+//         results[index] = res
+//         completed++
+//         if(completed === functions.length){
+//           resolve(results)
+//         }
+        
+//       }).catch((error)=>{
+//         if(!hasError){
+//           hasError = true;
+//           reject(error)
+//         }
+//       })
+      
+//     });
+//   })
+// };
+
+// const promise = promiseAll([() => new Promise(res => res(42))])
+// promise.then(console.log); // [42]
+
+var chunk = function(arr, size) {
+   
+    let result = [];
+    for (let i = 0; i < arr.length; i += size) {
+        result.push(arr.slice(i, i + size));
+    }
+    return result
+    
+   
+};
+console.log(chunk([1,2,3,4,5,6], 1));
+
 
 
 
