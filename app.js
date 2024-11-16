@@ -3973,6 +3973,31 @@ const data = [
 
 // console.log(timelimit.countVal());
 
+const inputVal = document.getElementById("inputVal");
+
+const debounceHandler = (func, delay)=>{
+ console.log(func, delay);
+ let timer;
+ return function(e){
+   clearTimeout(timer)
+   timer = setTimeout(()=>{
+    func(e)
+   }, delay)
+ }
+
+  
+}
+
+const hanledebounce = debounceHandler(function(e){
+  console.log(e.target.value);
+  
+}, 500)
+
+
+inputVal.addEventListener("input", hanledebounce)
+
+
+
 
 
  
