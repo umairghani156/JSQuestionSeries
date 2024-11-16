@@ -3897,30 +3897,66 @@ const data = [
   
 //}) // "Time Limit Exceeded" at t=100ms
 
-TimeLimitedCache.prototype.set = function(key, value, duration) {
-   this.cache = {};
+// TimeLimitedCache.prototype.set = function(key, value, duration) {
+//    this.cache = {};
 
-   const currentTime = Date.now();
-   let isExistingKey = false;
-   if(this.cache[key] && this.cache[key].expiryTime > currentTime){
-    isExistingKey = true;
-   }
+//    const currentTime = Date.now();
+//    let isExistingKey = false;
+//    if(this.cache[key] && this.cache[key].expiryTime > currentTime){
+//     isExistingKey = true;
+//    }
 
-   this.cache[key] = {
-    count: value,
-    expiryTime: currentTime + duration
-   }
-  return isExistingKey
+//    this.cache[key] = {
+//     count: value,
+//     expiryTime: currentTime + duration
+//    }
+//   return isExistingKey
     
-};
-TimeLimitedCache.prototype.get = function(key) {
+// };
+// TimeLimitedCache.prototype.get = function(key) {
+//     const currentTime = Date.now();
+//     if(this.cache[key] && this.cache[key].expiryTime > currentTime){
+//       return this.cache[key].value
+//     }
+//     return -1
+// };
+// TimeLimitedCache.prototype.count = function() {
+//     let currentTime = Date.now();
+//     let validateCount = 0
+//     for (let key in this.cache) {
+//       if (this.cache[key].expiryTime > currentTime) {
+//           validateCount++
+//       }
+//   }
+//   return validateCount
+
+// };
+
+class TimeLimitedCache{
+  constructor(key, value, duration){
+    let cache = {};
+    this.cache = cache;
+
     const currentTime = Date.now();
+    if(cache[key] && cache[key].expiryTime > currentTime){
+      return cache[key]
+    }
+    cache[key] = {
+      count: value,
+      expiryTime: currentTime + duration
+    }
+
+  }
+
+  greet(key){
+    const currentTime = Date.now();
+    console.log(this.cache)
     if(this.cache[key] && this.cache[key].expiryTime > currentTime){
-      return this.cache[key].value
+      return this.cache[key].count
     }
     return -1
-};
-TimeLimitedCache.prototype.count = function() {
+  }
+  countVal(){
     let currentTime = Date.now();
     let validateCount = 0
     for (let key in this.cache) {
@@ -3929,12 +3965,14 @@ TimeLimitedCache.prototype.count = function() {
       }
   }
   return validateCount
+  }
 
-};
+}
 
-const timelimit = new TimeLimitedCache();
-timelimit.set(1, 42, 1000);
-console.log(timelimit);
+const timelimit = new TimeLimitedCache(1, 42, 1000);
+
+console.log(timelimit.countVal());
+
 
 
  
