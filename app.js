@@ -4077,6 +4077,20 @@ const data = [
 // const val =[1,1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
 //  console.log(val);
 
+function checkNum(delay){
+  let time = [];
+  let timer;
+  if(!time.includes(delay)){
+    time.push(delay)
+    timer = setTimeout(()=>{
+      console.log(delay);
+    }, delay)
+  }
+
+}
+checkNum(1000)
+checkNum(1000)
+
 
 
 
