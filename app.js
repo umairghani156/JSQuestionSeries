@@ -4077,19 +4077,80 @@ const data = [
 // const val =[1,1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
 //  console.log(val);
 
-function checkNum(delay){
-  let time = [];
-  let timer;
-  if(!time.includes(delay)){
-    time.push(delay)
-    timer = setTimeout(()=>{
-      console.log(delay);
-    }, delay)
-  }
+// function checkNum(delay){
+//   let time = [];
+//   let timer;
+//   if(!time.includes(delay)){
+//     time.push(delay)
+//     timer = setTimeout(()=>{
+//       console.log(delay);
+//     }, delay)
+//   }
 
-}
-checkNum(1000)
-checkNum(1000)
+// }
+// checkNum(1000)
+// checkNum(1000)
+
+// function helloFunc(a){
+//  // console.log(a);
+//   return a
+  
+// }
+
+// var sortBy = function(arr, fn) {
+//   let n = arr.length;
+ 
+//   for(let i = 0; i < n; i++){
+//     console.log("outer",arr[i]);
+//     for(let j = 0; j <= n - i -1; j++){
+      
+//       if(arr[j] > arr[j + 1]){
+//       let temp = arr[j]
+       
+//         arr[j] = arr[j + 1]
+//         arr[j + 1] = temp
+//       }
+      
+//     }
+//   }
+ 
+//   fn(arr)
+  
+  
+    
+// };
+// sortBy([5, 4, 1, 2, 3], (a)=> a)
+
+//var join = function(arr1, arr2) {
+  
+//   let data = arr1.concat(arr2).sort((a, b)=> a.id - b.id);
+//   let data3 = data.reduce((acc, cur)=>{
+//       let existing = acc.find(item => item.id === cur.id);
+//       if(existing){
+//         Object.assign(existing, cur)
+//       }else{
+//         acc.push({...cur})
+//       }
+//       return acc
+//   },[]);
+  
+
+//   return data3
+  
+  
+  
+  
+  
+ 
+   
+ 
+  
+  
+    
+// };
+// join([{id: 20, name: "umair"}],[{id: 2, name: "faiz"},{id: 3, name: "sami"},{id: 3, name: "kahan"}])
+
+
 
 
 
