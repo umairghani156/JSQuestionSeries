@@ -4025,17 +4025,19 @@ const data = [
 // const promise = promiseAll([() => new Promise(res => res(42))])
 // promise.then(console.log); // [42]
 
-var chunk = function(arr, size) {
+// var chunk = function(arr, size) {
    
-    let result = [];
-    for (let i = 0; i < arr.length; i += size) {
-        result.push(arr.slice(i, i + size));
-    }
-    return result
+//     let result = [];
+//     for (let i = 0; i < arr.length; i += size) {
+//         result.push(arr.slice(i, i + size));
+//     }
+//     return result
     
    
-};
-console.log(chunk([1,2,3,4,5,6], 1));
+// };
+// console.log(chunk([1,2,3,4,5,6], 2));
+
+
 
 
 
