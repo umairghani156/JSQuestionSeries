@@ -4037,7 +4037,20 @@ const data = [
 // };
 // console.log(chunk([1,2,3,4,5,6], 2));
 
+Array.prototype.last = function(arguments) {
+    let val = JSON.stringify(this)
+   if(val === "[]"){
+    return -1
+   }
+    return this[this.length -1];
+    
+    
+};
 
+ const arr = [1, 2, 3];
+ ; // 3
+ console.log(arr.last());
+ 
 
 
 
