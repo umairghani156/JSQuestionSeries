@@ -4150,7 +4150,59 @@ const data = [
 // };
 // join([{id: 20, name: "umair"}],[{id: 2, name: "faiz"},{id: 3, name: "sami"},{id: 3, name: "kahan"}])
 
+var join = function(arr1, arr2) {
+// let data = arr1.concat(arr2).sort((a, b)=> a.id - b.id);
+//  let resultObj = {}
+//  for(let d of data){
+//   let id = d.id
+//   if(resultObj[id]){
+//     resultObj[id] = {...resultObj[id], ...d}
+//   }else{
+//     resultObj[id] = d
+//   }
 
+  
+//  }
+//  let finalData = Object.values(resultObj);
+//  return finalData
+
+var flat = function (arr, n) {
+  let result = []
+  
+  arr.forEach(element => {
+    if(Array.isArray(element) && n > 0){
+      
+      result = result.concat(flat(element, n-1))
+      
+    }else{
+      result.push(element)
+    }
+    
+  });
+  
+  
+  return result;
+  
+  
+  
+    
+};
+console.log(flat([[1, 2, 3], [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 1));
+ 
+ 
+
+
+
+
+
+
+ 
+
+
+
+  
+};
+join([{id: 20, name: "umair"}],[{id: 2, name: "faiz"},{id: 3, name: "sami"},{id: 3, name: "kahan"}])
 
 
 
