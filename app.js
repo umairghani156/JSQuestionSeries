@@ -4051,32 +4051,33 @@ const data = [
 //  ; // 3
 //  console.log(arr.last());
 
-Array.prototype.groupBy = function(fn) {
+// Array.prototype.groupBy = function(fn) {
 
-let obj = {};
-   this.forEach((item)=>{
-    let key = fn(item);
-    console.log(key);
-    if(!obj[key]){
-      obj[key] = [item]
-    }else{
+// let obj = {};
+//    this.forEach((item)=>{
+//     let key = fn(item);
+//     console.log(key);
+//     if(!obj[key]){
+//       obj[key] = [item]
+//     }else{
 
-    obj[key].push(item)
-    }
+//     obj[key].push(item)
+//     }
   
     
-   })
+//    })
   
-   return obj
+//    return obj
    
 
 
     
-  };
+//   };
 
-const val =[1,1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
- console.log(val);
- 
+// const val =[1,1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
+//  console.log(val);
+
+
 
 
 
