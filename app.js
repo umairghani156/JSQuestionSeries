@@ -4037,19 +4037,45 @@ const data = [
 // };
 // console.log(chunk([1,2,3,4,5,6], 2));
 
-Array.prototype.last = function(arguments) {
-    let val = JSON.stringify(this)
-   if(val === "[]"){
-    return -1
-   }
-    return this[this.length -1];
+// Array.prototype.last = function(arguments) {
+//     let val = JSON.stringify(this)
+//    if(val === "[]"){
+//     return -1
+//    }
+//     return this[this.length -1];
     
     
-};
+// };
 
- const arr = [1, 2, 3];
- ; // 3
- console.log(arr.last());
+//  const arr = [1, 2, 3];
+//  ; // 3
+//  console.log(arr.last());
+
+Array.prototype.groupBy = function(fn) {
+
+let obj = {};
+   this.forEach((item)=>{
+    let key = fn(item);
+    console.log(key);
+    if(!obj[key]){
+      obj[key] = [item]
+    }else{
+
+    obj[key].push(item)
+    }
+  
+    
+   })
+  
+   return obj
+   
+
+
+    
+  };
+
+const val =[1,1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
+ console.log(val);
  
 
 
