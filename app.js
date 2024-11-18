@@ -4166,30 +4166,46 @@ var join = function(arr1, arr2) {
 //  let finalData = Object.values(resultObj);
 //  return finalData
 
-var flat = function (arr, n) {
-  let result = []
+// var flat = function (arr, n) {
+//   let result = []
   
-  arr.forEach(element => {
-    if(Array.isArray(element) && n > 0){
-      console.log(result);
+//   arr.forEach(element => {
+//     if(Array.isArray(element) && n > 0){
+//       console.log(result);
       
       
-      result = result.concat(flat(element, n-1))
+//       result = result.concat(flat(element, n-1))
       
-    }else{
-      result.push(element)
-    }
+//     }else{
+//       result.push(element)
+//     }
     
-  });
+//   });
   
   
-  return result;
+//   return result;
   
   
   
     
-};
-console.log(flat([[1, 2, 3], [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 2));
+// };
+// console.log(flat([[1, 2, 3], [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 2));
+
+function coercionHandle(n){
+  if(n ===0){
+    return 1
+  }
+  return n * coercionHandle(n-1)//5*4*3*2*1
+}
+console.log(coercionHandle(5));
+
+
+
+
+
+
+
+
  
  
 
