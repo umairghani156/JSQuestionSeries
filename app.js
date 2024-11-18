@@ -4191,13 +4191,33 @@ var join = function(arr1, arr2) {
 // };
 // console.log(flat([[1, 2, 3], [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 2));
 
-function coercionHandle(n){
-  if(n ===0){
-    return 1
-  }
-  return n * coercionHandle(n-1)//5*4*3*2*1
+// function coercionHandle(n){
+//   if(n ===0){
+//     return 1
+//   }
+//   return n * coercionHandle(n-1)//5*4*3*2*1
+// }
+// console.log(coercionHandle(5));
+
+
+function handleArray(arr, n){
+  console.log(arr);
+  let result = [];
+  arr.forEach(element => {
+    if(Array.isArray(element) && n > 0){
+   result = result.concat(handleArray(element, n-1))
+    
+    }else{
+      result.push(element)
+    }
+  });
+  console.log(result);
+  return result
+  
 }
-console.log(coercionHandle(5));
+
+console.log(handleArray([1, 2, 3, [4, 5, 6, [7, 8]], 9 , 10], 2));
+
 
 
 
