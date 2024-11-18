@@ -4171,6 +4171,8 @@ var flat = function (arr, n) {
   
   arr.forEach(element => {
     if(Array.isArray(element) && n > 0){
+      console.log(result);
+      
       
       result = result.concat(flat(element, n-1))
       
@@ -4187,7 +4189,7 @@ var flat = function (arr, n) {
   
     
 };
-console.log(flat([[1, 2, 3], [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 1));
+console.log(flat([[1, 2, 3], [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 2));
  
  
 
