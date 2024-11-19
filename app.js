@@ -4272,6 +4272,23 @@ var compactObject = function(obj) {
 
 compactObject({"a": null, "b": [false, 1]})
 
+function join(arr1, arr2) {
+  let data = arr1.concat(arr2).sort((a, b)=> a.id - b.id);
+  let resultObj = {}
+  for(let d of data){
+   let id = d.id
+   if(resultObj[id]){
+     resultObj[id] = {...resultObj[id], ...d}
+   }else{
+     resultObj[id] = d
+   }
+
+  
+  }
+  let finalData = Object.values(resultObj);
+  return finalData  
+  
+
 
 
 
