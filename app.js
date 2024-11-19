@@ -4200,23 +4200,81 @@ var join = function(arr1, arr2) {
 // console.log(coercionHandle(5));
 
 
-function handleArray(arr, n){
-  console.log(arr);
-  let result = [];
-  arr.forEach(element => {
-    if(Array.isArray(element) && n > 0){
-   result = result.concat(handleArray(element, n-1))
+// function handleArray(arr, n){
+//   console.log(arr);
+//   let result = [];
+//   arr.forEach(element => {
+//     if(Array.isArray(element) && n > 0){
+//    result = result.concat(handleArray(element, n-1))
     
-    }else{
-      result.push(element)
-    }
-  });
-  console.log(result);
-  return result
+//     }else{
+//       result.push(element)
+//     }
+//   });
+//   console.log(result);
+//   return result
   
-}
+// }
 
-console.log(handleArray([1, 2, 3, [4, 5, 6, [7, 8]], 9 , 10], 2));
+// console.log(handleArray([1, 2, 3, [4, 5, 6, [7, 8]], 9 , 10], 2));
+
+var compactObject = function(obj) {
+    let result = []
+    let resultObj = {}
+    console.log(obj);
+    
+   
+  
+    function hello(data){
+      if(Array.isArray(data)){
+        
+        result = data.filter((value)=> typeof value === "number" && value);
+        
+      }
+
+      else if(typeof data === 'object' && data !== null){
+        console.log(data);
+        for(let val in data){
+          console.log(data[val]);
+          if(!data[val]){
+            delete data[val]
+          }
+          else if(Array.isArray(data[val])){
+            console.log("arr", data[val]);
+            console.log("arrPro",val);
+            
+           let heloo= data[val].map((val2)=>{
+              if(val2){
+               return val2
+              }
+              return
+              
+            })
+            console.log(heloo);
+            
+            
+          }
+          
+          
+          console.log(data);
+        }
+        
+        
+      }
+
+    }
+    hello(obj)
+    console.log(result);
+    console.log(resultObj);
+    
+    
+};
+
+compactObject({"a": null, "b": [false, 1]})
+
+
+
+
 
 
 
