@@ -490,7 +490,7 @@
 // //             }
 // //         }
 // //     }
-    
+
 // // }
 // // console.log(outPut);
 
@@ -507,7 +507,7 @@
 // //        }
 // //     }
 // //    return arr;
-    
+
 // // }
 // // console.log(hello(input2)); 
 
@@ -547,7 +547,7 @@
 // //          freqNum[a1[i]]++
 // //        }
 // //    }
-  
+
 // //    let result = [];
 // //     for (let num of a2) {
 // //         while (freqNum[num] > 0) {
@@ -643,7 +643,7 @@
 //         i++
 //     }
 //    }
-   
+
 //     let seconLargestNum = arr[0];
 //     for(let j =0; j<arr.length;j++){
 //         if(arr[j] > seconLargestNum){
@@ -712,7 +712,7 @@
 // //How to find prime number in javascript
 
 // const arr9 = [11, 12, 13, 15, 16, 17, 18, 19, 20];
- 
+
 // function isPrime(n){
 //    if(n <= 0) return false;
 //    if(n === 2) return true
@@ -1019,7 +1019,7 @@
 //         if (clickCount < 20) {
 //             const coinImage = document.createElement("img");
 //             const elementDev2 = document.createElement("div");
-            
+
 //             coinImage.src = `./images/rupee${randomval}.png`;
 //             coinImage.style.width = "100%";
 //             coinImage.style.height = "100%";
@@ -1042,12 +1042,12 @@
 //             const coinType = `rupee${randomval}`;
 //             coinCounts[coinType]++;
 
-            
+
 //             randomval = Math.floor(Math.random() * 6) + 1;
 
 //             clickCount++;
 //         } else {
-           
+
 //             let maxCoin = "";
 //             let maxCount = 0;
 
@@ -1069,7 +1069,7 @@
 //     });
 // });
 
- 
+
 
 // const devEle = document.createElement("div");
 // const fetchData = ()=>{
@@ -1264,7 +1264,7 @@
 //     return y * y
 //   }
 
- 
+
 //   return function(x) {
 //     return mul(add(x)) + 1
 //   }
@@ -1378,7 +1378,7 @@
 // console.log(arr);
 
 // var foo = function foo(){
-  
+
 //   console.log(foo === foo);
 // }
 
@@ -1400,7 +1400,7 @@
 //   arguments[1] = 10;
 //   console.log(arguments);
 //   console.log(b);
-  
+
 // }
 
 // foo(1);
@@ -1439,7 +1439,7 @@
 
 // const apiCall = (e)=>{
 //   console.log(e.target.value);
-  
+
 // }
 
 // const data = debounce(apiCall, 100)
@@ -1488,17 +1488,17 @@
 //   x = 100;
 //   console.log(x);
 //   var x
-  
+
 // };
 // doSomething()
 // console.log(x);
 
 // function formatDate(userDate) {
- 
-  
-  
+
+
+
 //   }
-  
+
 //   console.log(formatDate("12/31/2014"));
 
 
@@ -1510,7 +1510,7 @@
 //    }
 //     return acc + cur
 //   }, 0)
-  
+
 //   return initialSpeed - f
 // }
 
@@ -1527,7 +1527,7 @@
 //     btn.setAttribute("onclick","toggleEventColor2()")
 //     }
 //   })
-  
+
 // }
 
 // function toggleEventColor2(){
@@ -1548,7 +1548,7 @@
 
 // function sortedArray(arr){
 //    return arr.sort((a,b)=> a - b)
-   
+
 // }
 // console.log(sortedArray([ 1, 10, 6, 7, 9]))
 
@@ -1556,7 +1556,7 @@
 // function sortedArray(arr){
 //    let num = Math.min(...arr);
 
-   
+
 
 //   for (let i = 0; i < arr.length; i++) {
 //         let minIndex = i;
@@ -1568,21 +1568,21 @@
 //         }
 //   }
 //   console.log(arr);
-  
 
-  
-  
-  
-   
-   
-  
+
+
+
+
+
+
+
 // }
 // console.log(sortedArray([ 1, 10, 6, 7, 9]))
 
 // function sortedArray(arr){
 //   let num = Math.min(...arr);
 
-  
+
 
 //  for (let i = 0; i < arr.length; i++) {
 //        let minIndex = i;
@@ -1594,19 +1594,19 @@
 //            }
 //            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
 
-          
-          
+
+
 //        }
 //  }
 //  console.log(arr);
- 
 
- 
- 
- 
-  
-  
- 
+
+
+
+
+
+
+
 // }
 // console.log(sortedArray([ 1, 10, 6, 7, 9]))
 
@@ -1662,9 +1662,9 @@
 //   if(arr[count] === 7 || arr[count] === 8){
 //     arr.splice(count, 1)
 //   }
-  
+
 //    count++
-  
+
 // }while(count < arr.length)
 //   return arr
 // }
@@ -1673,7 +1673,7 @@
 // function removeDuplicates(arr){
 //    let count = arr.length - 1;
 //    while (count >= 0) {
-   
+
 //     count--
 //     if(arr[count] === 7 || arr[count] === 8){
 //       arr.splice(count, 1)
@@ -1681,7 +1681,7 @@
 //    }
 //    return arr
 // }
- 
+
 // console.log(removeDuplicates([5, 6, 7, 7,7, 8, 8, 9, 7, 7, 7]));
 
 // function isPowerOfTwo(num){
@@ -1709,7 +1709,7 @@
 //   }
 //   const sortedval = arr.sort((a, b)=> a - b);
 //   return sortedval[0]
-  
+
 // }
 // console.log(findMinVal([1, -7, 8, -2]));
 // console.log(findMinVal([]));
@@ -1723,10 +1723,10 @@
 //       }else{
 //         return val
 //       }
-      
+
 //   })
 //   return h2.join("")
-  
+
 // }
 
 // console.log(toCamelCase("hello world kah hhh ty "));
@@ -1792,7 +1792,7 @@
 // function calculateMean(arr){
 //   const meanVal = arr.reduce((acc, cur)=> acc + cur, 0);
 //   console.log(meanVal);
-  
+
 //   return meanVal /arr.length
 // };
 
@@ -1807,12 +1807,12 @@
 //    let middle = Math.floor(length / 2);
 //    if(length % 2 === 0){
 //       return (arr[middle] + arr[middle -1]) /2;
-      
+
 //    }else{
 //       return arr[middle]
-      
+
 //    }
-   
+
 // }
 // console.log(findMedian([5, 3, 9, 1, 7]));
 // console.log(findMedian([2, 4, 6, 8]));
@@ -1831,11 +1831,11 @@
 //    let i = 0
 //     function k(){
 //       console.log(i);
-      
+
 //    }
 //    await hello();
 //     console.log("Hello",await hello());
-    
+
 //    return k
 // }
 
@@ -1853,7 +1853,7 @@
 //    },{})
 
 //    return h
-   
+
 // };
 // console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]))
 
@@ -1867,8 +1867,8 @@
 //       }
 //    });
 //    console.log(count);
-   
-   
+
+
 // };
 // console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]))
 
@@ -1877,9 +1877,9 @@
 //    for(const val of arr){
 //      count[val] = (count[val] || 0) + 1
 //    }
-   
+
 //    console.log(count);
-   
+
 // };
 // console.log(occurenceElement([1, 2, 2, 3, 1, 4, 2]));
 
@@ -1892,7 +1892,7 @@
 //    input = input ^ 6;
 //    console.log(input);
 
- 
+
 // }
 // h(h2)
 
@@ -1913,7 +1913,7 @@
 //    // const arrData = `#${(data[0].slice(0,1).toUpperCase()+data[0].slice(1).toLowerCase()) + (data[1].slice(0,1).toUpperCase() +data[1].slice(1).toLowerCase())}`;
 //    // return arrData;
 
-   
+
 // }
 
 // console.log(arr(arrData)); // output #UmairAhmed
@@ -1927,11 +1927,11 @@
 //     age: 23,
 //     calAge: function (){
 //         console.log(this);
-        
+
 //         return 2024 - this.age
 //     },
 //     greet: ()=> console.log(this)
-    
+
 // };
 
 // console.log(jonas.calAge());
@@ -1941,7 +1941,7 @@
 
 // function hello(inp){
 //     console.log(inp.length);
-    
+
 // }
 
 // hello(pr);
@@ -1975,8 +1975,8 @@
 //       }
 //    })
 //    console.log(check);
-   
-   
+
+
 // }
 // console.log(truncateString("A-tiskit a-tasket a green and yellow basket hellortwe", 8));
 
@@ -2009,23 +2009,23 @@
 //             ){
 //                 return true
 //             }
-           
 
-            
+
+
 //         })
 //        if(isInteger.length === 0){
 //         return false
 //        }else{
 //         return true
 //        }
-       
+
 //     }
-    
-  
-   
-    
-    
-    
+
+
+
+
+
+
 // }
 // console.log(simplePasswordValidator("helLok2"));
 
@@ -2085,8 +2085,8 @@
 //         filteredData = imagesData
 //     }
 //     showImage(filteredData)
-    
-    
+
+
 // }
 
 // function showImage(data){
@@ -2097,7 +2097,7 @@
 //      dataImgs = `
 //         <div class="imageWrapperCon">
 //         <img class="imgSrc" src="${element.image}" alt="${element.name}">
-        
+
 //         </div>`
 //         imageWrapper.innerHTML += dataImgs
 //     });
@@ -2146,7 +2146,7 @@
 //        let items = `<li onclick="handleClick('${element}')">${element.substring(0,1).toUpperCase()+element.substring(1).toLowerCase()}</li>`  
 //        navbarItemsList.innerHTML += items
 //     });
-    
+
 // }
 // navbarFunc(listItems);
 
@@ -2155,10 +2155,10 @@
 //    if(filteredData.length === 0){
 //     filteredData = imagesData
 //    }
-   
+
 //    renderData(filteredData)
-   
-    
+
+
 // }
 
 // function renderData(data){
@@ -2182,8 +2182,8 @@
 //    document.body.style.backgroundColor = `#${num}`
 //    btn.innerText = `Hex Code #${num}`
 //    console.log(num);
-   
-   
+
+
 // })
 
 
@@ -2194,7 +2194,7 @@
 //         arr.splice(index, 1)
 //       }
 //       index++
-      
+
 //     }
 //     return arr
 // }
@@ -2263,7 +2263,7 @@
 //     // }
 //   });
 //   console.log(val);
-  
+
 // }
 // console.log(isInclude(["sami","umair","saad","farooq","apple","noman"]));
 
@@ -2296,7 +2296,7 @@
 //         }, 1000);
 //     }
 //     a(i)
-   
+
 // }
 
 // function add(a, b) {
@@ -2364,7 +2364,7 @@
 // function objToArr(obj){
 //    const vl = Object.entries(obj)
 //    console.log(vl);
-   
+
 // }
 // console.log(objToArr({name: "Umair", age: 20}));
 
@@ -2379,8 +2379,8 @@
 //    const h = Math.abs(cd2 - cd1)
 //    const t = h /(1000 * 60 * 60 * 24)
 //    console.log(t);
-   
-   
+
+
 
 
 
@@ -2392,7 +2392,7 @@
 //    const curdate = new Date();
 //    const d = curdate.getFullYear() - age.getFullYear()
 //   console.log(d);
-  
+
 // }
 // console.log(calculateAge("1989-05-15"));
 
@@ -2406,20 +2406,20 @@
 //         }else{
 //          obj[arr[i]] = "*"
 //         }
-        
+
 //       }
 //    }
 //    console.log(obj);
 //    return obj
-   
+
 // }
 // console.log(generateBarChart([5, 3, 9, 2]));
 
 
 
 // function validateCreditCard(num){
-    
-    
+
+
 // if(typeof Number(num.indexOf(0)) === "number"){
 //     let curDegit = ""
 //        const cvrt = num.split(" ").join("").split("").reverse();
@@ -2428,7 +2428,7 @@
 //             v = v * 2
 //             if(v > 9){
 //               v= v - 9
-               
+
 //             }else{
 //              v = v
 //             }
@@ -2436,19 +2436,19 @@
 //         return v
 //        });
 //        console.log(an);
-       
+
 //     //  const add = an.reduce((acc, cur)=> acc + cur, 0);
-     
-    
+
+
 //     //  if(add % 10){
 //     //     return true
 //     //  }else{
 //     //     return false
 //     //  }
-    
-    
-       
-       
+
+
+
+
 
 //      }
 
@@ -2533,7 +2533,7 @@
 //       }
 //     });
 //     console.log(val);
-    
+
 //   }
 //   console.log(isInclude(["sami","umair","saad","farooq","apple","noman"]));
 
@@ -2555,7 +2555,7 @@
 //     else{
 //       answer.push(i)
 //     }
-    
+
 //    }
 //    return answer
 // }
@@ -2576,7 +2576,7 @@
 //     else{
 //       answer.push(i)
 //     }
-    
+
 //    }
 //    return answer
 // }
@@ -2594,8 +2594,8 @@
 //    const h = Math.abs(cd2 - cd1)
 //    const t = h /(1000 * 60 * 60 * 24)
 //    console.log(t);
-   
-   
+
+
 
 
 
@@ -2616,9 +2616,9 @@
 //    const val = num.split("");
 //    const h = val.filter((v)=> Number(v)).map((v)=> Number(v));
 //    return h
-   
-   
-   
+
+
+
 // }
 
 // console.log(extractNumber("gagha56788kkj45"));
@@ -2630,11 +2630,11 @@
 //     if(Number(val[i])){
 //       numbers.push(Number(val[i]))
 //     }
-    
+
 //   }
-  
+
 //   return numbers
-  
+
 // }
 
 // console.log(extractNumber("gagha56788kkj45"));
@@ -2648,7 +2648,7 @@
 //             v = v * 2
 //             if(v > 9){
 //               v= v - 9
-               
+
 //             }else{
 //              v = v
 //             }
@@ -2656,19 +2656,19 @@
 //         return v
 //        });
 //        console.log(an);
-       
+
 //     //  const add = an.reduce((acc, cur)=> acc + cur, 0);
-     
-    
+
+
 //     //  if(add % 10){
 //     //     return true
 //     //  }else{
 //     //     return false
 //     //  }
-    
-    
-       
-       
+
+
+
+
 
 //      }
 
@@ -2777,7 +2777,7 @@
 //   },
 //   hello: function(){
 //     console.log("My name is " + this.name);
-    
+
 //   }
 // }
 
@@ -2802,7 +2802,7 @@
 //       console.log("self.foo", self.foo);
 
 
-      
+
 //     })()
 //   }
 // }
@@ -2849,7 +2849,7 @@
 //   name: "Umair",
 //   sayHi:function(age, des, exp){
 //     console.log('Hello ' + this.name + " " + age + " "+des + " " + exp);
-    
+
 //   }
 // };
 
@@ -2875,7 +2875,7 @@
 //   name: "Habib",
 //   sayHi: function(age, desc){
 //     console.log("hello my Friend " + this.name + age + desc);
-    
+
 //   }
 // }
 
@@ -2904,7 +2904,7 @@
 //   name: "Aamir",
 //   sayHi:function(age, desc){
 //     console.log("Hello "+ this.name + " " + age + " " + desc);
-    
+
 //   }
 // }
 
@@ -2927,7 +2927,7 @@
 //   name : "Ahmed",
 //   sayHi: function (...age){
 //     console.log("Welcome " + this.name + " " + age[0] + " " + age[1] + " " + age[2]);
-    
+
 //   }
 // }
 // printName.sayHi.myApply(nameObj, [23, "Umair", "Developer"]);
@@ -2965,9 +2965,9 @@
 //   console.log(checkUser);
 //  const myBind = greet.myCall(checkUser,"Welcome to the page",24)
 //  myBind()
- 
-  
-  
+
+
+
 // }
 
 //Promise in JavaScript
@@ -2985,24 +2985,24 @@ const data = [
   {
     name: "umair"
   },
-  
+
 
 ]
 // function renderVal(users){
 //   return users
 // }
 // const myPromise = new Promise(async(resolve, reject)=>{
-  
+
 //     const check = await renderVal(data);
 //     return check
- 
+
 // })
 // myPromise.then((resolve)=>{
 //   console.log("hhh",resolve);
-  
+
 // }, (reject)=>{
 //   console.log("rej",reject);
-  
+
 // })
 
 // const promiseBtn = document.getElementById("promiseBtn");
@@ -3013,12 +3013,12 @@ const data = [
 //       if(arg ==="res"){
 //        return  resolve("Resolve Hogiiya he!")
 //       }
-       
+
 //       reject("Reject Hogiya he!")
 //      },1000)
 //   })
 
-  
+
 
 //   return myPromise
 // }
@@ -3027,17 +3027,17 @@ const data = [
 // promiseBtn.addEventListener("click", ()=>{
 //   console.log("h");
 //  const check =  helloFunc("rej");
- 
+
 //  check.then((res)=>res).then((res)=>{
 //   console.log("resolved", res);
-  
+
 //  }).catch((error)=>{
 //   console.log("Error", error);
-  
+
 //  })
- 
-  
-  
+
+
+
 // })
 
 // function User(name,age){
@@ -3069,13 +3069,13 @@ const data = [
 
 // function LevelOne() {
 //   console.log("LevelOne");
-  
+
 //   LevelTwo()
 // }
 
 // function main() {
 //   console.log("Main");
-  
+
 //   LevelOne()
 // }
 
@@ -3090,7 +3090,7 @@ const data = [
 
 // function displayData(data){
 //   console.log(`Fetched Data: ID = ${data.age}, Name = ${data.name}`);
-  
+
 // }
 
 // hello2(displayData)
@@ -3102,11 +3102,11 @@ const data = [
 //    clearTimeout(timeOut)
 //    timeOut= setTimeout(()=>{
 //       console.log(e.target.value);
-      
+
 //     },1000)
 //     console.log(timeOut);
-    
-   
+
+
 // }
 
 // inputVal.addEventListener("input", showData)
@@ -3144,7 +3144,7 @@ const data = [
 
 // const arr = [1, 2, 3, function(){
 //   console.log("Hello world");
-  
+
 // }, "umair"]
 
 // console.log(arr[3]());
@@ -3152,7 +3152,7 @@ const data = [
 
 // const arr = [1, 2, 3, function(){
 //   console.log("Hello world");
-  
+
 // }, "umair"]
 
 // console.log(arr[3]());
@@ -3179,7 +3179,7 @@ const data = [
 
 // const arr = [1, 2, 3, function(){
 //   console.log("Hello world");
-  
+
 // }, "umair"]
 
 // console.log(arr[3]());
@@ -3250,8 +3250,8 @@ const data = [
 //    item.style.backgroundColor = currentColor
 //    listCount = index
 
-   
-    
+
+
 //   })
 // })
 
@@ -3274,8 +3274,8 @@ const data = [
 //   },0)
 //   console.log(countVal);
 //   return countVal
-  
-  
+
+
 
 // }
 // console.log(howManyChar("Habib kahan ho tum aaj kl nazar nhi arha he"));
@@ -3301,7 +3301,7 @@ const data = [
 //     return str + " Hello world"
 //   }
 //  } catch (error) {
-  
+
 //  }
 // }
 // // console.log(hello("ka"));
@@ -3315,7 +3315,7 @@ const data = [
 //     })()
 //   }
 //   console.log(x, y);
-  
+
 // }
 // hello()
 
@@ -3328,7 +3328,7 @@ const data = [
 //    let lists = `<li>${inputTag.value}<button onclick="editHandler(this)">Edit</button><button onclick="deleteHandler(this)">Delete</button></li>`;
 //    ulList.innerHTML += lists
 //    inputTag.value = ""
-   
+
 // }
 
 // function editHandler(d){
@@ -3336,11 +3336,11 @@ const data = [
 //   console.log(d.parentElement.firstChild.nodeValue);
 //   inputTag.value = d.parentElement.firstChild.nodeValue;
 //   submitBtn.setAttribute('onclick',`editValueHandler()`)
-  
+
 // }
 // function deleteHandler(d){
 //   d.parentElement.remove()
-  
+
 // };
 
 // function editValueHandler(d){
@@ -3352,9 +3352,9 @@ const data = [
 //     currentEditItem = null
 //     inputTag.value =""
 //   }
-  
-  
-  
+
+
+
 // }
 
 // let arr = [["hello"]];
@@ -3364,14 +3364,14 @@ const data = [
 // async function hello1(){
 //   setTimeout(() => {
 //     console.log("hello world");
-    
+
 //   }, 0);
 
-  
-//   console.log("hello");
- 
 
-  
+//   console.log("hello");
+
+
+
 
 // }
 // hello1();
@@ -3508,7 +3508,7 @@ const data = [
 //       return count
 //     },
 //   }
-    
+
 // };
 
 
@@ -3516,10 +3516,10 @@ const data = [
 //  console.log(counter.increment()); // 6
 //  console.log(counter.reset()); // 5
 //  console.log(counter.decrement()); // 4
- 
+
 
 // function helloFunc(val){
- 
+
 //   return val + 1
 // }
 
@@ -3536,7 +3536,7 @@ const data = [
 
 // function callBackFunc(i){
 //   console.log(i);
-  
+
 //    return i === 0;
 // }
 /**
@@ -3567,8 +3567,8 @@ const data = [
 // var reduce = function(nums, fn, init) {
 //   let val = init
 //      for(let i =0; i< nums.length; i++){
-      
-      
+
+
 //        val = fn(val, nums[i])
 //      }
 //   return val
@@ -3577,11 +3577,11 @@ const data = [
 
 // var compose = function(functions) {
 //   return function(x) {
-    
+
 //    let val = functions.reduceRight((acc,fn)=> fn(acc),x)
 //    return val
-   
-   
+
+
 //   }
 // };
 
@@ -3594,7 +3594,7 @@ const data = [
 //   curr = 20
 //  }
 //  return acc + curr
-  
+
 // }, 0);
 // console.log(val);
 
@@ -3605,8 +3605,8 @@ const data = [
 //      val = functions[i](val)
 //   }
 //   return val
-  
-   
+
+
 //   }
 // };
 
@@ -3615,7 +3615,7 @@ const data = [
 
 // var argumentsLength = function(...args) {
 //   console.log(...args);
-  
+
 //     return args.length
 // };
 
@@ -3644,16 +3644,16 @@ const data = [
 
 // function memoize(fn) {
 //   let memo = {}
-    
+
 //   return function(...args) {
 //     let key = JSON.stringify(args)
-    
+
 //     if(!memo[key]){
 //       memo[key] = fn(...args)
 //     }
 //     return memo[key]
-      
-      
+
+
 //   }
 // }
 
@@ -3684,7 +3684,7 @@ const data = [
 // }
 // function outerFunc(fn){
 //   let val = false
-  
+
 //   return function (...args){
 //      if(!val){
 //       val = true
@@ -3711,11 +3711,11 @@ const data = [
 // }
 // function outerFunc(fn){
 //   let val = {};
-  
+
 //   return function (...args){
 //     let key = JSON.stringify(args);
 //     console.log(key);
-    
+
 //      if(!val[key]){
 //       val[key] = fn(...args)
 //       return val
@@ -3753,7 +3753,7 @@ const data = [
 //         resolve()
 //       }, millis)
 //     })
-    
+
 // }
 
 // let t = Date.now()
@@ -3766,12 +3766,12 @@ const data = [
 //   let t = Date.now();
 //   const result = await sleep(1000);
 //   console.log("result", result);
-  
+
 
 //   console.log("inner",Date.now() - t);
-  
 
-  
+
+
 // }
 // run()
 
@@ -3797,14 +3797,14 @@ const data = [
 //     return memo[key]
 //    }
 // }
- 
+
 
 // var cancellable = function(fn, args, t) {
 //   let timer =setTimeout(()=>{
 //     fn(...args); 
 //      },t)
 //   return function cancelFn(){
-    
+
 //    clearTimeout(timer)
 //   }
 // };
@@ -3814,20 +3814,20 @@ const data = [
 
 //  const fn = (x) => x * 5;
 //  const args = [2], t = 20, cancelTimeMs = 50;
- 
+
 //   const start = performance.now();
 
 //   const log = (...argsArr) => {
 //       const diff = Math.floor(performance.now() - start);
 //       result.push({"time": diff, "returned": fn(...argsArr)});
 //   }
-       
+
 //   const cancel = cancellable(log, args, t);
 //   console.log(cancel);
-  
+
 
 //   const maxT = Math.max(t, cancelTimeMs);
-           
+
 //   setTimeout(cancel, cancelTimeMs);
 
 //   setTimeout(() => {
@@ -3846,7 +3846,7 @@ const data = [
 //   return function cancelFn(){
 //     clearInterval(interval)
 //   }
-    
+
 // };
 
 
@@ -3858,10 +3858,10 @@ const data = [
 //      const diff = Math.floor(performance.now() - start);
 //      result.push({"time": diff, "returned": fn(...argsArr)});
 //  }
-      
+
 //  const cancel = cancellable(log, args, t);
 //   setTimeout(cancel, cancelTimeMs);
-  
+
 //  setTimeout(() => {
 //      console.log(result); // [
 //                           //     {"time":0,"returned":8},
@@ -3882,7 +3882,7 @@ const data = [
 //       reject("Time Limit Exceeded")
 //     }, t)
 
-    
+
 //    })
 //   }
 // };
@@ -3891,10 +3891,10 @@ const data = [
 // const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
 // limited(150).then((res)=>{
 //   console.log(res);
-  
+
 // }).catch((error)=>{
 //   console.log(error)
-  
+
 //}) // "Time Limit Exceeded" at t=100ms
 
 // TimeLimitedCache.prototype.set = function(key, value, duration) {
@@ -3911,7 +3911,7 @@ const data = [
 //     expiryTime: currentTime + duration
 //    }
 //   return isExistingKey
-    
+
 // };
 // TimeLimitedCache.prototype.get = function(key) {
 //     const currentTime = Date.now();
@@ -3985,12 +3985,12 @@ const data = [
 //    }, delay)
 //  }
 
-  
+
 // }
 
 // const hanledebounce = debounceHandler(function(e){
 //   console.log(e.target.value);
-  
+
 // }, 500)
 
 
@@ -4010,14 +4010,14 @@ const data = [
 //         if(completed === functions.length){
 //           resolve(results)
 //         }
-        
+
 //       }).catch((error)=>{
 //         if(!hasError){
 //           hasError = true;
 //           reject(error)
 //         }
 //       })
-      
+
 //     });
 //   })
 // };
@@ -4026,14 +4026,14 @@ const data = [
 // promise.then(console.log); // [42]
 
 // var chunk = function(arr, size) {
-   
+
 //     let result = [];
 //     for (let i = 0; i < arr.length; i += size) {
 //         result.push(arr.slice(i, i + size));
 //     }
 //     return result
-    
-   
+
+
 // };
 // console.log(chunk([1,2,3,4,5,6], 2));
 
@@ -4043,8 +4043,8 @@ const data = [
 //     return -1
 //    }
 //     return this[this.length -1];
-    
-    
+
+
 // };
 
 //  const arr = [1, 2, 3];
@@ -4063,15 +4063,15 @@ const data = [
 
 //     obj[key].push(item)
 //     }
-  
-    
+
+
 //    })
-  
+
 //    return obj
-   
 
 
-    
+
+
 //   };
 
 // const val =[1,1,2,3].groupBy(String) // {"1":[1],"2":[2],"3":[3]}
@@ -4094,35 +4094,35 @@ const data = [
 // function helloFunc(a){
 //  // console.log(a);
 //   return a
-  
+
 // }
 
 // var sortBy = function(arr, fn) {
 //   let n = arr.length;
- 
+
 //   for(let i = 0; i < n; i++){
 //     console.log("outer",arr[i]);
 //     for(let j = 0; j <= n - i -1; j++){
-      
+
 //       if(arr[j] > arr[j + 1]){
 //       let temp = arr[j]
-       
+
 //         arr[j] = arr[j + 1]
 //         arr[j + 1] = temp
 //       }
-      
+
 //     }
 //   }
- 
+
 //   fn(arr)
-  
-  
-    
+
+
+
 // };
 // sortBy([5, 4, 1, 2, 3], (a)=> a)
 
 //var join = function(arr1, arr2) {
-  
+
 //   let data = arr1.concat(arr2).sort((a, b)=> a.id - b.id);
 //   let data3 = data.reduce((acc, cur)=>{
 //       let existing = acc.find(item => item.id === cur.id);
@@ -4133,24 +4133,24 @@ const data = [
 //       }
 //       return acc
 //   },[]);
-  
+
 
 //   return data3
-  
-  
-  
-  
-  
- 
-   
- 
-  
-  
-    
+
+
+
+
+
+
+
+
+
+
+
 // };
 // join([{id: 20, name: "umair"}],[{id: 2, name: "faiz"},{id: 3, name: "sami"},{id: 3, name: "kahan"}])
 
-var join = function(arr1, arr2) {
+//var join = function(arr1, arr2) {
 // let data = arr1.concat(arr2).sort((a, b)=> a.id - b.id);
 //  let resultObj = {}
 //  for(let d of data){
@@ -4161,33 +4161,33 @@ var join = function(arr1, arr2) {
 //     resultObj[id] = d
 //   }
 
-  
+
 //  }
 //  let finalData = Object.values(resultObj);
 //  return finalData
 
 // var flat = function (arr, n) {
 //   let result = []
-  
+
 //   arr.forEach(element => {
 //     if(Array.isArray(element) && n > 0){
 //       console.log(result);
-      
-      
+
+
 //       result = result.concat(flat(element, n-1))
-      
+
 //     }else{
 //       result.push(element)
 //     }
-    
+
 //   });
-  
-  
+
+
 //   return result;
-  
-  
-  
-    
+
+
+
+
 // };
 // console.log(flat([[1, 2, 3], [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]], 2));
 
@@ -4206,228 +4206,206 @@ var join = function(arr1, arr2) {
 //   arr.forEach(element => {
 //     if(Array.isArray(element) && n > 0){
 //    result = result.concat(handleArray(element, n-1))
-    
+
 //     }else{
 //       result.push(element)
 //     }
 //   });
 //   console.log(result);
 //   return result
-  
+
 // }
 
 // console.log(handleArray([1, 2, 3, [4, 5, 6, [7, 8]], 9 , 10], 2));
 
+// var compactObject = function(obj) {
+//     let result = []
+//     let resultObj = {}
+//     console.log(obj);
+
+
+
+//     function hello(data){
+//       if(Array.isArray(data)){
+
+//         result = data.filter((value)=> typeof value === "number" && value);
+
+//       }
+
+//       else if(typeof data === 'object' && data !== null){
+//         console.log(data);
+//         for(let val in data){
+//           console.log(data[val]);
+//           if(!data[val]){
+//             delete data[val]
+//           }
+//           else if(Array.isArray(data[val])){
+//             console.log("arr", data[val]);
+//             console.log("arrPro",val);
+
+//            let heloo= data[val].map((val2)=>{
+//               if(val2){
+//                return val2
+//               }
+//               return
+
+//             })
+//             console.log(heloo);
+
+
+//           }
+
+
+//           console.log(data);
+//         }
+
+
+//       }
+
+//     }
+//     hello(obj)
+//     console.log(result);
+//     console.log(resultObj);
+
+
+// };
+
+// compactObject({"a": null, "b": [false, 1]})
+
+// function join(arr1, arr2) {
+//   let data = arr1.concat(arr2).sort((a, b)=> a.id - b.id);
+//   let resultObj = {}
+//   for(let d of data){
+//    let id = d.id
+//    if(resultObj[id]){
+//      resultObj[id] = {...resultObj[id], ...d}
+//    }else{
+//      resultObj[id] = d
+//    }
+
+
+//   }
+//   let finalData = Object.values(resultObj);
+//   return finalData  
+// }
+
+// function join(arr1, arr2) {
+//   let data = arr1.concat(arr2).sort((a, b)=> a.id - b.id);
+//   let resultObj = {}
+//   for(let d of data){
+//    let id = d.id
+//    if(resultObj[id]){
+//      resultObj[id] = {...resultObj[id], ...d}
+//    }else{
+//      resultObj[id] = d
+//    }
+
+
+//   }
+//   let finalData = Object.values(resultObj);
+//   return finalData  
+// }
+
+
+// var compactObject = function (obj) {
+//   let result = []
+
+
+
+//   function hello(data) {
+//     if (Array.isArray(data)) {
+
+//       return data.map((value) => {
+//         if (Array.isArray(value)) {
+//           return hello(value)
+//         }
+
+//         return value
+//       }).filter(val =>val || val ==="[]")
+
+
+//     } else if (typeof data === 'object' && data !== null) {
+//       let cleanedObj = {}
+//       for (let key in data) {
+//         const value = data[key];
+//         if (value) {
+//           if (Array.isArray(value)) {
+//             const filteredArray = hello(value);
+//             if (filteredArray.length > 0 && filteredArray === "[]") {
+//               cleanedObj[key] = filteredArray;
+//             }
+
+//           }else if(typeof value === 'object' && value !== null){
+//             const filteredObject = hello(value);
+//             if (filteredObject.length > 0 && filteredObject === "{}") {
+//               cleanedObj[key] = filteredObject;
+//             }
+//           }else{
+//             cleanedObj[key] = value
+//           }
+//         }
+
+
+//       }
+
+//       return cleanedObj
+
+//     }
+//     return data
+//   }
+//     hello(obj)
+//     return result
+
+//   };
+//   console.log(compactObject([null, 0, false, 1]))
+//   console.log(compactObject({ "a": null, "b": [false, 1] }));
+//   console.log(compactObject([null, 0, 5, [0], [false, 16]]));
 var compactObject = function(obj) {
-    let result = []
-    let resultObj = {}
-    console.log(obj);
-    
-   
-  
-    function hello(data){
-      if(Array.isArray(data)){
-        
-        result = data.filter((value)=> typeof value === "number" && value);
-        
-      }
+  let result = [];
 
-      else if(typeof data === 'object' && data !== null){
-        console.log(data);
-        for(let val in data){
-          console.log(data[val]);
-          if(!data[val]){
-            delete data[val]
-          }
-          else if(Array.isArray(data[val])){
-            console.log("arr", data[val]);
-            console.log("arrPro",val);
-            
-           let heloo= data[val].map((val2)=>{
-              if(val2){
-               return val2
-              }
-              return
-              
-            })
-            console.log(heloo);
-            
-            
-          }
-          
-          
-          console.log(data);
+  
+  function hello(data) {
+    if (Array.isArray(data)) {
+      return data.map(value => {
+        if (Array.isArray(value)) {
+          return hello(value); 
         }
-        
-        
+        return value; 
+      }).filter(value => value || value === "[]");
+    } else if (typeof data === 'object' && data !== null) {
+      let cleanedObj = {};
+      for (let key in data) {
+        const value = data[key];
+
+        if (value) {
+          if (Array.isArray(value)) {
+           
+            const filteredArray = hello(value);
+            if (filteredArray.length > 0 || filteredArray === "[]") {
+              cleanedObj[key] = filteredArray;
+            }
+          } else if (typeof value === 'object') {
+            
+            const filteredObject = hello(value);
+            if (Object.keys(filteredObject).length > 0) {
+              cleanedObj[key] = filteredObject;
+            }
+          } else {
+           
+            cleanedObj[key] = value;
+          }
+        }
       }
-
+      return cleanedObj;
     }
-    hello(obj)
-    console.log(result);
-    console.log(resultObj);
-    
-    
+    return data; 
+  }
+
+  result = hello(obj);
+  return result;
 };
 
-compactObject({"a": null, "b": [false, 1]})
-
-function join(arr1, arr2) {
-  let data = arr1.concat(arr2).sort((a, b)=> a.id - b.id);
-  let resultObj = {}
-  for(let d of data){
-   let id = d.id
-   if(resultObj[id]){
-     resultObj[id] = {...resultObj[id], ...d}
-   }else{
-     resultObj[id] = d
-   }
-
-  
-  }
-  let finalData = Object.values(resultObj);
-  return finalData  
-}
-
-function join(arr1, arr2) {
-  let data = arr1.concat(arr2).sort((a, b)=> a.id - b.id);
-  let resultObj = {}
-  for(let d of data){
-   let id = d.id
-   if(resultObj[id]){
-     resultObj[id] = {...resultObj[id], ...d}
-   }else{
-     resultObj[id] = d
-   }
-
-  
-  }
-  let finalData = Object.values(resultObj);
-  return finalData  
-}
-
-
-
-
-
-
-
-
-
-
-
- 
- 
-
-
-
-
-
-
- 
-
-
-
-  
-};
-join([{id: 20, name: "umair"}],[{id: 2, name: "faiz"},{id: 3, name: "sami"},{id: 3, name: "kahan"}])
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Example Test Case
+console.log(compactObject([null, 0, false, 1]));
+console.log(compactObject({"a": null, "b": [false, 1]}))
+console.log(compactObject([null, 0, 5, [0], [false, 16]])); 
