@@ -4360,6 +4360,8 @@ const data = [
 //   console.log(compactObject([null, 0, false, 1]))
 //   console.log(compactObject({ "a": null, "b": [false, 1] }));
 //   console.log(compactObject([null, 0, 5, [0], [false, 16]]));
+
+
 var compactObject = function(obj) {
   let result = [];
 
@@ -4409,3 +4411,16 @@ var compactObject = function(obj) {
 console.log(compactObject([null, 0, false, 1]));
 console.log(compactObject({"a": null, "b": [false, 1]}))
 console.log(compactObject([null, 0, 5, [0], [false, 16]])); 
+
+//Chunk Array 
+
+// function arrChunk(arr, size){
+//   let arr2 = [];
+//   for(let i = 0; i < arr.length; i+= size){
+//     console.log(arr[i], i);
+    
+//     arr2.push(arr.slice(i, i + size))
+//   }
+//   return arr2
+// }
+// console.log(arrChunk([1, 2, 3, 4, 5], 2));
