@@ -4546,78 +4546,92 @@ const data = [
 //  console.log(String(obj1)); // "[1,2]"
 //  String(obj2); // "[3,4]"
 
-class Calculator {
+// class Calculator {
     
-  /** 
-   * @param {number} value
-   */
-  constructor(value) {
-   this.value = value
-  }
+//   /** 
+//    * @param {number} value
+//    */
+//   constructor(value) {
+//    this.value = value
+//   }
   
-  /** 
-   * @param {number} value
-   * @return {Calculator}
-   */
-  add(value){
-    console.log(this);
+//   /** 
+//    * @param {number} value
+//    * @return {Calculator}
+//    */
+//   add(value){
+//     console.log(this);
     
-     this.value = this.value + value
-     return this
+//      this.value = this.value + value
+//      return this
      
-  }
+//   }
   
-  /*
-   * @param {number} value
-   * @return {Calculator}
-   */
-  subtract(value){
+//   /*
+//    * @param {number} value
+//    * @return {Calculator}
+//    */
+//   subtract(value){
     
-    this.value = this.value - value
-    return this
-  }
+//     this.value = this.value - value
+//     return this
+//   }
   
-  /*
-   * @param {number} value
-   * @return {Calculator}
-   */  
-  multiply(value) {
-    this.value = this.value * value
-    return this
-  }
+//   /*
+//    * @param {number} value
+//    * @return {Calculator}
+//    */  
+//   multiply(value) {
+//     this.value = this.value * value
+//     return this
+//   }
   
-  /* 
-   * @param {number} value
-   * @return {Calculator}
-   */
-  divide(value) {
-    if(value === 0){
-      throw new Error("Wrong")
-    }
-      this.value = this.value / value
-      return this
-  }
+//   /* 
+//    * @param {number} value
+//    * @return {Calculator}
+//    */
+//   divide(value) {
+//     if(value === 0){
+//       throw new Error("Wrong")
+//     }
+//       this.value = this.value / value
+//       return this
+//   }
   
-  /*
-   * @param {number} value
-   * @return {Calculator}
-   */
-  power(value) {
-      this.value = this.value ** value
-      return this
-  }
+//   /*
+//    * @param {number} value
+//    * @return {Calculator}
+//    */
+//   power(value) {
+//       this.value = this.value ** value
+//       return this
+//   }
   
-  /*
-   * @return {number}
-   */
-  getResult() {
-    return  this.value
-  }
-}
-let res1 = new Calculator(10).add(5).subtract(7).getResult()
-let res2 = new Calculator(10).multiply(5).power(2).getResult() // 10 + 5 - 7 = 8
-let res3 =new Calculator(20).divide(0).getResult()
-console.log("res1",res1);
-console.log("res2",res2);
-console.log("res3",res3);
+//   /*
+//    * @return {number}
+//    */
+//   getResult() {
+//     return  this.value
+//   }
+// }
+// let res1 = new Calculator(10).add(5).subtract(7).getResult()
+// let res2 = new Calculator(10).multiply(5).power(2).getResult() // 10 + 5 - 7 = 8
+// let res3 =new Calculator(20).divide(0).getResult()
+// console.log("res1",res1);
+// console.log("res2",res2);
+// console.log("res3",res3);
+
+var createCounter = function(n) {
+  let count = n
+  return function() {
+      return count++
+  };
+};
+
+
+const counter = createCounter(10)
+console.log(counter()) // 10
+console.log(counter()) // 11
+console.log(counter()) // 12
+
 
