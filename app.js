@@ -4406,51 +4406,51 @@ const data = [
 //   result = hello(obj);
 //   return result;
 // };
-var compactObject = function(obj) {
+// var compactObject = function(obj) {
   
-  function cleanData(data) {
-      if (Array.isArray(data)) {
-        console.log("data", data);
+//   function cleanData(data) {
+//       if (Array.isArray(data)) {
+//         console.log("data", data);
         
          
-          const cleanedArray = data.map(item => cleanData(item)).filter(item => item);
+//           const cleanedArray = data.map(item => cleanData(item)).filter(item => item);
 
          
-          return cleanedArray.length === 0 ? null : cleanedArray;
-      } 
+//           return cleanedArray.length === 0 ? null : cleanedArray;
+//       } 
      
-      else if (typeof data === 'object' && data !== null) {
-          let cleanedObj = {}; 
+//       else if (typeof data === 'object' && data !== null) {
+//           let cleanedObj = {}; 
 
           
-          for (let key in data) {
-              const value = data[key];
+//           for (let key in data) {
+//               const value = data[key];
 
              
-              const cleanedValue = cleanData(value);
-              console.log("cleanedValue", cleanedValue);
+//               const cleanedValue = cleanData(value);
+//               console.log("cleanedValue", cleanedValue);
               
 
              
-              if (cleanedValue) {
-                  cleanedObj[key] = cleanedValue;
-              }
-          }
+//               if (cleanedValue) {
+//                   cleanedObj[key] = cleanedValue;
+//               }
+//           }
 
-          return Object.keys(cleanedObj).length > 0 ? cleanedObj : null;
-      }
+//           return Object.keys(cleanedObj).length > 0 ? cleanedObj : null;
+//       }
 
-      return data;
-  }
+//       return data;
+//   }
 
-  return cleanData(obj);
-};
+//   return cleanData(obj);
+// };
 
-// Example Test Case
-console.log(compactObject([null, 0, false, 1]));
-console.log(compactObject({"a": null, "b": [false, 1]}))
-console.log(compactObject([null, 0, 5, [0], [false, 16]])); 
-console.log(compactObject({"a": 1, "b": 1, "c": null, "d": "false", "e": 0}));
+// // Example Test Case
+// console.log(compactObject([null, 0, false, 1]));
+// console.log(compactObject({"a": null, "b": [false, 1]}))
+// console.log(compactObject([null, 0, 5, [0], [false, 16]])); 
+// console.log(compactObject({"a": 1, "b": 1, "c": null, "d": "false", "e": 0}));
 
 
 //Chunk Array 
@@ -4465,3 +4465,54 @@ console.log(compactObject({"a": 1, "b": 1, "c": null, "d": "false", "e": 0}));
 //   return arr2
 // }
 // console.log(arrChunk([1, 2, 3, 4, 5], 2));
+
+class EventEmitter {
+  constructor() {
+    this.events = {};
+  }
+    
+  /*
+   * @param {string} eventName
+   * @param {Function} callback
+   * @return {Object}
+   */
+  subscribe(eventName, callback) {
+     if(!this.events[eventName]){
+      this.events[eventName] = []
+     }
+    this.events[eventName].push(callback)      
+      return {
+          unsubscribe: () => {
+              let index = this.events[eventName].indexOf(callback);
+              if(index !== -1){
+              this.events[eventName].splice(index, 1);
+              }
+          }
+      };
+  }
+  
+  /*
+   * @param {string} eventName
+   * @param {Array} args
+   * @return {Array}
+   */
+  emit(eventName, args = []) {
+      if(!this.events[eventName] || this.events[eventName].length === 0){
+          return []
+      }
+      const result = this.events[eventName].map(cb => cb(...args));
+      return result
+  }
+}
+
+
+ const emitter = new EventEmitter();
+
+//Subscribe to the onClick event with onClickCallback
+ function onClickCallback() { return 99 }
+ const sub = emitter.subscribe('onClick', onClickCallback);
+
+emitter.emit('onClick'); // [99]
+sub.unsubscribe(); // undefined
+emitter.emit('onClick'); // []
+
