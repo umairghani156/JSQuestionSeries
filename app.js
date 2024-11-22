@@ -4466,53 +4466,83 @@ const data = [
 // }
 // console.log(arrChunk([1, 2, 3, 4, 5], 2));
 
-class EventEmitter {
-  constructor() {
-    this.events = {};
-  }
+// class EventEmitter {
+//   constructor() {
+//     this.events = {};
+//   }
     
-  /*
-   * @param {string} eventName
-   * @param {Function} callback
-   * @return {Object}
-   */
-  subscribe(eventName, callback) {
-     if(!this.events[eventName]){
-      this.events[eventName] = []
-     }
-    this.events[eventName].push(callback)      
-      return {
-          unsubscribe: () => {
-              let index = this.events[eventName].indexOf(callback);
-              if(index !== -1){
-              this.events[eventName].splice(index, 1);
-              }
-          }
-      };
-  }
+//   /*
+//    * @param {string} eventName
+//    * @param {Function} callback
+//    * @return {Object}
+//    */
+//   subscribe(eventName, callback) {
+//      if(!this.events[eventName]){
+//       this.events[eventName] = []
+//      }
+//     this.events[eventName].push(callback)      
+//       return {
+//           unsubscribe: () => {
+//               let index = this.events[eventName].indexOf(callback);
+//               if(index !== -1){
+//               this.events[eventName].splice(index, 1);
+//               }
+//           }
+//       };
+//   }
   
-  /*
-   * @param {string} eventName
-   * @param {Array} args
-   * @return {Array}
-   */
-  emit(eventName, args = []) {
-      if(!this.events[eventName] || this.events[eventName].length === 0){
-          return []
-      }
-      const result = this.events[eventName].map(cb => cb(...args));
-      return result
-  }
+//   /*
+//    * @param {string} eventName
+//    * @param {Array} args
+//    * @return {Array}
+//    */
+//   emit(eventName, args = []) {
+//       if(!this.events[eventName] || this.events[eventName].length === 0){
+//           return []
+//       }
+//       const result = this.events[eventName].map(cb => cb(...args));
+//       return result
+//   }
+// }
+
+
+//  const emitter = new EventEmitter();
+
+// //Subscribe to the onClick event with onClickCallback
+//  function onClickCallback() { return 99 }
+//  const sub = emitter.subscribe('onClick', onClickCallback);
+
+// emitter.emit('onClick'); // [99]
+// sub.unsubscribe(); // undefined
+// emitter.emit('onClick'); // []
+
+
+var ArrayWrapper = function(nums) {
+    this.nums = nums
+
+};
+
+/*
+ * @return {number}
+ */
+ArrayWrapper.prototype.valueOf = function() {
+  return this.nums.reduce((a, b) => a + b, 0);
+  
+}
+
+/*
+ * @return {string}
+ */
+ArrayWrapper.prototype.toString = function() {
+    return `[${this.nums}]`;
 }
 
 
- const emitter = new EventEmitter();
-
-//Subscribe to the onClick event with onClickCallback
- function onClickCallback() { return 99 }
- const sub = emitter.subscribe('onClick', onClickCallback);
-
-emitter.emit('onClick'); // [99]
-sub.unsubscribe(); // undefined
-emitter.emit('onClick'); // []
+ const obj1 = new ArrayWrapper([1,2]);
+ console.log(obj1);
+ 
+ const obj2 = new ArrayWrapper([3,4]);
+ obj1 + obj2; // 10
+ console.log(String(obj1)); // "[1,2]"
+ String(obj2); // "[3,4]"
 
