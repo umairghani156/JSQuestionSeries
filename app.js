@@ -4517,32 +4517,107 @@ const data = [
 // emitter.emit('onClick'); // []
 
 
-var ArrayWrapper = function(nums) {
-    this.nums = nums
+// var ArrayWrapper = function(nums) {
+//     this.nums = nums
 
-};
+// };
 
-/*
- * @return {number}
- */
-ArrayWrapper.prototype.valueOf = function() {
-  return this.nums.reduce((a, b) => a + b, 0);
+// /*
+//  * @return {number}
+//  */
+// ArrayWrapper.prototype.valueOf = function() {
+//   return this.nums.reduce((a, b) => a + b, 0);
   
-}
+// }
 
-/*
- * @return {string}
- */
-ArrayWrapper.prototype.toString = function() {
-    return `[${this.nums}]`;
-}
+// /*
+//  * @return {string}
+//  */
+// ArrayWrapper.prototype.toString = function() {
+//     return `[${this.nums}]`;
+// }
 
 
- const obj1 = new ArrayWrapper([1,2]);
- console.log(obj1);
+//  const obj1 = new ArrayWrapper([1,2]);
+//  console.log(obj1);
  
- const obj2 = new ArrayWrapper([3,4]);
- obj1 + obj2; // 10
- console.log(String(obj1)); // "[1,2]"
- String(obj2); // "[3,4]"
+//  const obj2 = new ArrayWrapper([3,4]);
+//  obj1 + obj2; // 10
+//  console.log(String(obj1)); // "[1,2]"
+//  String(obj2); // "[3,4]"
+
+class Calculator {
+    
+  /** 
+   * @param {number} value
+   */
+  constructor(value) {
+   this.value = value
+  }
+  
+  /** 
+   * @param {number} value
+   * @return {Calculator}
+   */
+  add(value){
+    console.log(this);
+    
+     this.value = this.value + value
+     return this
+     
+  }
+  
+  /*
+   * @param {number} value
+   * @return {Calculator}
+   */
+  subtract(value){
+    
+    this.value = this.value - value
+    return this
+  }
+  
+  /*
+   * @param {number} value
+   * @return {Calculator}
+   */  
+  multiply(value) {
+    this.value = this.value * value
+    return this
+  }
+  
+  /* 
+   * @param {number} value
+   * @return {Calculator}
+   */
+  divide(value) {
+    if(value === 0){
+      throw new Error("Wrong")
+    }
+      this.value = this.value / value
+      return this
+  }
+  
+  /*
+   * @param {number} value
+   * @return {Calculator}
+   */
+  power(value) {
+      this.value = this.value ** value
+      return this
+  }
+  
+  /*
+   * @return {number}
+   */
+  getResult() {
+    return  this.value
+  }
+}
+let res1 = new Calculator(10).add(5).subtract(7).getResult()
+let res2 = new Calculator(10).multiply(5).power(2).getResult() // 10 + 5 - 7 = 8
+let res3 =new Calculator(20).divide(0).getResult()
+console.log("res1",res1);
+console.log("res2",res2);
+console.log("res3",res3);
 
