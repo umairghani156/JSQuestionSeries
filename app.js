@@ -4362,55 +4362,96 @@ const data = [
 //   console.log(compactObject([null, 0, 5, [0], [false, 16]]));
 
 
-var compactObject = function(obj) {
-  let result = [];
+// var compactObject = function(obj) {
+//   let result = [];
 
   
-  function hello(data) {
-    if (Array.isArray(data)) {
-      return data.map(value => {
-        if (Array.isArray(value)) {
-          return hello(value); 
-        }
-        return value; 
-      }).filter(value => value || value === "[]");
-    } else if (typeof data === 'object' && data !== null) {
-      let cleanedObj = {};
-      for (let key in data) {
-        const value = data[key];
+//   function hello(data) {
+//     if (Array.isArray(data)) {
+//       return data.map(value => {
+//         if (Array.isArray(value)) {
+//           return hello(value); 
+//         }
+//         return value; 
+//       }).filter(item =>item);
+//     } else if (typeof data === 'object' && data) {
+//       let cleanedObj = {};
+//       for (let key in data) {
+//         const value = data[key];
 
-        if (value) {
-          if (Array.isArray(value)) {
+//         if (value) {
+//           if (Array.isArray(value)) {
            
-            const filteredArray = hello(value);
-            if (filteredArray.length > 0 || filteredArray === "[]") {
-              cleanedObj[key] = filteredArray;
-            }
-          } else if (typeof value === 'object') {
+//             const filteredArray = hello(value);
+//             if (filteredArray.length > 0 || filteredArray === "[]") {
+//               cleanedObj[key] = filteredArray;
+//             }
+//           } else if (typeof value === 'object' && value !== null) {
             
-            const filteredObject = hello(value);
-            if (Object.keys(filteredObject).length > 0) {
-              cleanedObj[key] = filteredObject;
-            }
-          } else {
+//             const filteredObject = hello(value);
+//             if (Object.keys(filteredObject).length > 0) {
+//               cleanedObj[key] = filteredObject;
+//             }
+//           } else {
            
-            cleanedObj[key] = value;
+//             cleanedObj[key] = value;
+//           }
+//         }
+//       }
+//       return cleanedObj;
+//     }
+//     return data; 
+//   }
+
+//   result = hello(obj);
+//   return result;
+// };
+var compactObject = function(obj) {
+  
+  function cleanData(data) {
+      if (Array.isArray(data)) {
+        console.log("data", data);
+        
+         
+          const cleanedArray = data.map(item => cleanData(item)).filter(item => item);
+
+         
+          return cleanedArray.length === 0 ? null : cleanedArray;
+      } 
+     
+      else if (typeof data === 'object' && data !== null) {
+          let cleanedObj = {}; 
+
+          
+          for (let key in data) {
+              const value = data[key];
+
+             
+              const cleanedValue = cleanData(value);
+              console.log("cleanedValue", cleanedValue);
+              
+
+             
+              if (cleanedValue) {
+                  cleanedObj[key] = cleanedValue;
+              }
           }
-        }
+
+          return Object.keys(cleanedObj).length > 0 ? cleanedObj : null;
       }
-      return cleanedObj;
-    }
-    return data; 
+
+      return data;
   }
 
-  result = hello(obj);
-  return result;
+  return cleanData(obj);
 };
 
 // Example Test Case
 console.log(compactObject([null, 0, false, 1]));
 console.log(compactObject({"a": null, "b": [false, 1]}))
 console.log(compactObject([null, 0, 5, [0], [false, 16]])); 
+console.log(compactObject({"a": 1, "b": 1, "c": null, "d": "false", "e": 0}));
+
 
 //Chunk Array 
 
