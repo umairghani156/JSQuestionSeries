@@ -4634,42 +4634,42 @@ const data = [
 // console.log(counter()) // 11
 // console.log(counter()) // 12
 
-function memoize(fn) {
-     let result = {};
-  return function(...args) {
-    if(Array.isArray(args[0])){
-      console.log("array", args);
+// function memoize(fn) {
+//      let result = {};
+//   return function(...args) {
+//     if(Array.isArray(args[0])){
+//       console.log("array", args);
       
-     return args[0].map((val, ind)=>{
+//      return args[0].map((val, ind)=>{
       
-      let key = JSON.stringify(val);
+//       let key = JSON.stringify(val);
       
       
                 
-                if (result[key] === JSON.stringify(val)) {
+//                 if (result[key] === JSON.stringify(val)) {
                   
-                  result[key]
-                } else {
+//                   result[key]
+//                 } else {
                    
                     
-                    result[key]= fn(...val);
-                }
+//                     result[key]= fn(...val);
+//                 }
 
              
-                return result[key];
-      })
-    }else{
+//                 return result[key];
+//       })
+//     }else{
     
-    let key = JSON.stringify(args)
-     if(!result[key]) {
-      result[key] = fn(...args)
-     }
+//     let key = JSON.stringify(args)
+//      if(!result[key]) {
+//       result[key] = fn(...args)
+//      }
      
-      return result[key]
-    }
+//       return result[key]
+//     }
 
-  }
-}
+//   }
+// }
 function memoize(fn) {
   let cache = new Map();
 return function(...args) {
