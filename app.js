@@ -4621,17 +4621,87 @@ const data = [
 // console.log("res2",res2);
 // console.log("res3",res3);
 
-var createCounter = function(n) {
-  let count = n
-  return function() {
-      return count++
-  };
-};
+// var createCounter = function(n) {
+//   let count = n
+//   return function() {
+//       return count++
+//   };
+// };
 
 
-const counter = createCounter(10)
-console.log(counter()) // 10
-console.log(counter()) // 11
-console.log(counter()) // 12
+// const counter = createCounter(10)
+// console.log(counter()) // 10
+// console.log(counter()) // 11
+// console.log(counter()) // 12
+
+function memoize(fn) {
+     let result = {};
+  return function(...args) {
+    if(Array.isArray(args[0])){
+      console.log("array", args);
+      
+     return args[0].map((val, ind)=>{
+      
+      let key = JSON.stringify(val);
+      
+      
+                
+                if (result[key] === JSON.stringify(val)) {
+                  
+                  result[key]
+                } else {
+                   
+                    
+                    result[key]= fn(...val);
+                }
+
+             
+                return result[key];
+      })
+    }else{
+    
+    let key = JSON.stringify(args)
+     if(!result[key]) {
+      result[key] = fn(...args)
+     }
+     
+      return result[key]
+    }
+
+  }
+}
+function memoize(fn) {
+  let cache = new Map();
+return function(...args) {
+  let currentCache = cache;
+
+      for (const arg of args) {
+          if (!currentCache.has(arg)) {
+              currentCache.set(arg, new Map());
+          }
+          currentCache = currentCache.get(arg);
+      }
+
+      if (!currentCache.has('result')) {
+          currentCache.set('result', fn(...args));
+      }
+
+      return currentCache.get('result');
+}
+}
+
+
+
+ let callCount = 0;
+ const memoizedFn = memoize(function (a, b) {
+	 callCount += 1;
+   return a + b;
+ })
+ console.log(memoizedFn(2, 3)) // 5
+ console.log(memoizedFn(2, 3)) // 5
+ console.log(memoizedFn(3, 3)) // 5
+
+ console.log(memoizedFn([[{},{}],[{},{}],[{},{}]]))
+ console.log(callCount) 
 
 
