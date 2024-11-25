@@ -4670,38 +4670,38 @@ const data = [
 
 //   }
 // }
-function memoize(fn) {
-  let cache = new Map();
-return function(...args) {
-  let currentCache = cache;
+// function memoize(fn) {
+//   let cache = new Map();
+// return function(...args) {
+//   let currentCache = cache;
 
-      for (const arg of args) {
-          if (!currentCache.has(arg)) {
-              currentCache.set(arg, new Map());
-          }
-          currentCache = currentCache.get(arg);
-      }
+//       for (const arg of args) {
+//           if (!currentCache.has(arg)) {
+//               currentCache.set(arg, new Map());
+//           }
+//           currentCache = currentCache.get(arg);
+//       }
 
-      if (!currentCache.has('result')) {
-          currentCache.set('result', fn(...args));
-      }
+//       if (!currentCache.has('result')) {
+//           currentCache.set('result', fn(...args));
+//       }
 
-      return currentCache.get('result');
-}
-}
+//       return currentCache.get('result');
+// }
+// }
 
 
 
- let callCount = 0;
- const memoizedFn = memoize(function (a, b) {
-	 callCount += 1;
-   return a + b;
- })
- console.log(memoizedFn(2, 3)) // 5
- console.log(memoizedFn(2, 3)) // 5
- console.log(memoizedFn(3, 3)) // 5
+//  let callCount = 0;
+//  const memoizedFn = memoize(function (a, b) {
+// 	 callCount += 1;
+//    return a + b;
+//  })
+//  console.log(memoizedFn(2, 3)) // 5
+//  console.log(memoizedFn(2, 3)) // 5
+//  console.log(memoizedFn(3, 3)) // 5
 
- console.log(memoizedFn([[{},{}],[{},{}],[{},{}]]))
- console.log(callCount) 
+//  console.log(memoizedFn([[{},{}],[{},{}],[{},{}]]))
+//  console.log(callCount) 
 
 
