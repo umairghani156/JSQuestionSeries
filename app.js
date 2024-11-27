@@ -4705,38 +4705,62 @@ const data = [
 //  console.log(callCount) 
 
 
-function memoize(fn) {
-  let cache = new Map();
-return function(...args) {
-  let currentCache = cache;
+// function memoize(fn) {
+//   let cache = new Map();
+// return function(...args) {
+//   let currentCache = cache;
 
-      for (const arg of args) {
-          if (!currentCache.has(arg)) {
-              currentCache.set(arg, new Map());
-          }
-          currentCache = currentCache.get(arg);
-      }
+//       for (const arg of args) {
+//           if (!currentCache.has(arg)) {
+//               currentCache.set(arg, new Map());
+//           }
+//           currentCache = currentCache.get(arg);
+//       }
 
-      if (!currentCache.has('result')) {
-          currentCache.set('result', fn(...args));
-      }
+//       if (!currentCache.has('result')) {
+//           currentCache.set('result', fn(...args));
+//       }
 
-      return currentCache.get('result');
-}
-}
+//       return currentCache.get('result');
+// }
+// }
 
 
 
- let callCount = 0;
- const memoizedFn = memoize(function (a, b) {
-	 callCount += 1;
-   return a + b;
- })
- console.log(memoizedFn(2, 3)) // 5
- console.log(memoizedFn(2, 3)) // 5
- console.log(memoizedFn(3, 3)) // 5
+//  let callCount = 0;
+//  const memoizedFn = memoize(function (a, b) {
+// 	 callCount += 1;
+//    return a + b;
+//  })
+//  console.log(memoizedFn(2, 3)) // 5
+//  console.log(memoizedFn(2, 3)) // 5
+//  console.log(memoizedFn(3, 3)) // 5
 
- console.log(memoizedFn([[{},{}],[{},{}],[{},{}]]))
- console.log(callCount) 
+//  console.log(memoizedFn([[{},{}],[{},{}],[{},{}]]))
+//  console.log(callCount) 
+
+
+class Animal {};
+class Dog extends Animal {};
+var checkIfInstanceOf = function(obj, classFunction) {
+  let proto = Object.getPrototypeOf(obj);
+
+ 
+  while (proto !== null) {
+    if (proto === classFunction.prototype) {
+      return true; 
+    }
+    proto = Object.getPrototypeOf(proto);  
+  }
+  
+ 
+  return false;
+    
+};
+
+console.log(checkIfInstanceOf(new Date(), Date));
+console.log(checkIfInstanceOf(5, Number));
+console.log(checkIfInstanceOf(5n, BigInt));
+console.log(checkIfInstanceOf(new Dog(), Animal));
 
 
