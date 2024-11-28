@@ -4764,18 +4764,25 @@ const data = [
 // console.log(checkIfInstanceOf(new Dog(), Animal));
 
 
-function hello(arr){
- let arr2 = []
-   arr.forEach((val)=>{
-    if(Array.isArray(val)){
-     arr2 = arr2.concat(hello(val))
-    }else{
-      arr2.push(val)
-    }
-   })
-  return arr2
+// function hello(arr){
+//  let arr2 = []
+//    arr.forEach((val)=>{
+//     if(Array.isArray(val)){
+//      arr2 = arr2.concat(hello(val))
+//     }else{
+//       arr2.push(val)
+//     }
+//    })
+//   return arr2
    
-}
-console.log(hello([1, 2, 3, [4, 5, 6, [7, 8, 9]]]))
+// }
+// console.log(hello([1, 2, 3, [4, 5, 6, [7, 8, 9]]]))
+const hello = new Array(1000);
+console.log(typeof hello);
+
+hello.fill(2);
+console.log(hello);
+
+
 
 
