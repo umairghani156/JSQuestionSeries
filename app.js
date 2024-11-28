@@ -4740,27 +4740,32 @@ const data = [
 //  console.log(callCount) 
 
 
-class Animal {};
-class Dog extends Animal {};
-var checkIfInstanceOf = function(obj, classFunction) {
-  let proto = Object.getPrototypeOf(obj);
+// class Animal {};
+// class Dog extends Animal {};
+// var checkIfInstanceOf = function(obj, classFunction) {
+//   let proto = Object.getPrototypeOf(obj);
 
  
-  while (proto !== null) {
-    if (proto === classFunction.prototype) {
-      return true; 
-    }
-    proto = Object.getPrototypeOf(proto);  
-  }
+//   while (proto !== null) {
+//     if (proto === classFunction.prototype) {
+//       return true; 
+//     }
+//     proto = Object.getPrototypeOf(proto);  
+//   }
   
  
-  return false;
+//   return false;
     
-};
+// };
 
-console.log(checkIfInstanceOf(new Date(), Date));
-console.log(checkIfInstanceOf(5, Number));
-console.log(checkIfInstanceOf(5n, BigInt));
-console.log(checkIfInstanceOf(new Dog(), Animal));
+// console.log(checkIfInstanceOf(new Date(), Date));
+// console.log(checkIfInstanceOf(5, Number));
+// console.log(checkIfInstanceOf(5n, BigInt));
+// console.log(checkIfInstanceOf(new Dog(), Animal));
+
+
+function hello(arr){
+  
+}
 
 
