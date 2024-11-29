@@ -4777,11 +4777,45 @@ const data = [
    
 // }
 // console.log(hello([1, 2, 3, [4, 5, 6, [7, 8, 9]]]))
-const hello = new Array(1000);
-console.log(typeof hello);
+// const hello = new Array(1000);
+// console.log(typeof hello);
 
-hello.fill(2);
-console.log(hello);
+// hello.fill(2);
+// console.log(hello);
+
+Array.prototype.snail = function(rowsCount, colsCount) {
+    console.log(rowsCount, colsCount);
+    let arr = [];
+    for (let i = 0; i < rowsCount; i++) {
+      arr.push([]);
+    }
+    let rows = 0;
+    let cols = 0;
+    let direction = 'right';
+    for (let i = 0; i < this.length; i++) {
+      arr[rows][cols] = this[i];
+      if (direction === 'right') {
+        if (cols === colsCount - 1) {
+          direction = 'down';
+        } else {
+          cols++;
+        }
+      } else if (direction === 'down') {
+        if (rows === rowsCount - 1) {
+          direction = 'left';
+        } else {
+          rows++;
+        } 
+      }
+      }
+      console.log(arr);
+      
+    
+}
+
+const arr = [1,2,3,4];
+arr.snail(2,3); // [[1,2,3,4]]
+
 
 
 
