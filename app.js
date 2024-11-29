@@ -4784,18 +4784,53 @@ const data = [
 // console.log(hello);
 
 Array.prototype.snail = function(rowsCount, colsCount) {
-  let arr = []
-  for(let i = 0; i < this.length; i+= rowsCount){
-   arr.push([this[i], this[i + 1]])
-    
+  
+  let result = Array.from({ length: rowsCount }, () => Array(colsCount).fill(0));
+
+  let top = 0, bottom = rowsCount - 1, left = 0, right = colsCount - 1;
+  let index = 0;
+
+  while (top <= bottom && left <= right) {
+    // Traverse the top row from left to right
+    for (let i = left; i <= right; i++) {
+      result[top][i] = this[index++];
+    }
+    top++;
+
+    // Traverse the right column from top to bottom
+    for (let i = top; i <= bottom; i++) {
+      result[i][right] = this[index++];
+    }
+    right--;
+
+    // Traverse the bottom row from right to left
+    if (top <= bottom) {
+      for (let i = right; i >= left; i--) {
+        result[bottom][i] = this[index++];
+      }
+      bottom--;
+    }
+
+    // Traverse the left column from bottom to top
+    if (left <= right) {
+      for (let i = bottom; i >= top; i--) {
+        result[i][left] = this[index++];
+      }
+      left++;
+    }
   }
-  console.log(arr);
+
+  // Step 3: Return the filled 2D array (snail pattern)
+  console.log(result);
+  
+  return result;
+  
   
     
 }
 
 const arr = [1,2,3,4];
-arr.snail(1,2); // [[1,2,3,4]]
+console.log(arr.snail(1,2)); // [[1,2,3,4]]
 
 
 
