@@ -4785,52 +4785,54 @@ const data = [
 
 Array.prototype.snail = function(rowsCount, colsCount) {
   
-  let result = Array.from({ length: rowsCount }, () => Array(colsCount).fill(0));
+  let arr = [];
+  for(let i = 0; i < rowsCount; i++){
+    arr.push([])
+  }
+  let left = 0;
+  let right = colsCount -1;
+  let top = 0;
+  let bottom = rowsCount -1;
 
-  let top = 0, bottom = rowsCount - 1, left = 0, right = colsCount - 1;
-  let index = 0;
+  let index = 0; // Use a separate index variable to track the position in the input array
 
-  while (top <= bottom && left <= right) {
-    // Traverse the top row from left to right
-    for (let i = left; i <= right; i++) {
-      result[top][i] = this[index++];
+  while (left <= right && top <= bottom) {
+    // Traverse from left to right along the top row
+    for (let j = left; j <= right; j++) {
+      arr[top][j] = this[index++];
     }
     top++;
 
-    // Traverse the right column from top to bottom
-    for (let i = top; i <= bottom; i++) {
-      result[i][right] = this[index++];
+    // Traverse down the right column
+    for (let j = top; j <= bottom; j++) {
+      arr[j][right] = this[index++];
     }
     right--;
 
-    // Traverse the bottom row from right to left
+    // Traverse from right to left along the bottom row
     if (top <= bottom) {
-      for (let i = right; i >= left; i--) {
-        result[bottom][i] = this[index++];
+      for (let j = right; j >= left; j--) {
+        arr[bottom][j] = this[index++];
       }
       bottom--;
     }
 
-    // Traverse the left column from bottom to top
+    // Traverse up the left column
     if (left <= right) {
-      for (let i = bottom; i >= top; i--) {
-        result[i][left] = this[index++];
+      for (let j = bottom; j >= top; j--) {
+        arr[j][left] = this[index++];
       }
       left++;
     }
   }
 
-  // Step 3: Return the filled 2D array (snail pattern)
-  console.log(result);
-  
-  return result;
-  
+  return arr;
   
     
 }
 
-const arr = [1,2,3,4];
-console.log(arr.snail(1,2)); // [[1,2,3,4]]
+const arr = [19, 10, 3, 7, 9, 8, 5, 2, 1, 17, 16, 14, 12, 18, 6, 13, 11, 20, 4, 15];
+console.log(arr.snail(5,4)); // [[1,2,3,4]]
 
 
 
