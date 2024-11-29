@@ -4784,37 +4784,18 @@ const data = [
 // console.log(hello);
 
 Array.prototype.snail = function(rowsCount, colsCount) {
-    console.log(rowsCount, colsCount);
-    let arr = [];
-    for (let i = 0; i < rowsCount; i++) {
-      arr.push([]);
-    }
-    let rows = 0;
-    let cols = 0;
-    let direction = 'right';
-    for (let i = 0; i < this.length; i++) {
-      arr[rows][cols] = this[i];
-      if (direction === 'right') {
-        if (cols === colsCount - 1) {
-          direction = 'down';
-        } else {
-          cols++;
-        }
-      } else if (direction === 'down') {
-        if (rows === rowsCount - 1) {
-          direction = 'left';
-        } else {
-          rows++;
-        } 
-      }
-      }
-      console.log(arr);
-      
+  let arr = []
+  for(let i = 0; i < this.length; i+= 2){
+   arr.push([this[i], this[i + 1]])
+    
+  }
+  console.log(arr);
+  
     
 }
 
 const arr = [1,2,3,4];
-arr.snail(2,3); // [[1,2,3,4]]
+arr.snail(2); // [[1,2,3,4]]
 
 
 
