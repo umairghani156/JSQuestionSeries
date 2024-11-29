@@ -4785,7 +4785,7 @@ const data = [
 
 Array.prototype.snail = function(rowsCount, colsCount) {
   let arr = []
-  for(let i = 0; i < this.length; i+= 2){
+  for(let i = 0; i < this.length; i+= rowsCount){
    arr.push([this[i], this[i + 1]])
     
   }
@@ -4795,7 +4795,7 @@ Array.prototype.snail = function(rowsCount, colsCount) {
 }
 
 const arr = [1,2,3,4];
-arr.snail(2); // [[1,2,3,4]]
+arr.snail(1,2); // [[1,2,3,4]]
 
 
 
