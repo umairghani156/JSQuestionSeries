@@ -4783,56 +4783,66 @@ const data = [
 // hello.fill(2);
 // console.log(hello);
 
-Array.prototype.snail = function(rowsCount, colsCount) {
+// Array.prototype.snail = function(rowsCount, colsCount) {
   
-  let arr = [];
-  for(let i = 0; i < rowsCount; i++){
-    arr.push([])
-  }
-  let left = 0;
-  let right = colsCount -1;
-  let top = 0;
-  let bottom = rowsCount -1;
+//   let arr = [];
+//   for(let i = 0; i < rowsCount; i++){
+//     arr.push([])
+//   }
+//   let left = 0;
+//   let right = colsCount -1;
+//   let top = 0;
+//   let bottom = rowsCount -1;
 
-  let index = 0; // Use a separate index variable to track the position in the input array
+//   let index = 0; // Use a separate index variable to track the position in the input array
 
-  while (left <= right && top <= bottom) {
-    // Traverse from left to right along the top row
-    for (let j = left; j <= right; j++) {
-      arr[top][j] = this[index++];
-    }
-    top++;
+//   while (left <= right && top <= bottom) {
+//     // Traverse from left to right along the top row
+//     for (let j = left; j <= right; j++) {
+//       arr[top][j] = this[index++];
+//     }
+//     top++;
 
-    // Traverse down the right column
-    for (let j = top; j <= bottom; j++) {
-      arr[j][right] = this[index++];
-    }
-    right--;
+//     // Traverse down the right column
+//     for (let j = top; j <= bottom; j++) {
+//       arr[j][right] = this[index++];
+//     }
+//     right--;
 
-    // Traverse from right to left along the bottom row
-    if (top <= bottom) {
-      for (let j = right; j >= left; j--) {
-        arr[bottom][j] = this[index++];
-      }
-      bottom--;
-    }
+//     // Traverse from right to left along the bottom row
+//     if (top <= bottom) {
+//       for (let j = right; j >= left; j--) {
+//         arr[bottom][j] = this[index++];
+//       }
+//       bottom--;
+//     }
 
-    // Traverse up the left column
-    if (left <= right) {
-      for (let j = bottom; j >= top; j--) {
-        arr[j][left] = this[index++];
-      }
-      left++;
-    }
-  }
+//     // Traverse up the left column
+//     if (left <= right) {
+//       for (let j = bottom; j >= top; j--) {
+//         arr[j][left] = this[index++];
+//       }
+//       left++;
+//     }
+//   }
 
-  return arr;
+//   return arr;
   
     
-}
+// }
 
-const arr = [19, 10, 3, 7, 9, 8, 5, 2, 1, 17, 16, 14, 12, 18, 6, 13, 11, 20, 4, 15];
-console.log(arr.snail(5,4)); // [[1,2,3,4]]
+// const arr = [19, 10, 3, 7, 9, 8, 5, 2, 1, 17, 16, 14, 12, 18, 6, 13, 11, 20, 4, 15];
+// console.log(arr.snail(5,4)); // [[1,2,3,4]]
+
+let arr = [1, 2, 3, 4, 5, 6,7];
+
+arr.forEach((val)=>{
+ console.log(val);
+  if(val === 3){
+    return val
+    
+  }
+})
 
 
 
