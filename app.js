@@ -4834,15 +4834,15 @@ const data = [
 // const arr = [19, 10, 3, 7, 9, 8, 5, 2, 1, 17, 16, 14, 12, 18, 6, 13, 11, 20, 4, 15];
 // console.log(arr.snail(5,4)); // [[1,2,3,4]]
 
-let arr = [1, 2, 3, 4, 5, 6,7];
+// let arr = [1, 2, 3, 4, 5, 6,7];
 
-arr.forEach((val)=>{
- console.log(val);
-  if(val === 3){
-    return val
+// arr.forEach((val)=>{
+//  console.log(val);
+//   if(val === 3){
+//     return val
     
-  }
-})
+//   }
+// })
 
 
 
