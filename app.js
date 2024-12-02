@@ -3544,9 +3544,9 @@ const data = [
  * Applies the callback function to each element of the array, 
  * If the callback function returns true, the element is included in the new array, 
  * otherwise it is excluded
- * @param  {Array} arr The array to be filtered
- * @param  {Function} fn The callback function to be applied to each element
- * @return {Array} The filtered array
+ //@param  {Array} arr The array to be filtered
+ */// @param  {Function} fn The callback function to be applied to each element
+ // @return {Array} The filtered array
 //  */
 // var filter = function(arr, fn) {
 
@@ -4910,19 +4910,42 @@ const data = [
 //  console.log(gen.next().value); // 1
 //  console.log(gen.next().value); // 1
 
-function fibonacci(n){
-  console.log(n);
+// function fibonacci(n){
+//   console.log(n);
   
-  let arr = [0, 1];
-  for(let i = 2; i < n; i++){
-    arr[i] = arr[i -1] + arr[i - 2]// [0,1,1,2,4]
-  }
-  return arr
+//   let arr = [0, 1];
+//   for(let i = 2; i < n; i++){
+//     arr[i] = arr[i -1] + arr[i - 2]// [0,1,1,2,4]
+//   }
+//   return arr
 
+// }
+// console.log(fibonacci(2))
+// console.log(fibonacci(3))
+// console.log(fibonacci(7))
+
+Object.prototype.myCall = function(context, ...args){
+  context.createObj = this;
+ return context.createObj(...args)
 }
-console.log(fibonacci(2))
-console.log(fibonacci(3))
-console.log(fibonacci(7))
+Object.prototype.myApply = function (context, [...args]){
+  context.helloworld = this;
+  return context.helloworld(...args)
+}
+
+
+let obj = {
+  name:"Umair",
+  fnMethod:function(a, b, c){
+    console.log('Helllo '+ this.name + a, b);
+    
+  }
+}
+let obj2 = {name:"Habib"};
+
+const check = obj.fnMethod.myCall(obj2, 12, 12);
+console.log(check);
+
 
 
  
