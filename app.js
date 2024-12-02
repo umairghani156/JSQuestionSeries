@@ -4924,27 +4924,48 @@ const data = [
 // console.log(fibonacci(3))
 // console.log(fibonacci(7))
 
-Object.prototype.myCall = function(context, ...args){
-  context.createObj = this;
- return context.createObj(...args)
-}
-Object.prototype.myApply = function (context, [...args]){
-  context.helloworld = this;
-  return context.helloworld(...args)
-}
+// Object.prototype.myCall = function(context, ...args){
+//   context.createObj = this;
+//  return context.createObj(...args)
+// }
+// Object.prototype.myApply = function (context, [...args]){
+//   context.helloworld = this;
+//   return context.helloworld(...args)
+// }
 
 
-let obj = {
-  name:"Umair",
-  fnMethod:function(a, b, c){
-    console.log('Helllo '+ this.name + a, b);
+// let obj = {
+//   name:"Umair",
+//   fnMethod:function(a, b, c){
+//     console.log('Helllo '+ this.name + a, b);
     
-  }
-}
-let obj2 = {name:"Habib"};
+//   }
+// }
+// let obj2 = {name:"Habib"};
 
-const check = obj.fnMethod.myCall(obj2, 12, 12);
-console.log(check);
+// const check = obj.fnMethod.myCall(obj2, 12, 12);
+// console.log(check);
+// console.log("totle"+ "1000");
+
+var inorderTraversal = function*(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      yield* inorderTraversal(arr[i]);
+    } else {
+      yield arr[i];
+    }
+  }
+    
+    
+};
+
+
+const gen = inorderTraversal([1, [2, 3]]);
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+ 
+
 
 
 
