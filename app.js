@@ -4891,24 +4891,39 @@ const data = [
     
 // }
 
-var fibGenerator = function*() {
-  let a = 0, b = 1;
-  while(true){
-    yield a
-    [a,b] =  [b, a + b];
-  }
-};
+// var fibGenerator = function*() {
+//   let a = 0, b = 1;
+//   while(true){
+//     yield a
+//     [a,b] =  [b, a + b];
+//   }
+// };
 
 
- const gen = fibGenerator();
+//  const gen = fibGenerator();
 
  
- console.log(gen.next().value); // 0
- console.log(gen.next().value); // 1
- console.log(gen.next().value); // 1
- console.log(gen.next().value); // 1
- console.log(gen.next().value); // 1
- console.log(gen.next().value); // 1
+//  console.log(gen.next().value); // 0
+//  console.log(gen.next().value); // 1
+//  console.log(gen.next().value); // 1
+//  console.log(gen.next().value); // 1
+//  console.log(gen.next().value); // 1
+//  console.log(gen.next().value); // 1
+
+function fibonacci(n){
+  console.log(n);
+  
+  let arr = [0, 1];
+  for(let i = 2; i < n; i++){
+    arr[i] = arr[i -1] + arr[i - 2]// [0,1,1,2,4]
+  }
+  return arr
+
+}
+console.log(fibonacci(2))
+console.log(fibonacci(3))
+console.log(fibonacci(7))
+
 
  
 
