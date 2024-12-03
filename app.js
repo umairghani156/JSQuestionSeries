@@ -4983,7 +4983,27 @@ const data = [
 //  setTimeout(cancel, 50);
 //  promise.catch(console.log); // logs "Cancelled" at t=50ms
 
-let arr = ["Umair",'Faiz',"Ahmed","Suhaib","Zubair"];
+let arrData = ["Umair",'Faiz',"Ahmed","Suhaib","Zubair","Kashif","Aamir","suhan"];
+
+function findMiddleVal(arr){
+  let n = arr.length;
+  console.log(n);
+  if(n % 2 !== 0){
+    return arr[Math.floor(n /2)];
+    
+  }else{
+    const middleOne = arr[Math.floor(n / 2) -1];
+    const middleTwo = arr[Math.floor(n/2)];
+
+    return middleOne + " and "+middleTwo
+    
+  }
+
+  
+}
+
+console.log(findMiddleVal(arrData));
+
 
 
 
