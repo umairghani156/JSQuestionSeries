@@ -4994,8 +4994,10 @@ function findMiddleVal(arr){
   }else{
     const middleOne = arr[Math.floor(n / 2) -1];
     const middleTwo = arr[Math.floor(n/2)];
-
-    return middleOne + " and "+middleTwo
+    console.log(Math.floor(5/2));
+    
+    
+    return middleOne + " and " + middleTwo
     
   }
 
