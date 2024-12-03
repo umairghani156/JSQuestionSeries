@@ -4947,24 +4947,45 @@ const data = [
 // console.log(check);
 // console.log("totle"+ "1000");
 
-var inorderTraversal = function*(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (Array.isArray(arr[i])) {
-      yield* inorderTraversal(arr[i]);
-    } else {
-      yield arr[i];
-    }
-  }
+// var inorderTraversal = function*(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (Array.isArray(arr[i])) {
+//       yield* inorderTraversal(arr[i]);
+//     } else {
+//       yield arr[i];
+//     }
+//   }
     
     
-};
+// };
 
 
-const gen = inorderTraversal([1, [2, 3]]);
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
-console.log(gen.next().value); // 3
+// const gen = inorderTraversal([1, [2, 3]]);
+// console.log(gen.next().value); // 1
+// console.log(gen.next().value); // 2
+// console.log(gen.next().value); // 3
  
+// var cancellable = async function(generator) {
+//    console.log(generator.next(1));
+   
+// };
+
+
+//  function* tasks() {
+//    const val = yield new Promise(resolve => resolve(2 + 2));
+//    yield new Promise(resolve => setTimeout(resolve, 100));
+//    return val + 1;
+//  }
+//  const [cancel, promise] = cancellable(tasks());
+//  console.log(cancel, promise);
+ 
+// //  const [cancel, promise] = cancellable(tasks());
+//  setTimeout(cancel, 50);
+//  promise.catch(console.log); // logs "Cancelled" at t=50ms
+
+let arr = ["Umair",'Faiz',"Ahmed","Suhaib","Zubair"];
+
+
 
 
 
