@@ -5007,7 +5007,12 @@ const data = [
 const arrData = ["Umair","faiz","Kashif"];
 
 function middleVal(arr){
-
+  let n = arr.length;
+  if(n % 2 !== 0){
+    return arr[Math.floor(n/2)]
+  }else{
+    let 
+  }
 }
 console.log(middleVal(arrData));
 
