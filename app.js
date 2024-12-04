@@ -5004,19 +5004,19 @@ const data = [
 
 // console.log(findMiddleVal(arrData));
 
-const arrData = ["Umair","faiz","Kashif","hello"];
+// const arrData = ["Umair","faiz","Kashif","hello"];
 
-function middleVal(arr){
-  let n = arr.length;
-  if(n % 2 !== 0){
-    return arr[Math.floor(n/2)]
-  }else{
-    let middleOne = arr[Math.floor(n/2) -1];
-    let middleTwo = arr[Math.floor(n/2)];
-    return middleOne + " and " + middleTwo
-  }
-}
-console.log(middleVal(arrData));
+// function middleVal(arr){
+//   let n = arr.length;
+//   if(n % 2 !== 0){
+//     return arr[Math.floor(n/2)]
+//   }else{
+//     let middleOne = arr[Math.floor(n/2) -1];
+//     let middleTwo = arr[Math.floor(n/2)];
+//     return middleOne + " and " + middleTwo
+//   }
+// }
+// console.log(middleVal(arrData));
 
 
 
