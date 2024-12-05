@@ -5018,6 +5018,19 @@ const data = [
 // }
 // console.log(middleVal(arrData));
 
+ArrayWrapper.prototype.valueOf = function() {
+  //   return this.nums.reduce((a, b) => a + b, 0);
+    
+  // }
+  
+  // /*
+  //  * @return {string}
+  //  */
+  // ArrayWrapper.prototype.toString = function() {
+  //     return `[${this.nums}]`;
+  // }
+  
+
 
 
 
