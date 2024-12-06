@@ -5018,7 +5018,7 @@ const data = [
 // }
 // console.log(middleVal(arrData));
 
-ArrayWrapper.prototype.valueOf = function() {
+//ArrayWrapper.prototype.valueOf = function() {
   //   return this.nums.reduce((a, b) => a + b, 0);
     
   // }
@@ -5029,6 +5029,21 @@ ArrayWrapper.prototype.valueOf = function() {
   // ArrayWrapper.prototype.toString = function() {
   //     return `[${this.nums}]`;
   // }
+
+Function.prototype.callPolyfill = function(context, ...args) {
+ context.fn = this;
+ let val = context.fn(...args)
+ console.log(val);
+ 
+ 
+}
+
+
+function increment() { this.count++; return this.count; }
+let h = increment.callPolyfill({count: 1}); // 2
+console.log(h);
+
+
   
 
 
