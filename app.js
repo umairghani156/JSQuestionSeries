@@ -5047,19 +5047,28 @@ const data = [
 
 //Define Property of object
 
-let users = {
-  id: 1,
-  name:"Umair",
-  age: 23
-}
-console.log(users);
-Object.defineProperty(users, "name",{
-  value:"Ahmed",
-  writable:false,
-  enumerable:true
-})
-users.name = "Faiz"
-console.log(users);
+// let users = {
+//   id: 1,
+//   name:"Umair",
+//   age: 23
+// }
+// console.log(users);
+// Object.defineProperty(users, "name",{
+//   value:"Ahmed",
+//   writable:false,
+//   enumerable:true
+// })
+// users.name = "Faiz"
+// console.log(users);
+
+//Swapping value 
+
+let a = 10;
+let b = 20;
+console.log("a value  " + a + " and b value is " + b);
+[a, b] = [b, a];
+console.log("Swapping a value is " + a + " and b value is " + b);
+
 
 
 
