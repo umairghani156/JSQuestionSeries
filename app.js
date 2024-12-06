@@ -5031,10 +5031,12 @@ const data = [
   // }
 
 Function.prototype.callPolyfill = function(context, ...args) {
- context.fn = this;
- let val = context.fn(...args)
- console.log(val);
- 
+  Object.defineProperty(context, 'fn', {
+    value: this,
+    enumerable: false,
+  });
+
+  return context.fn(...args);
  
 }
 
