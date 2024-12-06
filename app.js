@@ -5063,11 +5063,21 @@ const data = [
 
 //Swapping value 
 
+// let a = 10;
+// let b = 20;
+// console.log("a value  " + a + " and b value is " + b);
+// [a, b] = [b, a];
+// console.log("Swapping a value is " + a + " and b value is " + b);
+
 let a = 10;
 let b = 20;
 console.log("a value  " + a + " and b value is " + b);
-[a, b] = [b, a];
+let c = b;
+  b = a;
+  a = c
 console.log("Swapping a value is " + a + " and b value is " + b);
+
+
 
 
 
