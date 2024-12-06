@@ -5030,20 +5030,37 @@ const data = [
   //     return `[${this.nums}]`;
   // }
 
-Function.prototype.callPolyfill = function(context, ...args) {
-  Object.defineProperty(context, 'fn', {
-    value: this,
-    enumerable: false,
-  });
-
-  return context.fn(...args);
+// Function.prototype.callPolyfill = function(context, ...args) {
+//   Object.defineProperty(context, 'fn', {
+//     value: this,
+//     enumerable: false,
+//   });
+  
+//   return context.fn(...args);
  
+// }
+
+
+// function increment() { this.count++; return this.count; }
+// let h = increment.callPolyfill({count: 1}); // 2
+// console.log(h);
+
+//Define Property of object
+
+let users = {
+  id: 1,
+  name:"Umair",
+  age: 23
 }
+console.log(users);
+Object.defineProperty(users, "name",{
+  value:"Ahmed",
+  writable:false,
+  enumerable:true
+})
+users.name = "Faiz"
+console.log(users);
 
-
-function increment() { this.count++; return this.count; }
-let h = increment.callPolyfill({count: 1}); // 2
-console.log(h);
 
 
   
