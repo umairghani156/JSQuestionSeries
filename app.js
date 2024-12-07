@@ -5077,6 +5077,22 @@ const data = [
 //   a = c
 // console.log("Swapping a value is " + a + " and b value is " + b);
 
+// let users = {
+//   id: 1,
+//   name:"Umair",
+//   age: 23
+// }
+// console.log(users);
+// Object.defineProperty(users, "name",{
+//   value:"Ahmed",
+//   writable:false,
+//   enumerable:true
+// })
+// users.name = "Faiz"
+// console.log(users);
+
+
+
 
 
 
