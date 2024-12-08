@@ -5091,6 +5091,21 @@ const data = [
 // users.name = "Faiz"
 // console.log(users);
 
+//Number Pyramid
+
+function pyramidNumber(n){
+  console.log(n);
+  for(let i = 1; i <= n; i++){
+    let appendNum = ""
+    for(let j = 1; j <= i; j++){
+      appendNum += j +" "
+    }
+    console.log(appendNum);
+    
+  }
+  
+}
+console.log(pyramidNumber(5));
 
 
 
