@@ -5096,11 +5096,18 @@ const data = [
 function pyramidNumber(n){
   console.log(n);
   for(let i = 1; i <= n; i++){
-    let appendNum = ""
-    for(let j = 1; j <= i; j++){
-      appendNum += j +" "
+    let spaceContent = ""
+    for(let space = 1; space <=n - i; space++){
+      spaceContent = spaceContent + " "
     }
-    console.log(appendNum);
+    for(let count = 1; count <= i; count++){
+      spaceContent = spaceContent+ count
+    }
+    for(let reverseCount= i-1; reverseCount >= 1; reverseCount--){
+      spaceContent = spaceContent + reverseCount
+    }
+    console.log(spaceContent);
+    
     
   }
   
