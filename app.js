@@ -5105,7 +5105,7 @@ function pyramidNumber(n){
   }
   
 }
-console.log(pyramidNumber(5));
+console.log(pyramidNumber(10));
 
 
 
