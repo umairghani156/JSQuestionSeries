@@ -5093,27 +5093,36 @@ const data = [
 
 //Number Pyramid
 
-function pyramidNumber(n){
-  console.log(n);
-  for(let i = 1; i <= n; i++){
-    let spaceContent = ""
-    for(let space = 1; space <=n - i; space++){
-      spaceContent = spaceContent + " "
-    }
-    for(let count = 1; count <= i; count++){
-      spaceContent = spaceContent+ count
-    }
-    for(let reverseCount= i-1; reverseCount >= 1; reverseCount--){
-      spaceContent = spaceContent + reverseCount
-    }
-    console.log(spaceContent);
+// function pyramidNumber(n){
+//   console.log(n);
+//   for(let i = 1; i <= n; i++){
+//     let spaceContent = ""
+//     for(let space = 1; space <=n - i; space++){
+//       spaceContent = spaceContent + " "
+//     }
+//     for(let count = 1; count <= i; count++){
+//       spaceContent = spaceContent+ count
+//     }
+//     for(let reverseCount= i-1; reverseCount >= 1; reverseCount--){
+//       spaceContent = spaceContent + reverseCount
+//     }
+//     console.log(spaceContent);
     
     
-  }
+//   }
+  
+// }
+// console.log(pyramidNumber(10));
+const inputHour = document.getElementById("inputHour");
+const inputMin = document.getElementById("inputMin");
+const ulList = document.querySelector(".ulList");
+function addText(){
+  let date = new Date();
+  let time = date.toTimeString()
+  ulList.innerHTML = inputHour.value + " : " + inputMin.value
+  console.log(time);
   
 }
-console.log(pyramidNumber(10));
-
 
 
 
