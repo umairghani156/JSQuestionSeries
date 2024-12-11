@@ -5116,11 +5116,21 @@ const data = [
 const inputHour = document.getElementById("inputHour");
 const inputMin = document.getElementById("inputMin");
 const ulList = document.querySelector(".ulList");
+let date = new Date();
+  const options = {
+    hour: '2-digit', 
+    minute: '2-digit', 
+    hour12: true // This ensures 12-hour format with AM/PM
+  };
+  let time = date.toLocaleString("en-US", options);
+  if(ulList.innerHTML === time){
+    alert("Alarm is already set");
+  }
 function addText(){
-  let date = new Date();
-  let time = date.toTimeString()
-  ulList.innerHTML = inputHour.value + " : " + inputMin.value
-  console.log(time);
+  
+  ulList.innerHTML = inputHour.value + " : " + inputMin.value + " PM";
+  let val = inputHour.value + ":" + inputMin.value + " PM";
+ 
   
 }
 
