@@ -5113,25 +5113,30 @@ const data = [
   
 // }
 // console.log(pyramidNumber(10));
-const inputHour = document.getElementById("inputHour");
-const inputMin = document.getElementById("inputMin");
-const ulList = document.querySelector(".ulList");
-let date = new Date();
-  const options = {
-    hour: '2-digit', 
-    minute: '2-digit', 
-    hour12: true // This ensures 12-hour format with AM/PM
-  };
-  let time = date.toLocaleString("en-US", options);
-  if(ulList.innerHTML === time){
-    alert("Alarm is already set");
-  }
-function addText(){
+// const inputHour = document.getElementById("inputHour");
+// const inputMin = document.getElementById("inputMin");
+// const ulList = document.querySelector(".ulList");
+// let date = new Date();
+//   const options = {
+//     hour: '2-digit', 
+//     minute: '2-digit', 
+//     hour12: true // This ensures 12-hour format with AM/PM
+//   };
+//   let time = date.toLocaleString("en-US", options);
+//   if(ulList.innerHTML === time){
+//     alert("Alarm is already set");
+//   }
+// function addText(){
   
-  ulList.innerHTML = inputHour.value + " : " + inputMin.value + " PM";
-  let val = inputHour.value + ":" + inputMin.value + " PM";
+//   ulList.innerHTML = inputHour.value + " : " + inputMin.value + " PM";
+//   let val = inputHour.value + ":" + inputMin.value + " PM";
  
   
+//}
+
+const val = "😂"
+if(0 === 1){
+  val = "😎"
 }
 
 
