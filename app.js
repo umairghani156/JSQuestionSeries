@@ -5134,10 +5134,22 @@ const data = [
   
 //}
 
-const val = "😂"
-if(0 === 1){
-  val = "😎"
+// const val = "😂"
+// if(0 === 1){
+//   val = "😎"
+// }
+
+function checkLeapYear(year) {
+  console.log(year % 4);
+  
+  if(year % 4 === 0){
+    return true
+  }else{
+    return false
+  }
 }
+console.log(checkLeapYear(2026));
+
 
 
 
