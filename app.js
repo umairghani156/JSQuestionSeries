@@ -5139,16 +5139,57 @@ const data = [
 //   val = "😎"
 // }
 
-function checkLeapYear(year) {
-  console.log(year % 4);
+// function checkLeapYear(year) {
+//   console.log(year % 4);
   
-  if(year % 4 === 0){
-    return true
-  }else{
-    return false
-  }
+//   if(year % 4 === 0){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+// console.log(checkLeapYear(2026));
+
+// let c = {
+
+// }
+// const a = {
+//   name: "Kashif"
+// }
+// const d = {
+//   name:"Mehmood"
+// }
+
+// a[d] = {
+//   name : "Umair"
+// }
+// a[c] = {
+//   name:"Faiz"
+// }
+
+// console.log(a[d]);
+
+const arr = [1, 2, 3, ,4 ,5 ,6, 3, 4, 20, 30, 40, 20, 30, 40];
+
+function duplicateValue(data) {
+  let finalVal = [];
+  let valTwo = []
+data.forEach(element => {
+ if(!finalVal.includes(element)){
+  finalVal.push(element)
+ }else{
+  valTwo.push(element)
+ }
+ })
+ console.log(finalVal);
+ console.log(valTwo);
+ 
+ 
+ 
 }
-console.log(checkLeapYear(2026));
+console.log(duplicateValue(arr));
+
+
 
 
 
