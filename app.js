@@ -5169,20 +5169,28 @@ const data = [
 
 // console.log(a[d]);
 
-const arr = [1, 2, 3, ,4 ,5 ,6, 3, 4, 20, 30, 40, 20, 30, 40];
+const arr = [1, 2, 3, ,4 ,5 ,6, 3, 4, 20, 30, 40, 20, 30, 40, 50, 50,50];
 
 function duplicateValue(data) {
   let finalVal = [];
   let valTwo = []
+  let duplicateLength = {}
 data.forEach(element => {
  if(!finalVal.includes(element)){
   finalVal.push(element)
- }else{
-  valTwo.push(element)
+ }
+ if(finalVal.includes(element)){
+  if(!duplicateLength.hasOwnProperty(element)){
+    duplicateLength[element] = 1
+  }else{
+    duplicateLength[element]++
+  }
  }
  })
  console.log(finalVal);
  console.log(valTwo);
+ console.log("duplicate", duplicateLength);
+ 
  
  
  
