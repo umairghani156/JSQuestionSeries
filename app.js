@@ -5197,15 +5197,30 @@ const arr = [1, 2, 3, ,4 ,5 ,6, 3, 4, 20, 30, 40, 20, 30, 40, 50, 50,50];
 // }
 // console.log(duplicateValue(arr));
 
-function findDuplicate(data){
-  let result = data.filter((val, ind, self)=> {
-    console.log(self.indexOf(val));
+// function findDuplicate(data){
+//   let result = data.filter((val, ind, self)=> {
+//     console.log(self.indexOf(val));
     
-  });
-  console.log(result);
+//   });
+//   console.log(result);
+  
+// }
+// console.log(findDuplicate(arr));
+
+function sortArr(arr){
+  let n = arr.length;
+  for(let i = 0; i < n; i++){
+    for(let j = 0; j < n - i - 1; j++){
+      if(arr[j] > arr[j + 1]){
+      [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+      }
+    }
+  }
+  console.log(arr);
   
 }
-console.log(findDuplicate(arr));
+console.log(sortArr([1, 3, 10, 20, 15, 13]));
+
 
 
 
