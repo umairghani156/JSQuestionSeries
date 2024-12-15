@@ -5241,13 +5241,15 @@ function middleArrayVal(arrData){
   if(n % 2 !== 0){
     return arrData[Math.floor(n/2)]
   }else{
-    let firstVal = arrData[Math.floor(n/2)];
-    let secondVal = arrData
-    console.log(firstVal);
+    let firstVal = arrData[Math.floor(n/3)];
+    let secondVal = arrData[Math.floor(n/2)];
+    return firstVal + " and "+ secondVal
     
   }
 }
 console.log(middleArrayVal(arr));
+console.log(6/2);
+
 
 
 
