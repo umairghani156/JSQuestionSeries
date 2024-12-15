@@ -5220,19 +5220,19 @@ const arr = [1, 2, 3, ,4 ,5 ,6, 3, 4, 20, 30, 40, 20, 30, 40, 50, 50,50];
   
 // }
 // console.log(sortArr([1, 3, 10, 20, 15, 13]));
-function sortArr(arr){
-  let n = arr.length;
-  for(let i = 0; i < n -1; i++){ //5
-    for(let j = 0; j < n - i - 1; j++){ 
-      if(arr[j] < arr[j + 1]){
-      [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
-      }
-    }
-  }
-  console.log(arr);
+// function sortArr(arr){
+//   let n = arr.length;
+//   for(let i = 0; i < n -1; i++){ //5
+//     for(let j = 0; j < n - i - 1; j++){ 
+//       if(arr[j] < arr[j + 1]){
+//       [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+//       }
+//     }
+//   }
+//   console.log(arr);
   
-}
-console.log(sortArr([1, 3, 10, 20, 15, 13]));
+// }
+// console.log(sortArr([1, 3, 10, 20, 15, 13]));
 
 
 
