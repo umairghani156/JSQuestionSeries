@@ -5234,21 +5234,37 @@ const data = [
 // }
 // console.log(sortArr([1, 3, 10, 20, 15, 13]));
 
-let arr = ["Umair", "Mehmood","Habib", "Kashif", "Faiz","Zubair"];
+// let arr = ["Umair", "Mehmood","Habib", "Kashif", "Faiz","Zubair"];
 
-function middleArrayVal(arrData){
-  let n = arrData.length;
-  if(n % 2 !== 0){
-    return arrData[Math.floor(n/2)]
-  }else{
-    let firstVal = arrData[Math.floor(n/3)];
-    let secondVal = arrData[Math.floor(n/2)];
-    return firstVal + " and "+ secondVal
+// function middleArrayVal(arrData){
+//   let n = arrData.length;
+//   if(n % 2 !== 0){
+//     return arrData[Math.floor(n/2)]
+//   }else{
+//     let firstVal = arrData[Math.floor(n/3)];
+//     let secondVal = arrData[Math.floor(n/2)];
+//     return firstVal + " and "+ secondVal
     
+//   }
+// }
+// console.log(middleArrayVal(arr));
+// console.log(6/2);
+
+function sortedArr(arr){
+  let n = arr.length;
+  for(let i = 0; i < n; i++){
+   for(let j = 0; j < n -i -1; j++){
+    console.log("nested",arr[j]);
+    if(arr[j] > arr[j +1]){
+      [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
+    }
+   }
   }
+  console.log(arr);
+  
 }
-console.log(middleArrayVal(arr));
-console.log(6/2);
+console.log(sortedArr([1, 10, 12, 13, 6]));
+
 
 
 
