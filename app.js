@@ -5169,7 +5169,7 @@ const data = [
 
 // console.log(a[d]);
 
-const arr = [1, 2, 3, ,4 ,5 ,6, 3, 4, 20, 30, 40, 20, 30, 40, 50, 50,50];
+//const arr = [1, 2, 3, ,4 ,5 ,6, 3, 4, 20, 30, 40, 20, 30, 40, 50, 50,50];
 
 // function duplicateValue(data) {
 //   let finalVal = [];
@@ -5233,6 +5233,22 @@ const arr = [1, 2, 3, ,4 ,5 ,6, 3, 4, 20, 30, 40, 20, 30, 40, 50, 50,50];
   
 // }
 // console.log(sortArr([1, 3, 10, 20, 15, 13]));
+
+let arr = ["Umair", "Mehmood","Habib", "Kashif", "Faiz","Zubair"];
+
+function middleArrayVal(arrData){
+  let n = arrData.length;
+  if(n % 2 !== 0){
+    return arrData[Math.floor(n/2)]
+  }else{
+    let firstVal = arrData[Math.floor(n/2)];
+    let secondVal = arrData
+    console.log(firstVal);
+    
+  }
+}
+console.log(middleArrayVal(arr));
+
 
 
 
