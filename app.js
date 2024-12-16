@@ -5268,8 +5268,8 @@ const data = [
 
 Function.prototype.myCall = function(context, ...args) {
   context.fn = this;
-  return function(){
-    return context.fn(...args)
+  return function(...args){
+     context.fn(...args)
   }
 };
 
@@ -5284,7 +5284,7 @@ let obj2 = {
   name: "Faiz"
 }
 let val = obj.mySelf.myCall(obj2);
-console.log(val(25));
+console.log(val(24));
 
 
 
