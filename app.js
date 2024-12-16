@@ -5266,25 +5266,50 @@ const data = [
 // console.log(sortedArr([1, 10, 12, 13, 6]));
 
 
-Function.prototype.myCall = function(context, ...args) {
-  context.fn = this;
+// Function.prototype.myCall = function(context, ...args) {
+//   context.fn = this;
+//   return function(...args){
+//      context.fn(...args)
+//   }
+// };
+
+// let obj = {
+//   name: "Umair",
+//   mySelf: function(age){
+//     console.log(`Hey this is ${this.name} and my age is ${age}`);
+    
+//   }
+// }
+// let obj2 = {
+//   name: "Faiz"
+// }
+// let val = obj.mySelf.myCall(obj2);
+// console.log(val(24));
+
+// Debounce function implementation
+function debounce(func, wait) {
+  // Your code here
+  let timer;
   return function(...args){
-     context.fn(...args)
+    clearTimeout(timer)
+    timer= setTimeout(()=>{
+      func(...args)
+    }, wait)
   }
+  
+}
+
+// Test the debounce function
+const myFunc = () => {
+  console.log('Function executed!');
 };
 
-let obj = {
-  name: "Umair",
-  mySelf: function(age){
-    console.log(`Hey this is ${this.name} and my age is ${age}`);
-    
-  }
-}
-let obj2 = {
-  name: "Faiz"
-}
-let val = obj.mySelf.myCall(obj2);
-console.log(val(24));
+const debouncedFunc = debounce(myFunc, 2000);
+
+// This will call `myFunc` only once, 2 seconds after the last call
+debouncedFunc();
+debouncedFunc();
+debouncedFunc();
 
 
 
