@@ -5250,20 +5250,42 @@ const data = [
 // console.log(middleArrayVal(arr));
 // console.log(6/2);
 
-function sortedArr(arr){
-  let n = arr.length;
-  for(let i = 0; i < n; i++){
-   for(let j = 0; j < n -i -1; j++){
-    console.log("nested",arr[j]);
-    if(arr[j] > arr[j +1]){
-      [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
-    }
-   }
-  }
-  console.log(arr);
+// function sortedArr(arr){
+//   let n = arr.length;
+//   for(let i = 0; i < n; i++){
+//    for(let j = 0; j < n -i -1; j++){
+//     console.log("nested",arr[j]);
+//     if(arr[j] > arr[j +1]){
+//       [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
+//     }
+//    }
+//   }
+//   console.log(arr);
   
+// }
+// console.log(sortedArr([1, 10, 12, 13, 6]));
+
+
+Function.prototype.myCall = function(context, ...args) {
+  context.fn = this;
+  return function(){
+    return context.fn(...args)
+  }
+};
+
+let obj = {
+  name: "Umair",
+  mySelf: function(age){
+    console.log(`Hey this is ${this.name} and my age is ${age}`);
+    
+  }
 }
-console.log(sortedArr([1, 10, 12, 13, 6]));
+let obj2 = {
+  name: "Faiz"
+}
+let val = obj.mySelf.myCall(obj2);
+console.log(val(25));
+
 
 
 
