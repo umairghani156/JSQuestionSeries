@@ -5317,7 +5317,7 @@ function duplicateVal(arr){
   let otherVal = []
   let duplicate=[]
   arr.forEach(element => {
-    if(!duplicate[element]){
+    if(!otherVal.includes(element)){
       otherVal.push(element)
     }else{
       duplicate.push(element)
