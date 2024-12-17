@@ -5287,29 +5287,46 @@ const data = [
 // console.log(val(24));
 
 // Debounce function implementation
-function debounce(func, wait) {
-  // Your code here
-  let timer;
-  return function(...args){
-    clearTimeout(timer)
-    timer= setTimeout(()=>{
-      func(...args)
-    }, wait)
-  }
+// function debounce(func, wait) {
+//   // Your code here
+//   let timer;
+//   return function(...args){
+//     clearTimeout(timer)
+//     timer= setTimeout(()=>{
+//       func(...args)
+//     }, wait)
+//   }
+  
+// }
+
+// // Test the debounce function
+// const myFunc = () => {
+//   console.log('Function executed!');
+// };
+
+// const debouncedFunc = debounce(myFunc, 2000);
+
+// // This will call `myFunc` only once, 2 seconds after the last call
+// debouncedFunc();
+// debouncedFunc();
+// debouncedFunc();
+
+
+function duplicateVal(arr){
+  let length = arr.length;
+  let otherVal = []
+  let duplicate=[]
+  arr.forEach(element => {
+    if(!duplicate[element]){
+      otherVal.push(element)
+    }else{
+      duplicate.push(element)
+    }
+  });
+  console.log(duplicate);
   
 }
-
-// Test the debounce function
-const myFunc = () => {
-  console.log('Function executed!');
-};
-
-const debouncedFunc = debounce(myFunc, 2000);
-
-// This will call `myFunc` only once, 2 seconds after the last call
-debouncedFunc();
-debouncedFunc();
-debouncedFunc();
+console.log(duplicateVal([1, 2, 3, 3, 4, ,5 , 6, 5]));
 
 
 
