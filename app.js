@@ -5312,22 +5312,22 @@ const data = [
 // debouncedFunc();
 
 
-function duplicateVal(arr){
-  let length = arr.length;
-  let otherVal = []
-  let duplicate=[]
-  arr.forEach(element => {
-    if(!otherVal.includes(element)){
-      otherVal.push(element)
-    }else{
-      duplicate.push(element)
-    }
-  });
-  console.log(duplicate);
+// function duplicateVal(arr){
+//   let length = arr.length;
+//   let otherVal = []
+//   let duplicate=[]
+//   arr.forEach(element => {
+//     if(!otherVal.includes(element)){
+//       otherVal.push(element)
+//     }else{
+//       duplicate.push(element)
+//     }
+//   });
+//   console.log(duplicate);
   
-}
+// }
 
-console.log(duplicateVal([1, 2, 3, 3, 4, ,5 , 6, 5]));
+// console.log(duplicateVal([1, 2, 3, 3, 4, ,5 , 6, 5]));
 
 
 
