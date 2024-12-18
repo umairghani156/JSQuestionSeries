@@ -5326,6 +5326,7 @@ function duplicateVal(arr){
   console.log(duplicate);
   
 }
+
 console.log(duplicateVal([1, 2, 3, 3, 4, ,5 , 6, 5]));
 
 
