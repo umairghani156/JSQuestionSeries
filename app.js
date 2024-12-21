@@ -5345,12 +5345,30 @@ const data = [
 // }
 
 // console.log(duplicateVal([1, 2, 3, 3, 4, ,5 , 6, 5]));
-let count = 0;
-function hello(){
-  count = 2
+// let count = 0;
+// function hello(){
+//   count = 2
+// }
+// hello()
+// console.log(count);
+
+function helloFunc(arr){
+  let arr2 =[]
+   arr.forEach(element => {
+    if(Array.isArray(element)){
+      arr2 = arr2.concat(helloFunc(element))
+    }else{
+      arr2.push(element)
+    }
+   });
+   return arr2
+
 }
-hello()
-console.log(count);
+
+
+
+console.log(helloFunc([1, 2, 3, [4,[10, 10, 10], 5, 6, [7, 8, 9]], 10]));
+
 
 
 
