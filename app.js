@@ -5345,6 +5345,12 @@ const data = [
 // }
 
 // console.log(duplicateVal([1, 2, 3, 3, 4, ,5 , 6, 5]));
+let count = 0;
+function hello(){
+  count = 2
+}
+hello()
+console.log(count);
 
 
 
