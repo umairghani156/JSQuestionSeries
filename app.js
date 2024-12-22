@@ -5352,23 +5352,47 @@ const data = [
 // hello()
 // console.log(count);
 
-function helloFunc(arr){
-  let arr2 =[]
-   arr.forEach(element => {
-    if(Array.isArray(element)){
-      arr2 = arr2.concat(helloFunc(element))
-    }else{
-      arr2.push(element)
-    }
-   });
-   return arr2
+// function helloFunc(arr){
+//   let arr2 =[]
+//    arr.forEach(element => {
+//     if(Array.isArray(element)){
+//       arr2 = arr2.concat(helloFunc(element))
+//     }else{
+//       arr2.push(element)
+//     }
+//    });
+//    return arr2
 
+// }
+
+
+
+// console.log(helloFunc([1, 2, 3, [4,[10, 10, 10], 5, 6, [7, 8, 9]], 10]));
+
+
+
+Function.prototype.myBind = function(context, ...args) {
+  // Your code here
+   context.fn = this;
+   return function( ...par){
+     context.fn(...par)
+   }
+ 
+  
 }
 
-
-
-console.log(helloFunc([1, 2, 3, [4,[10, 10, 10], 5, 6, [7, 8, 9]], 10]));
-
+let obj = {
+  name: "Umair",  
+  mySelf: function(age){
+    console.log(`Hey this is ${this.name} and my age is ${age}`);
+    
+  }
+}
+let obj2 = {
+  name: "Faiz"
+}
+let val = obj.mySelf.myBind(obj2);
+console.log(val(24));
 
 
 
