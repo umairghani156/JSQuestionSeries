@@ -5394,27 +5394,49 @@ const data = [
 // let val = obj.mySelf.myBind(obj2);
 // console.log(val(24));
 
+// function helloPrac(str){
+//   let arr = []
+//   let temp = ''; 
+//   let n = str.length;
+//   for(let i= 0; i < n; i++){
+//     if (!isNaN(str[i]) && str[i] !== ' ') { 
+//       temp += str[i]; 
+//     } else {
+//       if (temp) {
+//         arr.push(temp);
+//         temp = ''; 
+//       }
+//     }
+//   }
+//   console.log(temp);
+//   if(temp){
+//     arr.push(temp)
+//   }
+  
+//   console.log(arr);
+  
+  
+
+// }
+// console.log(helloPrac("a12245d34hj58"));
 function helloPrac(str){
-  let arr = []
-  let temp = ''; 
-  let n = str.length;
-  for(let i= 0; i < n; i++){
-    if (!isNaN(str[i]) && str[i] !== ' ') { 
-      temp += str[i]; 
-    } else {
-      if (temp) {
-        arr.push(temp);
-        temp = ''; 
-      }
+ let arr = [];
+ let temp = "";
+ let n = str.length;
+ for(let i =0; i < n; i++){
+  if(!isNaN(str[i]) && str[i] !== ' '){
+    temp += str[i]
+  }else{
+    if(temp){
+      arr.push(temp);
+      temp = "";
     }
   }
-  console.log(temp);
-  if(temp){
-    arr.push(temp)
-  }
-  
-  console.log(arr);
-  
+ }
+ if(temp){
+  arr.push(temp)
+ }
+ return arr
   
 
 }
