@@ -5419,28 +5419,28 @@ const data = [
 
 // }
 // console.log(helloPrac("a12245d34hj58"));
-function helloPrac(str){
- let arr = [];
- let temp = "";
- let n = str.length;
- for(let i =0; i < n; i++){
-  if(!isNaN(str[i]) && str[i] !== ' '){
-    temp += str[i]
-  }else{
-    if(temp){
-      arr.push(temp);
-      temp = "";
-    }
-  }
- }
- if(temp){
-  arr.push(temp)
- }
- return arr
+// function helloPrac(str){
+//  let arr = [];
+//  let temp = "";
+//  let n = str.length;
+//  for(let i =0; i < n; i++){
+//   if(!isNaN(str[i]) && str[i] !== ' '){
+//     temp += str[i]
+//   }else{
+//     if(temp){
+//       arr.push(temp);
+//       temp = "";
+//     }
+//   }
+//  }
+//  if(temp){
+//   arr.push(temp)
+//  }
+//  return arr
   
 
-}
-console.log(helloPrac("a12245d34hj58"));
+// }
+// console.log(helloPrac("a12245d34hj58"));
 
 
 
