@@ -5445,6 +5445,28 @@ const data = [
 
 let name = 'Kashif'
 
+function helloPrac(str){
+  let arr = []
+  let temp = ''
+  let n = str.length;
+  for(let i = 0; i < n; i++){
+    if(!isNaN(str[i]) && str[i] !== ' '){
+      temp += str[i]
+    }else{
+      if(temp){
+        arr.push(temp);
+        temp = ''
+      }
+    }
+  }
+  if(temp){
+    arr.push(temp)
+  }
+  return arr  
+
+}
+
+
 
 
 
