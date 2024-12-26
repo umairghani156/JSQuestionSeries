@@ -5443,6 +5443,9 @@ const data = [
 // console.log(helloPrac("a12245d34hj58"));
 
 
+let name = 'Kashif'
+
+
 
 
 
