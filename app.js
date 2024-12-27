@@ -5443,28 +5443,36 @@ const data = [
 // console.log(helloPrac("a12245d34hj58"));
 
 
-let name = 'Kashif'
+// let name = 'Kashif'
 
-function helloPrac(str){
-  let arr = []
-  let temp = ''
-  let n = str.length;
-  for(let i = 0; i < n; i++){
-    if(!isNaN(str[i]) && str[i] !== ' '){
-      temp += str[i]
-    }else{
-      if(temp){
-        arr.push(temp);
-        temp = ''
-      }
-    }
-  }
-  if(temp){
-    arr.push(temp)
-  }
-  return arr  
+// function helloPrac(str){
+//   let arr = []
+//   let temp = ''
+//   let n = str.length;
+//   for(let i = 0; i < n; i++){
+//     if(!isNaN(str[i]) && str[i] !== ' '){
+//       temp += str[i]
+//     }else{
+//       if(temp){
+//         arr.push(temp);
+//         temp = ''
+//       }
+//     }
+//   }
+//   if(temp){
+//     arr.push(temp)
+//   }
+//   return arr  
 
+// }
+console.log(i);
+
+for(var i = 0; i < 5; i++){
+  setTimeout(()=>{
+    console.log(i);
+  }, 1000)
 }
+
 
 
 
