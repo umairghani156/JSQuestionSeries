@@ -5465,13 +5465,24 @@ const data = [
 //   return arr  
 
 // }
-console.log(i);
+//console.log(i);
 
-for(var i = 0; i < 5; i++){
-  setTimeout(()=>{
-    console.log(i);
-  }, 1000)
+// for(var i = 0; i < 5; i++){
+//   setTimeout(()=>{
+//     console.log(i);
+//   }, 1000)
+// }
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+function helloPrac(arr){
+  let n = arr.length;
+  let sum = 0;
+  for(let i = 0; i < n; i++){
+    sum += arr[i]
+  }
+  return sum
 }
+console.log(helloPrac(arr));
 
 
 
