@@ -5474,15 +5474,17 @@ const data = [
 // }
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-function helloPrac(arr){
-  let n = arr.length;
-  let sum = 0;
-  for(let i = 0; i < n; i++){
-    sum += arr[i]
-  }
-  return sum
-}
-console.log(helloPrac(arr));
+// function helloPrac(arr){
+//   let n = arr.length;
+//   let sum = 0;
+//   for(let i = 0; i < n; i++){
+//     sum += arr[i]
+//   }
+//   return sum
+// }
+// console.log(helloPrac(arr));
+let modifiedVal = arr.map((val)=> val * 2);
+console.log(modifiedVal);
 
 
 
