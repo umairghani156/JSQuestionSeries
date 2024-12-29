@@ -5483,8 +5483,10 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //   return sum
 // }
 // console.log(helloPrac(arr));
-let modifiedVal = arr.map((val)=> val * 2);
-console.log(modifiedVal);
+// let modifiedVal = arr.map((val)=> val * 2);
+// console.log(modifiedVal);
+
+// let modifiedVal = arr.filter((val)=> val % 2 === 0);
 
 
 
