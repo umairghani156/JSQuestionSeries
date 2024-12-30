@@ -5488,6 +5488,19 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // let modifiedVal = arr.filter((val)=> val % 2 === 0);
 
+// let obj = {
+//   name: "Umair",
+//   innerObj:{
+//     name:"Zakat"
+//   }
+// }
+
+// let obj2 = JSON.parse(JSON.stringify(obj));
+// obj2.name = "Habib"
+// obj2.innerObj.name = "Faiz"
+// console.log(obj, obj2);
+
+
 
 
 
