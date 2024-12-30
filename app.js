@@ -5473,7 +5473,7 @@ const data = [
 //   }, 1000)
 // }
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // function helloPrac(arr){
 //   let n = arr.length;
 //   let sum = 0;
@@ -5499,6 +5499,17 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // obj2.name = "Habib"
 // obj2.innerObj.name = "Faiz"
 // console.log(obj, obj2);
+
+let obj = {
+  name: "Umair",
+  innerObj: {
+    name: "Zakat"
+  }
+}
+let obj2 = JSON.parse(JSON.stringify(obj));
+obj2.name = "Habib"
+obj2.innerObj.name = "Faiz"
+console.log(obj, obj2);
 
 
 
