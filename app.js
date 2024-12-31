@@ -5500,17 +5500,26 @@ const data = [
 // obj2.innerObj.name = "Faiz"
 // console.log(obj, obj2);
 
-let obj = {
-  name: "Umair",
-  innerObj: {
-    name: "Zakat"
-  }
-}
-let obj2 = JSON.parse(JSON.stringify(obj));
-obj2.name = "Habib"
-obj2.innerObj.name = "Faiz"
-console.log(obj, obj2);
+// let obj = {
+//   name: "Umair",
+//   innerObj: {
+//     name: "Zakat"
+//   }
+// }
+// let obj2 = JSON.parse(JSON.stringify(obj));
+// obj2.name = "Habib"
+// obj2.innerObj.name = "Faiz"
+// console.log(obj, obj2);
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
+function lastVal(data){
+  let modifiedVal = data.map((val)=>{
+    return [val[val.length -1]]
+  })
+  console.log(modifiedVal);
+  
+}
+lastVal(arr);
 
 
 
