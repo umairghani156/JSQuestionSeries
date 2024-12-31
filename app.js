@@ -5510,16 +5510,30 @@ const data = [
 // obj2.name = "Habib"
 // obj2.innerObj.name = "Faiz"
 // console.log(obj, obj2);
-let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+// let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
-function lastVal(data){
-  let modifiedVal = data.map((val)=>{
-    return [val[val.length -1]]
-  })
-  console.log(modifiedVal);
+// function lastVal(data){
+//   let modifiedVal = data.map((val)=>{
+//     return [val[val.length -1]]
+//   })
+//   console.log(modifiedVal);
   
+// }
+// lastVal(arr);
+
+let arr = [1, 2, 3, 4, ,5 , 6, 7, 8, 9];
+
+function middleVal(data){
+ let n = data.length;
+ if(n % 2 !== 0){
+   return data[Math.floor(n/2)]
+ }else{
+    let firstVal = data[Math.floor(n/2) -1];
+    let secondVal = data[Math.floor(n/2)];
+    return firstVal + " and " + secondVal
+ }
 }
-lastVal(arr);
+middleVal(arr);
 
 
 
