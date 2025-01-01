@@ -5521,19 +5521,21 @@ const data = [
 // }
 // lastVal(arr);
 
-let arr = [1, 2, 3, 4, ,5 , 6, 7, 8, 9];
+// let arr = [1, 2, 3, 4, ,5 , 6, 7, 8, 9];
 
-function middleVal(data){
- let n = data.length;
- if(n % 2 !== 0){
-   return data[Math.floor(n/2)]
- }else{
-    let firstVal = data[Math.floor(n/2) -1];
-    let secondVal = data[Math.floor(n/2)];
-    return firstVal + " and " + secondVal
- }
-}
-middleVal(arr);
+// function middleVal(data){
+//  let n = data.length;
+//  if(n % 2 !== 0){
+//    return data[Math.floor(n/2)]
+//  }else{
+//     let firstVal = data[Math.floor(n/2) -1];
+//     let secondVal = data[Math.floor(n/2)];
+//     return firstVal + " and " + secondVal
+//  }
+// }
+// middleVal(arr);
+
+let name = "Umair"
 
 
 
