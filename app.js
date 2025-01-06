@@ -5558,6 +5558,12 @@ function helloPrac(str){
 console.log(helloPrac("a12245d34hj58"));
 
 
+function middleNumArray(arr){
+    
+}
+middleNumArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+
 
 
 
