@@ -5559,7 +5559,10 @@ console.log(helloPrac("a12245d34hj58"));
 
 
 function middleNumArray(arr){
+   arr.forEach(element => {
+    console.log(element);
     
+   });
 }
 middleNumArray([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
